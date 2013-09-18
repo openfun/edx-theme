@@ -3,12 +3,12 @@
 <%namespace name='static' file='/static_content.html'/>
 <%inherit file="/navigation.html"/>
 
-## Toss the Stanford brand bar on top of the page
+## Toss the brand bar on top of the page
 <%block name="navigation_top">
   <div id="su-header">
     <div class="su-container">
-      <a href="http://www.stanford.edu">
-        <img src="https://www.stanford.edu/su-identity/images/brandbar-stanford-logo@2x.png" alt="Stanford University" width="152" height="23">
+      <a href="/">
+        <img src="${static.url('themes/fun/images/brandbar-logo@2x.png')}" alt="FUN" width="152" height="23">
       </a>
     </div>
   </div>
@@ -16,7 +16,7 @@
 
 ## TODO: this will eventually be moved to the Sass
 <%block name="navigation_logo">
-  <img src="${static.url('themes/stanford/images/stanford-S-logo.png')}" height="35" alt="Home Page" />
+  <img src="${static.url('themes/fun/images/S-logo.png')}" height="35" alt="Home Page" />
 </%block>
 
 ## We don't want extra links inside the navigation dropdown

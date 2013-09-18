@@ -1,12 +1,13 @@
 /****************************************************************************************************
-*   Stanford Theming File
+*   FUN Theming File
 *
-*   Contains all the theme color definitions for the Stanford Open Source MOOC Project
+*   Contains all the theme color definitions for the FUN Open Source MOOC Project
+*   Based on the Stanford theme
 *
 ****************************************************************************************************/
 
 //-----------------
-//  Color variables (from Stanford palette unless noted)
+//  Color variables
 //-----------------
 
 //Cardinal Color Variables
@@ -175,12 +176,12 @@ $footer_margin: ($baseline/4) 0;
 //-----------------
 //  CSS BG Images
 //-----------------
-$homepage-bg-image: '../themes/stanford/images/stanford-pano.jpg';
+$homepage-bg-image: '../themes/fun/images/stanford-pano.jpg';
 
 $login-banner-image: none;
 $register-banner-image: none;
 
-$video-thumb-url: '../themes/stanford/images/stanford-video-thumb.png';
+$video-thumb-url: '../themes/fun/images/stanford-video-thumb.png';
 
 //-----------------
 //  Mixin Styles

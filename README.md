@@ -61,7 +61,7 @@ Create a directory for themes and get the theme source repository in a folder na
 ```
 $ mkdir /opt/wwc/themes
 $ cd themes
-$ git git@github.com:FUNMOOC/edx-theme.git fun
+$ git clone git@github.com:FUNMOOC/edx-theme.git fun
 ```
 
 Then change to the branch you would like to use:

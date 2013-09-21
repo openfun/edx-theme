@@ -32,11 +32,16 @@ set the `THEME_NAME` like this, still in your ansible playbooks (the files
 generic_env_config: &edxapp_generic_env
     ...
     'THEME_NAME': 'fun'
+    'MKTG_URL_LINK_MAP':
+        'FAQ': 'root'
 ```
 
 This will make ansible add the `THEME_NAME` variable  to the env tokens in `/opt/wwc/lms*.env.json`
 (there can be several variants of the LMS service on a single host, and thus different
 files).
+
+This will also ensure that the new 'FAQ' page doesn't add a view requirement which isn't
+handled by the theme (to remove once this is fixed upstream).
 
 When playing the playbook with these variables, the theme repository is fetched and 
 the configuration variables get the code from `edx-platform` to load the
@@ -98,7 +103,8 @@ Here are the env.json with the proper values to enable the `fun` theme:
     "FAQ": null,
     "HONOR": null,
     "PRIVACY": null,
-    "TOS": null
+    "TOS": null,
+    "FAQ": null
   }
 }
 ```

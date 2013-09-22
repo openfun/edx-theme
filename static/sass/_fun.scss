@@ -394,6 +394,13 @@ body.view-login .introduction header h1 {
     width: 630px;
 }
 
+body {
+    .container, section.outside-app {
+        max-width: $content-max-width;
+        min-width: $content-min-width;
+    }
+}
+
 //-----------------
 // Controls
 //-----------------
@@ -411,48 +418,50 @@ body {
 // Slider (home)
 //-----------------
 
-.als-container {
-	position: relative;
-	width: 100%;
-	margin: 0px auto;
-	z-index: 0;
-}
+body .home {
+    .highlighted-courses {
+        margin: 30px -30px;
+        width: $content-max-width;
+    }
 
-.als-viewport {
-	position: relative;
-	overflow: hidden;
-	margin: 0px auto;
-}
+    .als-container {
+        position: relative;
+        width: 100%;
+        margin: 0px auto;
+        z-index: 0;
+    }
 
-.als-wrapper {
-	position: relative;
-	list-style: none;
-    margin: 0;
-    padding: 0;
-}
+    .als-viewport {
+        position: relative;
+        overflow: hidden;
+        margin: 0px auto;
+    }
 
-.als-item {
-	position: relative;
-	display: block;
-	text-align: center;
-	cursor: pointer;
-	float: left;
-}
+    .als-wrapper {
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-.als-item img,
-.als-prev img,
-.als-next img {
-    height: 100px;
-}
+    .als-item {
+        position: relative;
+        display: block;
+        text-align: center;
+        cursor: pointer;
+        float: left;
+    }
 
-.als-prev, .als-next {
-	position: absolute;
-	cursor: pointer;
-	clear: both;
+    .als-prev, .als-next {
+        position: absolute;
+        cursor: pointer;
+        clear: both;
+        top: 50%;
+        margin-top: -13px;
+        width: 17px;
+    }
+    .als-next {
+        right: 0;
+    }
 }
-.als-next {
-    right: 0;
-    top: 0;
-}
-
 

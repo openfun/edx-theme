@@ -1,19 +1,20 @@
 /****************************************************************************************************
-*   Stanford Theming File
+*   FUN Theming File
 *
-*   Contains all the theme color definitions for the Stanford Open Source MOOC Project
+*   Contains all the theme color definitions for the FUN Open Source MOOC Project
+*   Based on the Stanford theme
 *
 ****************************************************************************************************/
 
 //-----------------
-//  Color variables (from Stanford palette unless noted)
+//  Color variables
 //-----------------
 
 //Cardinal Color Variables
-$cardinal-red: #8C1515;
-$dark-red: #820000; //Link Color
-$cardinal-light: #c83737; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
-$cardinal-bg: #e9afaf; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
+$main-color: #3874b9;
+$main-color-dark: #0e4586; //Link Color
+$main-color-light: #3a76bb; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
+$main-color-bg: $main-color; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
 
 //Beige Color Variables
 $beige: #9d9573;
@@ -80,12 +81,12 @@ $base-font-color: $black;
 $lighter-base-font-color: $black-80;
 $very-light-text: $gray-1;
 
-$link-color: $dark-red;
-$link-color-d1: $dark-red;
-$link-hover: $cardinal-light;
-$site-status-color: $cardinal-bg;
+$link-color: $main-color-dark;
+$link-color-d1: $main-color-dark;
+$link-hover: $main-color-light;
+$site-status-color: $main-color-bg;
 
-$button-color: $cardinal-red;
+$button-color: $main-color;
 $button-archive-color: $gray-3;
 
 $shadow-color: $gray;
@@ -96,16 +97,16 @@ $button-bg-color: $gray-3;
 $button-bg-hover-color: $gray-1;
 
 // actions - primary
-$action-primary-bg: $cardinal-red;
+$action-primary-bg: $main-color;
 $action-primary-fg: $gray-2;
 $action-primary-shadow: none;
 
 // focused - hover/active pseudo states
-$action-primary-focused-bg: $dark-red;
+$action-primary-focused-bg: $main-color-dark;
 $action-primary-focused-fg: $gray-1;
 
 // current or active navigation item
-$action-primary-active-bg: $dark-red;
+$action-primary-active-bg: $main-color-dark;
 $action-primary-active-fg: $gray-1;
 $action-primary-active-shadow: none;
 $action-primary-active-focused-fg: $gray-2;
@@ -175,12 +176,12 @@ $footer_margin: ($baseline/4) 0;
 //-----------------
 //  CSS BG Images
 //-----------------
-$homepage-bg-image: '../themes/stanford/images/stanford-pano.jpg';
+$homepage-bg-image: '../themes/fun/images/stanford-pano.jpg';
 
 $login-banner-image: none;
 $register-banner-image: none;
 
-$video-thumb-url: '../themes/stanford/images/stanford-video-thumb.png';
+$video-thumb-url: '../themes/fun/images/stanford-video-thumb.png';
 
 //-----------------
 //  Mixin Styles
@@ -195,4 +196,16 @@ $video-thumb-url: '../themes/stanford/images/stanford-video-thumb.png';
 @mixin footer_references_style {
     margin: 0 !important;
     text-align: right;
+}
+
+//-----------------
+// Temporary
+//-----------------
+
+body header.global h1.logo { 
+    margin: -12px 39px 0px 0px; 
+}
+
+body header.global {
+    background: none repeat scroll 0% 0% #ffffff;
 }

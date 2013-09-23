@@ -104,7 +104,6 @@ Here are the env.json with the proper values to enable the `fun` theme:
     "HONOR": null,
     "PRIVACY": null,
     "TOS": null,
-    "FAQ": null
   }
 }
 ```

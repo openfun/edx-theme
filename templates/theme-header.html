@@ -18,22 +18,14 @@
 ## When unauthenticated, only show the about page link
 <%block name="navigation_global_links">
 <li class="nav-global-outer">
-  <div class="nav-global-separator nav-global-separator1"></div>
-  <div class="nav-global-separator nav-global-separator2"></div>
-  <div class="nav-global-separator nav-global-separator3"></div>
   <ul class="nav-global-inner">
-    <li>
-      <a href="/how-it-works">Qu'est-ce que FUN?</a>
-    </li>
-    <li>
-      <a href="/courses">Les cours</a>
-    </li>
-    <li>
-      <a href="#">Les établissements</a>
-    </li>
-    <li>
-      <a href="/register">S'inscrire maintenant</a>
-    </li>
+    <li class="nav-global-element"><a href="/how-it-works">Qu'est-ce que FUN?</a></li>
+    <li class="nav-global-separator"></li>
+    <li class="nav-global-element"><a href="/courses">Les cours</a></li>
+    <li class="nav-global-separator"></li>
+    <li class="nav-global-element"><a href="#">Les établissements</a></li>
+    <li class="nav-global-separator"></li>
+    <li class="nav-global-element"><a href="/register">S'inscrire maintenant</a></li>
   </ul>
 </li>
 </%block>
@@ -41,22 +33,14 @@
 ## When authenticated, show both the about page and find courses
 <%block name="navigation_global_links_authenticated">
 <li class="nav-global-outer">
-  <div class="nav-global-separator nav-global-separator1"></div>
-  <div class="nav-global-separator nav-global-separator2"></div>
-  <div class="nav-global-separator nav-global-separator3"></div>
   <ul class="nav-global-inner">
-    <li>
-      <a href="/how-it-works">Qu'est-ce que FUN?</a>
-    </li>
-    <li>
-      <a href="/courses">Les cours</a>
-    </li>
-    <li>
-      <a href="/schools">Les établissements</a>
-    </li>
-    <li>
-      <a href="/logout">Se déconnecter</a>
-    </li>
+    <li class="nav-global-element"><a href="/how-it-works">Qu'est-ce que FUN?</a></li>
+    <li class="nav-global-separator"></li>
+    <li class="nav-global-element"><a href="/courses">Les cours</a></li>
+    <li class="nav-global-separator"></li>
+    <li class="nav-global-element"><a href="/schools">Les établissements</a></li>
+    <li class="nav-global-separator"></li>
+    <li class="nav-global-element"><a href="/logout">Se déconnecter</a></li>
   </ul>
 </li>
 </%block>

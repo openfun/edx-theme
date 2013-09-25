@@ -243,24 +243,6 @@ body header.global {
                 width: 100%;
                 min-width: $content-min-width;
                 background-color: #333333;
-
-                .nav-global-separator {
-                    height: 51px;
-                    width: 20px;
-                    position: absolute;
-                    background-image: url("../themes/fun/images/menu_separator.png");
-                    left: 50%;
-                }
-
-                .nav-global-separator1 {
-                    margin-left: -260px;
-                }
-                .nav-global-separator2 {
-                    margin-left: -49px;
-                }
-                .nav-global-separator3 {
-                    margin-left: 208px;
-                }
             }
 
             .nav-global-inner {
@@ -270,9 +252,19 @@ body header.global {
                 position: relative;
                 
                 li {
-                    width: 242px;
-                    text-align: center;
                     height: 51px;
+                    float: left;
+                }
+
+                li.nav-global-element {
+                    width: 230px;
+                    text-align: center;
+                    
+                }
+
+                li.nav-global-separator {
+                    width: 20px;
+                    background-image: url("../themes/fun/images/menu_separator.png");
                 }
                 
                 a {

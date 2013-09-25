@@ -297,6 +297,16 @@ body header.global {
     }
 }
 
+body header.global.slim {
+    background-color: #ffffff;
+
+    h1.logo {
+        img {
+            height: 107px;
+        }
+    }
+}
+
 body {
     .home > header {
         margin-top: 0px;

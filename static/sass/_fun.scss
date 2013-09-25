@@ -251,13 +251,13 @@ body header.global {
                 }
 
                 .nav-global-separator1 {
-                    margin-left: -261px;
+                    margin-left: -260px;
                 }
                 .nav-global-separator2 {
-                    margin-left: -44px;
+                    margin-left: -49px;
                 }
                 .nav-global-separator3 {
-                    margin-left: 222px;
+                    margin-left: 208px;
                 }
             }
 
@@ -280,6 +280,8 @@ body header.global {
                     line-height: 51px;
                     vertical-align: middle;
                     padding: 0px;
+                    font-weight: bold;
+                    font-size: 14px;
                 }
             }
 
@@ -294,3 +296,77 @@ body header.global {
         }
     }
 }
+
+body {
+    .home > header {
+        margin-top: 0px;
+
+        .outer-wrapper {
+            display: none;
+        }
+    }
+}
+
+
+//-----------------
+// Controls
+//-----------------
+
+body {
+    .m-btn-primary, header.global .nav-courseware li .cta, .login .form-actions button[type="submit"], .register .form-actions button[type="submit"], .passwordreset .form-actions button[type="submit"], #forgot-password-modal #password-reset .form-actions button[type="submit"], .view-partial-mktgregister .action.action-register, .view-partial-mktgregister .action.access-courseware {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+    }
+}
+
+
+//-----------------
+// Slider (home)
+//-----------------
+
+.als-container {
+	position: relative;
+	width: 100%;
+	margin: 0px auto;
+	z-index: 0;
+}
+
+.als-viewport {
+	position: relative;
+	overflow: hidden;
+	margin: 0px auto;
+}
+
+.als-wrapper {
+	position: relative;
+	list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.als-item {
+	position: relative;
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+}
+
+.als-item img,
+.als-prev img,
+.als-next img {
+    height: 100px;
+}
+
+.als-prev, .als-next {
+	position: absolute;
+	cursor: pointer;
+	clear: both;
+}
+.als-next {
+    right: 0;
+    top: 0;
+}
+
+

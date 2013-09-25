@@ -58,15 +58,15 @@ $serif: $theme-serif-font, "Helvetica", sans-serif;
 //  Theme Element Assignments
 //-----------------
 
-$body-bg: $gray-1;
-$container-bg: $gray-1;
-$login-register-bg: $gray-1;
-$content-wrapper-bg: $gray-1;
+$body-bg: $main-color-content-background;
+$container-bg: $main-color-content-background;
+$login-register-bg: $main-color-content-background;
+$content-wrapper-bg: $main-color-content-background;
 $header-image: none;
 $header-bg: transparentize(lighten($sandstone, 18.5%), .25);
 $courseware-header-image: none;
 $courseware-header-bg: transparentize(lighten($sandstone, 18.5%), .25);
-$footer-bg: $sandstone-25;
+$footer-bg: $main-color-content-background;
 $courseware-footer-border: 1px solid $beige-60;
 $courseware-footer-shadow: box-shadow(2px 1px 0 rgba(0, 0, 0, .1));
 $courseware-footer-margin: 50px;
@@ -155,7 +155,7 @@ $dot-color: $beige-60;
 
 $course-bg-color: $gray-3;
 $course-bg-image: none;
-$account-content-wrapper-bg: $gray-1;
+$account-content-wrapper-bg: $main-color-content-background;
 
 $course-profile-bg: $gray-1;
 $course-header-bg: transparentize($gray-1, .1);
@@ -219,7 +219,7 @@ body header.global {
     box-shadow: none;
 
     h1.logo { 
-        margin: 0; 
+        margin: 0;
     }
 
     nav {
@@ -241,6 +241,7 @@ body header.global {
                 margin-top: 100px;
                 height: 51px;
                 width: 100%;
+                min-width: $content-min-width;
                 background-color: #333333;
 
                 .nav-global-separator {
@@ -276,13 +277,13 @@ body header.global {
                 
                 a {
                     color: #fff;
-                    width: 80%;
                     height: 51px;
                     line-height: 51px;
                     vertical-align: middle;
                     padding: 0px;
                     font-weight: bold;
                     font-size: 14px;
+                    letter-spacing: 0;
                 }
             }
 
@@ -382,7 +383,6 @@ body .wrapper-footer {
                 display: inline;
                 list-style-type: none;
                 padding-left: 5px;
-                line-height: 33px;
 
                 a, a:hover, a:visited {
                     height: 33px;
@@ -398,10 +398,9 @@ body .wrapper-footer {
 // Content
 // ----------------
 
-body .content-wrapper {
-    background-color: $main-color-content-background;
+body.view-login .introduction header h1 {
+    width: 630px;
 }
-
 
 //-----------------
 // Controls

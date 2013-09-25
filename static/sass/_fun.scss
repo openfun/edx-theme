@@ -15,6 +15,7 @@ $main-color: #3874b9;
 $main-color-dark: #0e4586; //Link Color
 $main-color-light: #3a76bb; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
 $main-color-bg: $main-color; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
+$main-color-content-background: #fff;
 
 //Beige Color Variables
 $beige: #9d9573;
@@ -213,7 +214,7 @@ $video-thumb-url: '../themes/fun/images/stanford-video-thumb.png';
 //-----------------
 
 body header.global {
-    background: none repeat scroll 0% 0% #ffffff;
+    background: none repeat scroll 0% 0% $main-color-content-background;
     border-bottom: none;
     box-shadow: none;
 
@@ -298,7 +299,7 @@ body header.global {
 }
 
 body header.global.slim {
-    background-color: #ffffff;
+    background-color: $main-color-content-background;
 
     h1.logo {
         img {
@@ -315,6 +316,90 @@ body {
             display: none;
         }
     }
+}
+
+
+//-----------------
+// Footer
+//-----------------
+
+body .wrapper-footer {
+    background-color: $main-color-content-background;
+    border-top: none;
+    box-shadow: none;
+
+    footer {
+        width: 980px;
+        margin: 30px auto;
+        position: relative;
+
+        .colophon .nav-colophon {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -15px;
+            font-size: 11px;
+            font-weight: bold;
+            color: #3a76bb;
+
+            li {
+                margin-right: 10px;
+
+                a, a:hover, a:visited {
+                    color: #3a76bb;
+                    font-weight: bold;
+                    border-bottom: none;
+                }
+            }
+        }
+
+        .reference {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: 4px;
+            font-size: 12px;
+            color: #666;
+
+            a, a:hover, a:visited {
+                color: #666;
+                border-bottom: none;
+            }
+        }
+
+        .social-networks {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -15px;
+
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            li {
+                display: inline;
+                list-style-type: none;
+                padding-left: 5px;
+                line-height: 33px;
+
+                a, a:hover, a:visited {
+                    height: 33px;
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+
+//-----------------
+// Content
+// ----------------
+
+body .content-wrapper {
+    background-color: $main-color-content-background;
 }
 
 

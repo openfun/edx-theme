@@ -167,6 +167,16 @@ $sidebar-active-image: $gray-3;
 $form-bg-color: $gray-1;
 $modal-bg-color: $gray-1;
 
+// ----------------
+// Sizes 
+// ----------------
+
+$content-inner-width: 980px;
+$content-min-width: $content-inner-width;
+$content-max-width: $content-inner-width;
+
+$header-height: 294px;
+
 //TOP HEADER IMAGE MARGIN
 $header_image_margin: -77px;
 
@@ -176,7 +186,7 @@ $footer_margin: ($baseline/4) 0;
 //-----------------
 //  CSS BG Images
 //-----------------
-$homepage-bg-image: '../themes/fun/images/stanford-pano.jpg';
+$homepage-bg-image: '../themes/fun/images/pano.jpg';
 
 $login-banner-image: none;
 $register-banner-image: none;
@@ -199,13 +209,88 @@ $video-thumb-url: '../themes/fun/images/stanford-video-thumb.png';
 }
 
 //-----------------
-// Temporary
+// Header
 //-----------------
-
-body header.global h1.logo { 
-    margin: -12px 39px 0px 0px; 
-}
 
 body header.global {
     background: none repeat scroll 0% 0% #ffffff;
+    border-bottom: none;
+    box-shadow: none;
+
+    h1.logo { 
+        margin: 0; 
+    }
+
+    nav {
+        height: 107px;
+
+        .nav-courseware {
+            margin-top: 71px;
+        }
+
+        .nav-global {
+            position: absolute;
+            top: 132px;
+            left: 0px;
+            width: 100%;
+            height: 151px;
+            background: url("../themes/fun/images/blue_banner.png") no-repeat scroll center 0px rgb(14, 69, 134);
+
+            .nav-global-outer {
+                margin-top: 100px;
+                height: 51px;
+                width: 100%;
+                background-color: #333333;
+
+                .nav-global-separator {
+                    height: 51px;
+                    width: 20px;
+                    position: absolute;
+                    background-image: url("../themes/fun/images/menu_separator.png");
+                    left: 50%;
+                }
+
+                .nav-global-separator1 {
+                    margin-left: -261px;
+                }
+                .nav-global-separator2 {
+                    margin-left: -44px;
+                }
+                .nav-global-separator3 {
+                    margin-left: 222px;
+                }
+            }
+
+            .nav-global-inner {
+                height: 100%;
+                width: $content-max-width;
+                margin: auto;
+                position: relative;
+                
+                li {
+                    width: 242px;
+                    text-align: center;
+                    height: 51px;
+                }
+                
+                a {
+                    color: #fff;
+                    width: 80%;
+                    height: 51px;
+                    line-height: 51px;
+                    vertical-align: middle;
+                    padding: 0px;
+                }
+            }
+
+            li {
+                margin: 0;
+            }
+
+            .nav-global-01, .nav-global-02, .nav-global-03,
+            .nav-global-04, .nav-global-05, .nav-global-06 {
+                display: none;
+            }
+        }
+    }
 }

@@ -304,6 +304,8 @@ body header.global.slim {
 body {
     .home > header {
         margin-top: 0px;
+        border-bottom: none;
+        box-shadow: none;
 
         .outer-wrapper {
             display: none;

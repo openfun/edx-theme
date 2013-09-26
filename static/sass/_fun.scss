@@ -178,7 +178,7 @@ $content-inner-width: 980px;
 $content-min-width: $content-inner-width;
 $content-max-width: $content-inner-width;
 
-$header-height: 294px;
+$header-height: 293px;
 
 //TOP HEADER IMAGE MARGIN
 $header_image_margin: -77px;
@@ -385,6 +385,22 @@ body .wrapper-footer {
 
 body.view-login .introduction header h1 {
     width: 630px;
+}
+
+body.view-register {
+    .introduction header {
+        .illustration {
+            float: right;
+        }
+
+        h1 {
+            width: 630px;
+        }
+    }
+
+    .register .content .instructions {
+        display: none;
+    }
 }
 
 body {

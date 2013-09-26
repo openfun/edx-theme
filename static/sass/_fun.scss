@@ -301,18 +301,6 @@ body header.global.slim {
     }
 }
 
-body {
-    .home > header {
-        margin-top: 0px;
-        border-bottom: none;
-        box-shadow: none;
-
-        .outer-wrapper {
-            display: none;
-        }
-    }
-}
-
 
 //-----------------
 // Footer
@@ -416,6 +404,154 @@ body {
     }
 }
 
+//-----------------
+// Home
+//-----------------
+
+body {
+    .home > header {
+        margin-top: 0px;
+        border-bottom: none;
+        box-shadow: none;
+        position: relative;
+
+        .outer-wrapper {
+            display: none;
+        }
+
+        .tagline {
+            .main, .secondary {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -350px;
+                height: 40px;
+                line-height: 40px;
+                vertical-align: middle;
+                padding: 0 10px;
+            }
+
+            .main {
+                margin-top: -44px;
+                background-color: #f92c30;
+                color: #fff;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+
+            .secondary {
+                margin-top: -4px;
+                background-color: #fff;
+                color: #f92c30;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .home .discover {
+        margin-top: 15px;
+        background: url("../themes/fun/images/bg_discover.jpg") repeat-y scroll center 0px #e7e7e9;
+
+        .discover-inner {
+            width: $content-max-width;
+            margin: 0 auto;
+            position: relative;
+            padding: 70px 0;
+
+            .course-highlight {
+                height: 275px;
+                width: 440px;
+                position: relative;
+                overflow: hidden;
+
+                .course-image {
+                    width: 440px;
+                }
+
+                .course-begins,
+                .course-legend,
+                .course-description {
+                    position: absolute;
+                }
+
+                .course-begins {
+                    top: 7px;
+                    right: 7px;
+                    background-color: #f92c30;
+                    font-weight: bold;
+                    font-size: 11px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    padding: 6px 5px 4px;
+                }
+
+                .course-legend {
+                    top: 160px;
+                    width: 416px;
+                    background-color: #333;
+                    color: #fff;
+                    height: 15px;
+                    font-size: 14px;
+                    padding: 10px 12px;
+                }
+
+                .course-description {
+                    top: 195px;
+                    width: 416px;
+                    background-color: #fff;
+                    height: 72px;
+                    font-size: 14px;
+                    padding: 4px 12px;
+                    color: #333;
+                    line-height: 1.3em;
+
+                    a:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                .course-more {
+                    position: absolute;
+                    bottom: -3px;
+                    left: -1px;
+                }
+            }
+
+            .discover-description {
+                width: 470px;
+                height: 275px;
+                position: absolute;
+                top: 70px;
+                left: 462px;
+
+                h1 {
+                    text-align: left;
+                    text-transform: uppercase;
+                    color: #3a76bb;
+                    font-size: 20px;
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 1.4em;
+                    color: #333;
+                }
+
+                a.button {
+                    font-weight: bold;
+                    font-size: 14px;
+                    position: absolute;
+                    bottom: 0;
+                }
+                .button {
+                    @extend .m-btn-primary;
+                }
+            }
+        }
+    }
+}
 
 //-----------------
 // Slider (home)

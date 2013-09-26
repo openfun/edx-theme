@@ -383,10 +383,12 @@ body .wrapper-footer {
 // Content
 // ----------------
 
+// Login
 body.view-login .introduction header h1 {
     width: 630px;
 }
 
+// Register
 body.view-register {
     .introduction header {
         .illustration {
@@ -403,6 +405,26 @@ body.view-register {
     }
 }
 
+// FAQ / Help
+body .content-wrapper .help-page {
+    .illustration {
+        float: right;
+        margin-top: -20px;
+    }
+
+    .faq .responses {
+        li {
+            line-height: 1.6em;
+            margin-bottom: 5px;
+        }
+
+        h2, p {
+            text-align: justify;
+        }
+    }
+}
+
+// Generic body container
 body {
     .container, section.outside-app {
         max-width: $content-max-width;

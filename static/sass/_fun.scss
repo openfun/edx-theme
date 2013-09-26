@@ -589,6 +589,8 @@ body .home {
         text-align: center;
         cursor: pointer;
         float: left;
+        min-width: 180px;
+        min-height: 110px;
     }
 
     .als-prev, .als-next {

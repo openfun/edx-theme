@@ -706,3 +706,106 @@ body .find-courses {
         }
     }
 }
+
+
+//-----------------
+// About course
+//-----------------
+
+body .course-info {
+    header.course-profile {
+        border-bottom: none;
+
+        .intro-inner-wrapper {
+            width: $content-max-width;
+
+            .intro .main-cta {
+                a.register, .register {
+                    width: 623px;
+                    font-size: 14px;
+                }
+
+                a .register.disabled {
+                    width: 285px;
+                }
+
+                strong {
+                    width: 303px;
+                    font-size: 14px;
+                }
+            }
+
+            .register-license {
+                font-size: 10px;
+                font-style: italic;
+                margin-top: 5px;
+                text-align: center;
+
+                a {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    .course-sidebar {
+        .video-header {
+            background-color: rgb(14, 69, 134);
+            color: #fff;
+            font-size: 14px;
+            margin-top: -1px;
+            padding: 10px 0px;
+            margin: -1px 0 0;
+            text-align: center;
+        }
+
+        .hero {
+            position: relative;
+
+            .play-intro {
+                @include background-image(linear-gradient(-90deg, rgba(0,0,0, 0.65), rgba(0,0,0, 0.75)));
+                border-radius: 4px;
+                box-shadow: 0 1px 12px 0 rgba(0,0,0, 0.4);
+                border: 2px solid rgba(255,255,255, 0.8);
+                height: 80px;
+                left: 50%;
+                margin-top: -40px;
+                margin-left: -40px;
+                position: absolute;
+                top: 50%;
+                width: 80px;
+
+                &::after {
+                    color: rgba(255,255,255, 0.8);
+                    content: "\25B6";
+                    display: block;
+                    font: normal 2em/1em $sans-serif;
+                    left: 50%;
+                    margin-left: -11px;
+                    margin-top: -16px;
+                    position: absolute;
+                    text-shadow: 0 -1px rgba(0,0,0, 0.8);
+                    top: 50%;
+                }
+            }
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    .details .inner-wrapper {
+        text-align: justify;
+
+        section li {
+            line-height: 1.6em;
+            margin-bottom: 5px;
+        }
+
+        .course-staff .teacher .teacher-image {
+            height: auto;
+        }
+    }
+}

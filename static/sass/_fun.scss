@@ -384,8 +384,14 @@ body .wrapper-footer {
 // ----------------
 
 // Login
-body.view-login .introduction header h1 {
-    width: 630px;
+body.view-login .introduction header {
+    .illustration {
+        float: right;
+    }
+
+    h1 {
+        width: 630px;
+    }
 }
 
 // Register

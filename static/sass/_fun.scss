@@ -454,6 +454,35 @@ body {
 // Home
 //-----------------
 
+@mixin tagline {
+    .main, .secondary {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -350px;
+        height: 40px;
+        line-height: 40px;
+        vertical-align: middle;
+        padding: 0 10px;
+    }
+
+    .main {
+        margin-top: -44px;
+        background-color: #f92c30;
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    .secondary {
+        margin-top: -4px;
+        background-color: #fff;
+        color: #f92c30;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+
 body {
     .home > header {
         margin-top: 0px;
@@ -466,32 +495,7 @@ body {
         }
 
         .tagline {
-            .main, .secondary {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-left: -350px;
-                height: 40px;
-                line-height: 40px;
-                vertical-align: middle;
-                padding: 0 10px;
-            }
-
-            .main {
-                margin-top: -44px;
-                background-color: #f92c30;
-                color: #fff;
-                font-size: 20px;
-                text-transform: uppercase;
-            }
-
-            .secondary {
-                margin-top: -4px;
-                background-color: #fff;
-                color: #f92c30;
-                font-size: 16px;
-                font-weight: bold;
-            }
+            @include tagline;
         }
     }
 
@@ -652,3 +656,53 @@ body .home {
     }
 }
 
+
+//-----------------
+// Courses
+//-----------------
+
+body .find-courses {
+    header.search {
+        margin-top: 0px;
+        border-bottom: none;
+        box-shadow: none;
+        position: relative;
+        background-image: url('../themes/fun/images/illustrations/courses.jpg');
+
+        .main-search {
+            display: none;
+        }
+
+        .tagline {
+            @include tagline;
+        }
+    }
+
+    .courses .courses-listing .course {
+        header.course-preview {
+            hgroup h2 .course-number {
+                display: none;
+            }
+        }
+
+        .info {
+            .cover-image img {
+                height: 200px;
+                width: auto;
+                margin-left: -22px;
+            }
+
+            .desc {
+                font-size: 13px;
+            }
+
+            .bottom {
+                font-size: 13px;
+
+                .university {
+                    display: inline;
+                }
+            }
+        }
+    }
+}

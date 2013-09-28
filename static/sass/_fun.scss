@@ -817,6 +817,10 @@ body .course-info {
 
         .course-staff .teacher .teacher-image {
             height: auto;
+
+            img {
+                min-height: 0;
+            }
         }
     }
 }

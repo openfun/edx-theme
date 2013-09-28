@@ -3,48 +3,90 @@
 
 <%inherit file="/main.html" />
 
-<%block name="title"><title>About FUN</title></%block>
+<%block name="title"><title>Qu’est-ce que FUN ?</title></%block>
 
 <section class="container about">
   <section class="vision">
-    <section class="message left" id="about">
+    <section class="message left about" id="about">
       <div class="photo">
-        <img src="${static.url('themes/fun/images/quad.jpg')}" alt="Stanford Quad with Hoover Tower" />
-          <!-- Image Copyright owned by Giulio Gratta -->
+        <img src="${static.url('themes/fun/images/illustrations/about.jpg')}" alt="Illustration - Etudiants" />
       </div>
       <article>
-        <h2>About <span class="edx">FUN</span></h2>
+        <h2>Qu’est-ce que FUN ?</h2>
 
+        <p>FUN est une plateforme de <strong>MOOC (Massive Open Online Courses, en français « cours en ligne à participation ouverte et massive »)</strong> mise à disposition des établissements l’enseignement supérieur français et de leurs partenaires académiques dans le monde entier. Lancée par le Ministère de l’Enseignement Supérieur et la Recherche en octobre 2013, cette initiative vise à fédérer les projets des universités et écoles françaises pour leur donner une visibilité internationale, et permettre à tous les publics, où qu’ils soient dans le monde.</p>
+
+        <p>Tous les cours présents sur  FUN sont conçus par des professeurs d’universités et écoles françaises et leurs partenaires académiques internationaux. Les étudiants et les internautes peuvent suivre ces cours de manière interactive et collaborative, à leur rythme.</p>
+
+        <p>Le catalogue de cours disponibles  s’enrichira continuellement pour proposer une variété de formations répondant aux besoins de tous les publics.</p>
+      </article>
+      <hr class="fade-right-hr-divider">
+    </section>
+
+    <section class="message left actors" id="actors">
+      <article>
+        <h2>Un projet, quatre acteurs clés</h2>
+        <p>A l’initiative du Ministère de l’Enseignement Supérieur et de la Recherche, ce projet s’est construit autour de trois acteur publics…</p>
+        <ul>
+          <li>L’INRIA pour le déploiement de la plateforme, le CINES pour l’hébergement, RENATER pour les infrastructures réseaux</li>
+          <li>… et des experts et représentants des équipes pédagogiques de la communauté universitaire au cœur de la conception de la plateforme</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="message left mesr" id="mesr">
+      <div class="photo">
+        <a href="http://www.enseignementsup-recherche.gouv.fr/">
+          <img src="${static.url('themes/fun/images/logos/mesr.jpg')}" alt="Logo Ministère de l’Enseignement Supérieur et de la Recherche (MESR)" />
+        </a>
+      </div>
+      <article>
+        <h2>Ministère de l’Enseignement Supérieur et de la Recherche</h2>
+        <p>Le stratégie du Ministère de l’Enseignement Supérieur et de la Recherche (MESR) s’inscrit dans l’agenda numérique du gouvernement qui fixe comme axe prioritaire la jeunesse, l’école et l’université. La loi du 22 juillet 2013 qui prévoit d’introduire systématiquement dans les formations du service public de l’enseignement supérieur la mise à disposition des ressources numériques et d’une formation à leur utilisation, s’inscrit dans cette optique.</p>
+
+        <p>Pour entretenir cette dynamique, le MESR a pour objectif de contribuer à mettre en valeur l’offre de formation en ligne française et les ressources pédagogiques ouvertes. En permettant aux établissements qui le souhaitant de dispenser leurs formations en ligne, le lancement de FUN s’inscrit pleinement dans cette objectif.</p>
+      </article>
+    </section>
+
+    <section class="message left inria" id="inria">
+      <div class="photo">
+        <a href="http://www.inria.fr/">
+          <img src="${static.url('themes/fun/images/logos/inria.jpg')}" alt="Logo Inria" />
+        </a>
+      </div>
+      <article>
+        <h2>Inria</h2>
         <p>TBD</p>
       </article>
-      <hr class="fade-right-hr-divider">
     </section>
 
-    <section class="message left" id="faq">
+    <section class="message left cines" id="cines">
       <div class="photo">
-        <img src="${static.url('themes/fun/images/memchu.jpg')}" alt="Stanford Memorial Church Facade" />
-          <!-- Image Copyright owned by Giulio Gratta -->
+        <a href="http://www.cines.fr/">
+          <img src="${static.url('themes/fun/images/logos/cines.jpg')}" alt="Logo CINES" />
+        </a>
       </div>
       <article>
-        <h2>FAQs</h2>
-        <p><strong>Question?</strong><br />
-        TBD</p>
+        <h2>CINES</h2>
+        <p>Le C.I.N.E.S. est un EPA national, basé à Montpellier, placé sous tutelle du MESR. Il propose des moyens informatiques exceptionnels, à l’ensemble de la communauté scientifique, dans ses deux missions statutaires :</p>
+        <ul>
+          <li>le calcul numérique intensif: le Centre héberge et exploite un des plus puissants supercalculateurs européens</li>
+          <li>L’archivage pérenne de données électroniques : la plate-forme du CINES est agrée par le SIAF (Service Interministériel des Archives de France)</li>
+        </ul>
+        <p>Les ingénieurs et techniciens du CINES ont installé et mis en œuvre, dans les infrastructures sécurisées de haut niveau, les environnements de base de la plateforme supportant les progiciels développés par les partenaires de l’initiative « FUN ». Ils en assurent l’exploitation 24h sur 24.</p>
       </article>
-      <hr class="fade-right-hr-divider">
     </section>
 
-    <section class="message left" id="contact">
+    <section class="message left renater" id="renater">
       <div class="photo">
-        <img src="${static.url('themes/fun/images/dish.jpg')}" alt="Stanford Dish by Twilight" />
-          <!-- Image Copyright owned by Stanford University -->
+        <a href="http://www.renater.fr/">
+          <img src="${static.url('themes/fun/images/logos/renater.jpg')}" alt="Logo Renater" />
+        </a>
       </div>
-      <article id="stanford-OpenEdX-contact">
-        <h2>Contact Information</h2>
-        <p><strong>For general information email us at:</strong><br />
-        <a href="mailto:contact@example.com">contact@example.com</a></p>
+      <article>
+        <h2>Renater</h2>
+        <p>TBD</p>
       </article>
-      <hr class="fade-right-hr-divider">
     </section>
   </section>
-
 </section>

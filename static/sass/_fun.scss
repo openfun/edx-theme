@@ -824,3 +824,33 @@ body .course-info {
         }
     }
 }
+
+
+//-----------------
+// About site
+//-----------------
+
+body .container.about .vision {
+    margin-top: 30px;
+
+    .message {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .message > article {
+        p {
+            text-align: justify;
+        }
+
+        li {
+            line-height: 1.6em;
+            margin-bottom: 5px;
+        }
+    }
+
+    .message.actors > article {
+        margin-left: 250px;
+    }
+}
+

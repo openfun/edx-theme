@@ -915,3 +915,89 @@ body .container.contact-sent {
     @extend .activation;
 }
 
+
+//---------------------
+// University directory
+//---------------------
+
+body .university-list {
+    .introduction.container {
+        height: 120px;
+        border-bottom: 1px solid rgb(138, 140, 143);
+
+        .illustration {
+            float: right;
+            margin-right: -30px;
+        }
+
+        h1 {
+            height: 50px;
+            padding-bottom: 0;
+            text-align: left;
+            font-size: 25px;
+            margin: 30px 0 0;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: $main-color-dark;
+        }
+
+        h2 {
+            text-transform: none;
+        }
+    }
+
+    .university-list.container {
+        margin-top: 30px;
+
+        li {
+            float: left;
+            list-style-type: none;
+            padding: 0 40px;
+            margin-bottom: 20px;
+
+            a {
+                padding: 20px;
+                line-height: 150px;
+                border-bottom: none;
+            }
+        }
+    }
+
+}
+
+body .university-courses {
+    .introduction.container {
+        height: 199px;
+        background-color:rgba(255,255,255,0.5);
+        position: relative;
+
+        header {
+            position: absolute;
+            height: 100%;
+            width: 280px;
+            right: 30px;
+            top: 0;
+            overflow: hidden;
+            background-color: rgba(255,255,255,0.8);
+
+            img.logo {
+                margin-left: 55px;
+                margin-top: 10px;
+            }
+
+            h1 {
+                font-size: 18px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .courses-list.container {
+        margin-top: 30px;
+
+        p {
+            font-size: 15px;
+            text-align: justify;
+        }
+    }
+}

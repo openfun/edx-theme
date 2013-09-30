@@ -897,6 +897,12 @@ body .container.contact {
 
         .fields {
             margin-top: 30px;
+
+            .field select {
+                width: 100%;
+                margin: 0px;
+                padding: 8px 15px;
+            }
         }
 
         .form-actions button {

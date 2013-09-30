@@ -227,6 +227,16 @@ body header.global {
     nav {
         height: 107px;
 
+        &:before {
+            content: 'Découvrir, apprendre et réussir';
+            position: absolute;
+            top: 162px;
+            text-transform: uppercase;
+            font-size: 16px;
+            z-index: 10;
+            color: #fff;
+        }
+
         .nav-courseware {
             margin-top: 71px;
         }
@@ -384,8 +394,14 @@ body .wrapper-footer {
 // ----------------
 
 // Login
-body.view-login .introduction header h1 {
-    width: 630px;
+body.view-login .introduction header {
+    .illustration {
+        float: right;
+    }
+
+    h1 {
+        width: 630px;
+    }
 }
 
 // Register
@@ -410,6 +426,7 @@ body .content-wrapper .help-page {
     .illustration {
         float: right;
         margin-top: -20px;
+        margin-right: 1px;
     }
 
     .faq .responses {
@@ -448,6 +465,35 @@ body {
 // Home
 //-----------------
 
+@mixin tagline {
+    .main, .secondary {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -350px;
+        height: 40px;
+        line-height: 40px;
+        vertical-align: middle;
+        padding: 0 10px;
+    }
+
+    .main {
+        margin-top: -44px;
+        background-color: #f92c30;
+        color: #fff;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    .secondary {
+        margin-top: -4px;
+        background-color: #fff;
+        color: #f92c30;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+
 body {
     .home > header {
         margin-top: 0px;
@@ -460,32 +506,7 @@ body {
         }
 
         .tagline {
-            .main, .secondary {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-left: -350px;
-                height: 40px;
-                line-height: 40px;
-                vertical-align: middle;
-                padding: 0 10px;
-            }
-
-            .main {
-                margin-top: -44px;
-                background-color: #f92c30;
-                color: #fff;
-                font-size: 20px;
-                text-transform: uppercase;
-            }
-
-            .secondary {
-                margin-top: -4px;
-                background-color: #fff;
-                color: #f92c30;
-                font-size: 16px;
-                font-weight: bold;
-            }
+            @include tagline;
         }
     }
 
@@ -644,5 +665,247 @@ body .home {
     .als-next {
         right: 0;
     }
+}
+
+
+//-----------------
+// Courses
+//-----------------
+
+body .find-courses {
+    header.search {
+        margin-top: 0px;
+        border-bottom: none;
+        box-shadow: none;
+        position: relative;
+        background-image: url('../themes/fun/images/illustrations/courses.jpg');
+
+        .main-search {
+            display: none;
+        }
+
+        .tagline {
+            @include tagline;
+        }
+    }
+
+    .courses .courses-listing .course {
+        header.course-preview {
+            hgroup h2 .course-number {
+                display: none;
+            }
+        }
+
+        .info {
+            .cover-image img {
+                height: 200px;
+                width: auto;
+                margin-left: -22px;
+            }
+
+            .desc {
+                font-size: 13px;
+            }
+
+            .bottom {
+                font-size: 13px;
+
+                .university {
+                    display: inline;
+                }
+            }
+        }
+    }
+}
+
+
+//-----------------
+// About course
+//-----------------
+
+body .course-info {
+    header.course-profile {
+        border-bottom: none;
+
+        .intro-inner-wrapper {
+            width: $content-max-width;
+
+            .intro .main-cta {
+                a.register, .register {
+                    width: 623px;
+                    font-size: 14px;
+                }
+
+                a .register.disabled {
+                    width: 285px;
+                }
+
+                strong {
+                    width: 303px;
+                    font-size: 14px;
+                }
+            }
+
+            .register-license {
+                font-size: 10px;
+                font-style: italic;
+                margin-top: 5px;
+                text-align: center;
+
+                a {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    .course-sidebar {
+        .video-header {
+            background-color: rgb(14, 69, 134);
+            color: #fff;
+            font-size: 14px;
+            margin-top: -1px;
+            padding: 10px 0px;
+            margin: -1px 0 0;
+            text-align: center;
+        }
+
+        .hero {
+            position: relative;
+
+            .play-intro {
+                @include background-image(linear-gradient(-90deg, rgba(0,0,0, 0.65), rgba(0,0,0, 0.75)));
+                border-radius: 4px;
+                box-shadow: 0 1px 12px 0 rgba(0,0,0, 0.4);
+                border: 2px solid rgba(255,255,255, 0.8);
+                height: 80px;
+                left: 50%;
+                margin-top: -40px;
+                margin-left: -40px;
+                position: absolute;
+                top: 50%;
+                width: 80px;
+
+                &::after {
+                    color: rgba(255,255,255, 0.8);
+                    content: "\25B6";
+                    display: block;
+                    font: normal 2em/1em $sans-serif;
+                    left: 50%;
+                    margin-left: -11px;
+                    margin-top: -16px;
+                    position: absolute;
+                    text-shadow: 0 -1px rgba(0,0,0, 0.8);
+                    top: 50%;
+                }
+            }
+
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+    .details .inner-wrapper {
+        text-align: justify;
+
+        section li {
+            line-height: 1.6em;
+            margin-bottom: 5px;
+        }
+
+        .course-staff .teacher .teacher-image {
+            height: auto;
+
+            img {
+                min-height: 0;
+            }
+        }
+    }
+}
+
+
+//-----------------
+// About site
+//-----------------
+
+body .container.about .vision {
+    margin-top: 30px;
+
+    .message {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .message > article {
+        p {
+            text-align: justify;
+        }
+
+        li {
+            line-height: 1.6em;
+            margin-bottom: 5px;
+        }
+    }
+
+    .message.actors > article {
+        margin-left: 250px;
+    }
+}
+
+
+//-----------------
+// Contact form
+//-----------------
+
+body .container.contact {
+    @extend .login;
+
+    section.content {
+        margin-top: 50px;
+
+        h2 {
+            border-bottom: 1px solid rgb(200, 200, 200);
+            padding-bottom: 15px;
+        }
+
+        .status.message.submission-error {
+            .message-title {
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0px;
+            }
+
+            .message-copy {
+                font-size: 15px;
+                margin: 0px 0px 20px;
+                color: rgb(46, 45, 41);
+                line-height: 1.41575em;
+
+                ul {
+                    margin-top: 5px;
+                }
+
+                li {
+                    list-style: disc;
+                    margin-left: 15px;
+                }
+            }
+        }
+
+        .fields {
+            margin-top: 30px;
+        }
+
+        .form-actions button {
+            font-weight: bold;
+        }
+    }
+}
+
+body .container.contact-sent {
+    @extend .activation;
 }
 

@@ -312,6 +312,20 @@ body header.global.slim {
     }
 }
 
+// Slim version (courseware)
+body header.global.slim {
+    nav:before, 
+    nav .logo:before,
+    nav .logo:after {
+        display: none !important;
+    }
+
+    h2 {
+        width: 600px;
+        margin-top: 44px;
+    }
+}
+
 
 //-----------------
 // Footer
@@ -764,6 +778,20 @@ body .course-info {
                 }
             }
 
+            .media .hero {
+                height: 150px;
+                background-color: #fff;
+
+                img {
+                    width: auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -55px;
+                    margin-left: -85px;
+                }
+            }
+
             .register-license {
                 font-size: 10px;
                 font-style: italic;
@@ -930,7 +958,7 @@ body .container.contact {
 }
 
 body .container.contact-sent {
-    @extend .activation;
+    @extend .activation !optional;
 }
 
 
@@ -1019,3 +1047,12 @@ body .university-courses {
         }
     }
 }
+
+//---------------------
+// Courseware
+//---------------------
+
+body nav.course-material .inner-wrapper {
+    max-width: $content-max-width;
+}
+

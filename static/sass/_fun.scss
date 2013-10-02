@@ -271,7 +271,6 @@ body header.global {
                 li.nav-global-element {
                     width: 230px;
                     text-align: center;
-                    
                 }
 
                 li.nav-global-separator {
@@ -446,6 +445,17 @@ body .content-wrapper .help-page {
         h2, p {
             text-align: justify;
         }
+    }
+}
+
+body .static-container {
+    ul li, ol li {
+        line-height: 1.6em;
+        margin-bottom: 5px;
+    }
+
+    h2, p {
+        text-align: justify;
     }
 }
 

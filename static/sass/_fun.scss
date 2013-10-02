@@ -407,12 +407,20 @@ body.view-login .introduction header {
 // Register
 body.view-register {
     .introduction header {
+        position: relative;
+
         .illustration {
             float: right;
         }
 
         h1 {
             width: 630px;
+        }
+
+        h2 {
+            text-transform: none;
+            top: 85px;
+            position: absolute;
         }
     }
 

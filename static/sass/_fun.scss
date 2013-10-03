@@ -271,7 +271,6 @@ body header.global {
                 li.nav-global-element {
                     width: 230px;
                     text-align: center;
-                    
                 }
 
                 li.nav-global-separator {
@@ -310,6 +309,20 @@ body header.global.slim {
         img {
             height: 107px;
         }
+    }
+}
+
+// Slim version (courseware)
+body header.global.slim {
+    nav:before, 
+    nav .logo:before,
+    nav .logo:after {
+        display: none !important;
+    }
+
+    h2 {
+        width: 600px;
+        margin-top: 44px;
     }
 }
 
@@ -407,12 +420,20 @@ body.view-login .introduction header {
 // Register
 body.view-register {
     .introduction header {
+        position: relative;
+
         .illustration {
             float: right;
         }
 
         h1 {
             width: 630px;
+        }
+
+        h2 {
+            text-transform: none;
+            top: 85px;
+            position: absolute;
         }
     }
 
@@ -438,6 +459,17 @@ body .content-wrapper .help-page {
         h2, p {
             text-align: justify;
         }
+    }
+}
+
+body .static-container {
+    ul li, ol li {
+        line-height: 1.6em;
+        margin-bottom: 5px;
+    }
+
+    h2, p {
+        text-align: justify;
     }
 }
 
@@ -746,6 +778,20 @@ body .course-info {
                 }
             }
 
+            .media .hero {
+                height: 150px;
+                background-color: #fff;
+
+                img {
+                    width: auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -55px;
+                    margin-left: -85px;
+                }
+            }
+
             .register-license {
                 font-size: 10px;
                 font-style: italic;
@@ -897,6 +943,12 @@ body .container.contact {
 
         .fields {
             margin-top: 30px;
+
+            .field select {
+                width: 100%;
+                margin: 0px;
+                padding: 8px 15px;
+            }
         }
 
         .form-actions button {
@@ -906,6 +958,101 @@ body .container.contact {
 }
 
 body .container.contact-sent {
-    @extend .activation;
+    @extend .activation !optional;
+}
+
+
+//---------------------
+// University directory
+//---------------------
+
+body .university-list {
+    .introduction.container {
+        height: 120px;
+        border-bottom: 1px solid rgb(138, 140, 143);
+
+        .illustration {
+            float: right;
+            margin-right: -30px;
+        }
+
+        h1 {
+            height: 50px;
+            padding-bottom: 0;
+            text-align: left;
+            font-size: 25px;
+            margin: 30px 0 0;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: $main-color-dark;
+        }
+
+        h2 {
+            text-transform: none;
+        }
+    }
+
+    .university-list.container {
+        margin-top: 30px;
+
+        li {
+            float: left;
+            list-style-type: none;
+            padding: 0 40px;
+            margin-bottom: 20px;
+
+            a {
+                padding: 20px;
+                line-height: 150px;
+                border-bottom: none;
+            }
+        }
+    }
+
+}
+
+body .university-courses {
+    .introduction.container {
+        height: 199px;
+        background-color:rgba(255,255,255,0.5);
+        position: relative;
+
+        header {
+            position: absolute;
+            height: 100%;
+            width: 280px;
+            right: 30px;
+            top: 0;
+            overflow: hidden;
+            background-color: rgba(255,255,255,0.8);
+
+            img.logo {
+                margin-left: 55px;
+                margin-top: 10px;
+            }
+
+            h1 {
+                font-size: 18px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .courses-list.container {
+        margin-top: 30px;
+
+        p {
+            font-size: 15px;
+            text-align: justify;
+        }
+    }
+}
+
+//---------------------
+// Courseware
+//---------------------
+
+body nav.course-material .inner-wrapper {
+    max-width: $content-max-width;
 }
 

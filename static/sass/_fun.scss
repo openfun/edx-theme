@@ -226,15 +226,15 @@ body header.global {
 
     nav {
         height: 107px;
+        text-transform: uppercase;
+        color: #fff;
 
         &:before {
             content: 'Découvrir, apprendre et réussir';
             position: absolute;
             top: 162px;
-            text-transform: uppercase;
             font-size: 16px;
             z-index: 10;
-            color: #fff;
         }
 
         .nav-courseware {
@@ -302,22 +302,20 @@ body header.global {
     }
 }
 
+// Slim version (courseware)
 body header.global.slim {
     background-color: $main-color-content-background;
+
+    nav:before, 
+    nav .logo:before,
+    nav .logo:after {
+        display: none !important;
+    }
 
     h1.logo {
         img {
             height: 107px;
         }
-    }
-}
-
-// Slim version (courseware)
-body header.global.slim {
-    nav:before, 
-    nav .logo:before,
-    nav .logo:after {
-        display: none !important;
     }
 
     h2 {
@@ -646,6 +644,21 @@ body {
     }
 }
 
+//-------------------------
+// IE / Unsupported browser
+//-------------------------
+
+body.view-unsupported-browser {
+    h1.logo {
+        margin-top: 50px;
+    }
+
+    p.unsupported-browser-warning {
+        text-align: center;
+        margin-top: 70px;
+    }
+}
+
 //-----------------
 // Slider (home)
 //-----------------
@@ -854,6 +867,7 @@ body .course-info {
     }
 
     .details .inner-wrapper {
+        font-size: 14px;
         text-align: justify;
 
         section li {
@@ -882,6 +896,11 @@ body .container.about .vision {
     .message {
         padding-bottom: 0;
         border-bottom: 0;
+
+        .photo {
+            border: none;
+            padding: 2px;
+        }
     }
 
     .message > article {
@@ -953,6 +972,11 @@ body .container.contact {
 
         .form-actions button {
             font-weight: bold;
+        }
+
+        .form-legend {
+            margin-top: 20px;
+            font-size: 12px;
         }
     }
 }
@@ -1034,6 +1058,7 @@ body .university-courses {
             h1 {
                 font-size: 18px;
                 margin-top: 10px;
+                font-weight: bold;
             }
         }
     }
@@ -1046,6 +1071,10 @@ body .university-courses {
             text-align: justify;
         }
     }
+}
+
+body .find-courses {
+    background-color: $main-color-content-background;
 }
 
 //---------------------

@@ -33,7 +33,14 @@ generic_env_config: &edxapp_generic_env
     ...
     'THEME_NAME': 'fun'
     'MKTG_URL_LINK_MAP':
-        'FAQ': 'root'
+      "ABOUT": "about"
+      "HELP": "help"
+      "HONOR": "honor"
+      "HOW-IT-WORKS": "how-it-works"
+      "TOS": "tos"
+      "FAQ": null
+      "PRIVACY": null,
+      "CONTACT": null
 ```
 
 This will make ansible add the `THEME_NAME` variable  to the env tokens in `/opt/wwc/lms*.env.json`
@@ -92,18 +99,27 @@ Here are the env.json with the proper values to enable the `fun` theme:
 
 ```
 {
-  "PLATFORM_NAME": "FUNMOOC",
-  "SITE_NAME": "connect.inria.fr",
-  "BUGS_EMAIL": "bugs@example.com",
-  "CONTACT_EMAIL": "contact@example.com",
-  "TECH_SUPPORT_EMAIL": "techsupport@example.com",
+  "PLATFORM_NAME": "FUN",
+  "SITE_NAME": "france-universite-numerique-mooc.fr",
+  "DEFAULT_FROM_EMAIL": "inscription@france-universite-numerique-mooc.fr",
+  "DEFAULT_FEEDBACK_EMAIL": "feedback@france-universite-numerique-mooc.fr",
+  "DEFAULT_BULK_FROM_EMAIL": "cours@france-universite-numerique-mooc.fr",
+  "SERVER_EMAIL": "dev@france-universite-numerique-mooc.fr",
+  "TECH_SUPPORT_EMAIL": "helpdesk@france-universite-numerique-mooc.fr",
+  "CONTACT_EMAIL": "contact@france-universite-numerique-mooc.fr",
+  "BUGS_EMAIL": "bugs@france-universite-numerique-mooc.fr",
+  "PAYMENT_SUPPORT_EMAIL": "paiements@france-universite-numerique-mooc.fr",
+  "ADMINS": ["dev@france-universite-numerique-mooc.fr"],
   "THEME_NAME": "fun",
   "MKTG_URL_LINK_MAP": {
-    "CONTACT": null,
+    "ABOUT": "about",
+    "HELP": "help",
+    "HONOR": "honor",
+    "HOW-IT-WORKS": "how-it-works",
+    "TOS": "tos",
     "FAQ": null,
-    "HONOR": null,
     "PRIVACY": null,
-    "TOS": null,
+    "CONTACT": null
   }
 }
 ```
@@ -128,9 +144,16 @@ if not THEME_NAME is None:
     enable_theme(THEME_NAME)
     FAVICON_PATH = 'themes/%s/images/favicon.ico' % THEME_NAME
 
+DEFAULT_FROM_EMAIL = ENV_TOKENS.get('DEFAULT_FROM_EMAIL', DEFAULT_FROM_EMAIL)
+DEFAULT_FEEDBACK_EMAIL = ENV_TOKENS.get('DEFAULT_FEEDBACK_EMAIL', DEFAULT_FEEDBACK_EMAIL)
+DEFAULT_BULK_FROM_EMAIL = ENV_TOKENS.get('DEFAULT_BULK_FROM_EMAIL', DEFAULT_BULK_FROM_EMAIL)
+SERVER_EMAIL = ENV_TOKENS.get('SERVER_EMAIL', SERVER_EMAIL)
 TECH_SUPPORT_EMAIL = ENV_TOKENS.get('TECH_SUPPORT_EMAIL', TECH_SUPPORT_EMAIL)
 CONTACT_EMAIL = ENV_TOKENS.get('CONTACT_EMAIL', CONTACT_EMAIL)
 BUGS_EMAIL = ENV_TOKENS.get('BUGS_EMAIL', BUGS_EMAIL)
+PAYMENT_SUPPORT_EMAIL = ENV_TOKENS.get('PAYMENT_SUPPORT_EMAIL', PAYMENT_SUPPORT_EMAIL)
+ADMINS = ENV_TOKENS.get('ADMINS', ADMINS)
+MANAGERS = ADMINS
 
 # Marketing link overrides
 for key, value in ENV_TOKENS.get('MKTG_URL_LINK_MAP', {}).items():

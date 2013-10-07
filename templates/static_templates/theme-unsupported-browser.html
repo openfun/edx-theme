@@ -1,0 +1,26 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='../static_content.html'/>
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Navigateur</title>
+
+  <%static:css group='application'/>
+
+  <!--[if lt IE 9]>
+  <script src="{% static 'js/html5shiv.js' %}"></script>
+  <![endif]-->
+
+</head>
+
+<body class="view-unsupported-browser">
+
+<h1 class="logo">
+  <img src="/static/themes/fun/images/logo.png">
+</h1>
+
+<p class="unsupported-browser-warning">La version de votre navigateur n'est pas supportée car trop ancienne. Nous recommandons vivement d'utiliser <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox</a> ou <a href="https://www.google.com/intl/fr/chrome/browser/" target="_blank">Chrome</a>.</p>
+
+</body>
+</html>

@@ -866,20 +866,26 @@ body .course-info {
         }
     }
 
-    .details .inner-wrapper {
-        font-size: 14px;
-        text-align: justify;
-
-        section li {
-            line-height: 1.6em;
-            margin-bottom: 5px;
+    .details {
+        nav a {
+            font-size: 18px;
+            font-weight: bold;
         }
 
-        .course-staff .teacher .teacher-image {
-            height: auto;
+        .inner-wrapper {
+            text-align: justify;
 
-            img {
-                min-height: 0;
+            section li {
+                line-height: 1.6em;
+                margin-bottom: 5px;
+            }
+
+            .course-staff .teacher .teacher-image {
+                height: auto;
+
+                img {
+                    min-height: 0;
+                }
             }
         }
     }

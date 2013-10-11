@@ -1,5 +1,5 @@
-Overview
-========
+Overview (v1.1)
+===============
 This directory stores FUN's theming files for its edX instance.
 It is based on the Stanford theme. We're storing the stuff here 
 and then pulling it in to our instance when we deploy.

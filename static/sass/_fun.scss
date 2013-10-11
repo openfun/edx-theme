@@ -469,6 +469,54 @@ body .static-container {
     h2, p {
         text-align: justify;
     }
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    p + h2, ul + h2, ol + h2 {
+        margin-top: 70px;
+    }
+
+    table.licenses {
+        margin: 40px 0 0;
+        font-size: 15px;
+
+        th, td {
+            border: 1px solid #ccc;
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px 5px;
+        }
+
+        td .deeds img {
+            padding: 5px;
+            height: 30px;
+        }
+
+        .column-other {
+            width: 130px;
+        }
+
+        tbody tr {
+            height: 80px;
+        }
+
+        .cross {
+            color: #e36c0a;
+        }
+    }
+    p.table-legend {
+        text-align: right;
+        font-style: italic;
+        font-size: 13px;
+        margin-bottom: 40px;
+
+        a {
+            font-style: italic;
+        }
+    }
+
 }
 
 // Generic body container
@@ -882,6 +930,8 @@ body .course-info {
 
             .course-staff .teacher .teacher-image {
                 height: auto;
+                padding: 0;
+                border: 0;
 
                 img {
                     min-height: 0;
@@ -1089,5 +1139,15 @@ body .find-courses {
 
 body nav.course-material .inner-wrapper {
     max-width: $content-max-width;
+}
+
+//---------------------
+// Dashboard
+//---------------------
+
+body.view-dashboard {
+    .modal h2 span {
+        color: rgb(88, 87, 84);
+    }
 }
 

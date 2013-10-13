@@ -419,6 +419,7 @@ body.view-login .introduction header {
 body.view-register {
     .introduction header {
         position: relative;
+        height: 140px;
 
         .illustration {
             float: right;
@@ -426,11 +427,12 @@ body.view-register {
 
         h1 {
             width: 630px;
+            margin-top: 70px;
         }
 
         h2 {
             text-transform: none;
-            top: 85px;
+            top: 105px;
             position: absolute;
         }
     }
@@ -556,7 +558,7 @@ body {
     }
 
     .main {
-        margin-top: -44px;
+        margin-top: -45px;
         background-color: #f92c30;
         color: #fff;
         font-size: 20px;
@@ -564,7 +566,7 @@ body {
     }
 
     .secondary {
-        margin-top: -4px;
+        margin-top: -5px;
         background-color: #fff;
         color: #f92c30;
         font-size: 16px;
@@ -574,10 +576,12 @@ body {
 
 body {
     .home > header {
+        background: url("../themes/fun/images/pano.jpg") no-repeat scroll center 0% / cover rgb(233, 230, 223);
         margin-top: 0px;
         border-bottom: none;
         box-shadow: none;
         position: relative;
+        height: 381px;
 
         .outer-wrapper {
             display: none;
@@ -771,7 +775,8 @@ body .find-courses {
         border-bottom: none;
         box-shadow: none;
         position: relative;
-        background-image: url('../themes/fun/images/illustrations/courses.jpg');
+        background-image: url('../themes/fun/images/pano.jpg');
+        height: 381px;
 
         .main-search {
             display: none;
@@ -956,6 +961,10 @@ body .container.about .vision {
         .photo {
             border: none;
             padding: 2px;
+
+            img {
+                background-color: #fff;
+            }
         }
     }
 
@@ -982,6 +991,10 @@ body .container.about .vision {
 
 body .container.contact {
     @extend .login;
+
+    & > .illustration {
+        float: right;
+    }
 
     section.content {
         margin-top: 50px;

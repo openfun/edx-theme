@@ -358,12 +358,15 @@ body .wrapper-footer {
                 }
             }
         }
+        .colophon .nav-colophon.nav-colophon2 {
+            margin-top: 5px;
+        }
 
         .reference {
             position: absolute;
             left: 0;
             top: 50%;
-            margin-top: 4px;
+            margin-top: 22px;
             font-size: 12px;
             color: #666;
 
@@ -406,12 +409,15 @@ body .wrapper-footer {
 
 // Login
 body.view-login .introduction header {
+    height: 140px;
+
     .illustration {
         float: right;
     }
 
     h1 {
         width: 630px;
+        margin-top: 70px;
     }
 }
 
@@ -468,7 +474,7 @@ body .static-container {
         margin-bottom: 5px;
     }
 
-    h2, p {
+    h2, p, li {
         text-align: justify;
     }
 
@@ -480,7 +486,7 @@ body .static-container {
         margin-top: 70px;
     }
 
-    table.licenses {
+    table.licenses, table.copyrights-images {
         margin: 40px 0 0;
         font-size: 15px;
 
@@ -490,7 +496,9 @@ body .static-container {
             vertical-align: middle;
             padding: 10px 5px;
         }
+    }
 
+    table.licenses {
         td .deeds img {
             padding: 5px;
             height: 30px;
@@ -508,6 +516,13 @@ body .static-container {
             color: #e36c0a;
         }
     }
+    
+    table.copyrights-images {
+        td {
+            padding: 10px 20px;
+        }
+    }
+    
     p.table-legend {
         text-align: right;
         font-style: italic;
@@ -1040,6 +1055,10 @@ body .container.contact {
         .form-legend {
             margin-top: 20px;
             font-size: 12px;
+        }
+
+        p {
+            text-align: justify;
         }
     }
 }

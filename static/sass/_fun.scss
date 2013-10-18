@@ -816,23 +816,35 @@ body .find-courses {
         }
     }
 
-    .courses .courses-listing .course {
-        header.course-preview {
-            hgroup h2 .course-number {
-                display: none;
-            }
+    .courses {
+        position: relative;
+
+        .university-filter {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-family: $sans-serif;
+            font-size: 13px;
         }
 
-        .info {
-            .desc {
-                font-size: 13px;
+        .courses-listing .course {
+            header.course-preview {
+                hgroup h2 .course-number {
+                    display: none;
+                }
             }
 
-            .bottom {
-                font-size: 13px;
+            .info {
+                .desc {
+                    font-size: 13px;
+                }
 
-                .university {
-                    display: inline;
+                .bottom {
+                    font-size: 13px;
+
+                    .university {
+                        display: inline;
+                    }
                 }
             }
         }

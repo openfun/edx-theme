@@ -1,10 +1,29 @@
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+## mako
+<%
+import re
+from urllib import quote_plus
+%>
 
-  //ga('create', 'UA-40837107-1', 'class.stanford.edu');
-  //ga('send', 'pageview');
-
+<!-- Xiti -->
+% if settings.XITI_ENABLED:
+<script type="text/javascript">
+  <!--
+  xtnv = document;
+  xtsd = "${settings.XITI_XTSD}";
+  xtsite = "${settings.XITI_XTSITE}";
+  xtn2 = "${settings.XITI_XTN2}";
+  xtpage = "${ '::'.join(re.sub(r'[^a-zA-Z0-9\/]+', '', request.path).split('/')[1:]) }";
+  xtdi = "";
+  xt_multc = "";
+  xt_an = "";
+  xt_ac = "";
+  //do not modify below
+  if (window.xtparam!=null){window.xtparam+="&ac="+xt_ac+"&an="+xt_an+xt_multc;}
+  else{window.xtparam="&ac="+xt_ac+"&an="+xt_an+xt_multc;};
+  //-->
 </script>
+<script type="text/javascript" src="${settings.XITI_JS_URL}"></script>
+<noscript>
+  <img width="1" height="1" alt="" src="${settings.XITI_XTSD}.xiti.com/hit.xiti?s=${settings.XITI_XTSITE}&s2=${settings.XITI_XTN2}&p=${ quote_plus('::'.join(re.sub(r'[^a-zA-Z0-9\/]+', '', request.path).split('/')[1:])) }&di=&an=&ac=" >
+</noscript>
+% endif

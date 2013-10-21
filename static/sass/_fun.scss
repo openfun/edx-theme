@@ -456,19 +456,33 @@ body .content-wrapper .help-page {
         margin-right: 1px;
     }
 
-    .faq .responses {
-        li {
-            line-height: 1.6em;
-            margin-bottom: 5px;
+    .faq {
+        nav.categories {
+            position: fixed;
+            left: 50%;
+            margin-left: 257px;
+            top: 423px;
+            width: 232px;
         }
 
-        h2, p {
-            text-align: justify;
+        .responses {
+            li {
+                line-height: 1.6em;
+                margin-bottom: 5px;
+            }
+
+            h2, p {
+                text-align: justify;
+            }
         }
     }
 }
 
 body .static-container {
+    .inner-wrapper {
+        width: 980px;
+    }
+
     ul li, ol li {
         line-height: 1.6em;
         margin-bottom: 5px;
@@ -802,23 +816,35 @@ body .find-courses {
         }
     }
 
-    .courses .courses-listing .course {
-        header.course-preview {
-            hgroup h2 .course-number {
-                display: none;
-            }
+    .courses {
+        position: relative;
+
+        .university-filter {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-family: $sans-serif;
+            font-size: 13px;
         }
 
-        .info {
-            .desc {
-                font-size: 13px;
+        .courses-listing .course {
+            header.course-preview {
+                hgroup h2 .course-number {
+                    display: none;
+                }
             }
 
-            .bottom {
-                font-size: 13px;
+            .info {
+                .desc {
+                    font-size: 13px;
+                }
 
-                .university {
-                    display: inline;
+                .bottom {
+                    font-size: 13px;
+
+                    .university {
+                        display: inline;
+                    }
                 }
             }
         }
@@ -1134,13 +1160,7 @@ body .university-courses {
 
             img.logo {
                 margin-left: 55px;
-                margin-top: 10px;
-            }
-
-            h1 {
-                font-size: 18px;
-                margin-top: 10px;
-                font-weight: bold;
+                margin-top: 45px;
             }
         }
     }

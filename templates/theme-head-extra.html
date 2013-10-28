@@ -2,7 +2,12 @@
 
 <%namespace name='static' file='/static_content.html'/>
 <!--[if lt IE 10]>
-<script type="text/javascript">
-    window.location = "/unsupported-browser";
-</script>
+  <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      if ("/" == window.location.pathname) {
+        alert("Les applications de la plateforme FUN nécessitent une version récente de votre navigateur pour un fonctionnement optimal.\nPour profiter pleinement de l’expérience FUN, nous vous invitons à télécharger et utiliser les dernières version de Firefox, Chrome ou Internet Explorer 10.");
+      }
+    });
+  </script>
 <![endif]-->

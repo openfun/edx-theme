@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 1.4.1
+
+- LMS wiki: set correct display by adding new CSS files
+- Homepage: align video and "all courses" button
+- New rules for AEGIS markers
+
 ## 1.4
 
 - Backport CSS/SASS enhancements from edX upstream

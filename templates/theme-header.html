@@ -35,16 +35,17 @@ from urllib import quote_plus
 </noscript>
 % endif
 
-<!-- AEGIS -->
+## AEGIS
 <%
 url = ''
-if request.path == '/':
+if request.path == '/courses':
    url = 'cat=2013-433'
 elif request.path.startswith('/activate/'):
    url = 'cat=2013-311'
-else:
-   url = 'cat=2013-892;u1=[' + quote_plus("https://" + request.META['HTTP_HOST'] + request.path) + ']'
+elif re.match(r'^/courses/[^/]+/[^/]+/[^/]+/about$', request.path):
+   url = 'cat=2013-892;u1=[' + quote_plus("https://" + request.META['HTTP_HOST'] + request.get_full_path()) + ']'
 %>
+% if url != '':
 <!--
 Start of DoubleClick Floodlight Tag: Please do not remove
 Activity name of this tag: 2013-10-MESR-MOOC-Arrivee Page MOOC
@@ -61,7 +62,7 @@ document.write('<iframe src="https://3005751.fls.doubleclick.net/activityi;src=3
 <iframe src="https://3005751.fls.doubleclick.net/activityi;src=3005751;type=moocw700;${ url };ord=1;num=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
 </noscript>
 <!-- End of DoubleClick Floodlight Tag: Please do not remove -->
-
+% endif
 </%block>
 
 ## TODO: this will eventually be moved to the Sass

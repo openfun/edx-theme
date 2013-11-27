@@ -799,23 +799,7 @@ body .home {
 //-----------------
 
 body .find-courses {
-    header.search {
-        margin-top: 0px;
-        border-bottom: none;
-        box-shadow: none;
-        position: relative;
-        background-image: url('../themes/fun/images/pano.jpg');
-        height: 381px;
-
-        .main-search {
-            display: none;
-        }
-
-        .tagline {
-            @include tagline;
-        }
-    }
-
+    
     .courses {
         position: relative;
 

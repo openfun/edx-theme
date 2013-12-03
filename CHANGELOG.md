@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 1.4.3
+
+- TBD
+
+## 1.4.2
+
+- Dailymotion Cloud: each university uses its own DM user_id and api_key
+
 ## 1.4.1
 
 - LMS wiki: set correct display by adding new CSS files

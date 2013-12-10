@@ -269,7 +269,7 @@ body header.global {
                 }
 
                 li.nav-global-element {
-                    width: 230px;
+                    width: 190px;
                     text-align: center;
                 }
 
@@ -314,13 +314,15 @@ body header.global.slim {
 
     h1.logo {
         img {
-            height: 107px;
+            height: 70px;
         }
     }
 
     h2 {
-        width: 600px;
-        margin-top: 44px;
+        font-size:1.1em;
+        width: 700px;
+        margin-top: 17px;
+        white-space: normal;
     }
 }
 

@@ -1,6 +1,7 @@
 ## mako
 <%! from django.core.urlresolvers import reverse %>
 <%namespace name='static' file='/static_content.html'/>
+<%namespace file='/navigation.html' import="popup_layout"/>
 <%inherit file="/navigation.html"/>
 
 ## Toss the brand bar on top of the page
@@ -98,10 +99,9 @@ document.write('<iframe src="https://3005751.fls.doubleclick.net/activityi;src=3
     <li class="nav-global-separator"></li>
     <li class="nav-global-element"><a href="/university/">Les établissements</a></li>
     <li class="nav-global-separator"></li>
-    <li class="nav-global-element"><a href="/logout">Se déconnecter</a></li>
+    <li class="nav-global-element"><a href="#log-out" rel="leanModal">Se déconnecter</a></li>
   </ul>
 </li>
 </%block>
-
 
 

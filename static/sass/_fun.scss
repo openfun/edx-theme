@@ -225,7 +225,7 @@ body header.global {
     }
 
     nav {
-        height: 107px;
+        height: auto;
         text-transform: uppercase;
         color: #fff;
 
@@ -320,8 +320,8 @@ body header.global.slim {
 
     h2 {
         font-size:1.1em;
-        width: 700px;
-        margin-top: 17px;
+        width: 750px;
+        margin-top: 29px;
         white-space: normal;
     }
 }

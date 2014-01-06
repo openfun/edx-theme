@@ -320,7 +320,8 @@ body header.global.slim {
 
     h2 {
         font-size:1.1em;
-        width: 750px;
+        max-width: 630px;
+        width: auto;
         margin-top: 29px;
         white-space: normal;
     }

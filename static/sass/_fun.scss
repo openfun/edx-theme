@@ -413,22 +413,8 @@ body .wrapper-footer {
             top: 50%;
             margin-top: -15px;
 
-            ul {
-                margin: 0;
-                padding: 0;
-            }
+            @include footer-list;
 
-            li {
-                display: inline;
-                list-style-type: none;
-                padding-left: 5px;
-
-                a, a:hover, a:visited {
-                    height: 33px;
-                    line-height: 35px;
-                    border-bottom: none;
-                }
-            }
         }
     }
 }

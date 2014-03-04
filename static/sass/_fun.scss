@@ -332,6 +332,25 @@ body header.global.slim {
 // Footer
 //-----------------
 
+@mixin footer-list {
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline;
+        list-style-type: none;
+        padding-left: 5px;
+
+        a, a:hover, a:visited {
+            height: 33px;
+            line-height: 35px;
+            border-bottom: none;
+        }
+    }
+}
+
 body .wrapper-footer {
     background-color: $main-color-content-background;
     border-top: none;
@@ -377,6 +396,15 @@ body .wrapper-footer {
                 color: #666;
                 border-bottom: none;
             }
+        }
+
+        .powered-by {
+            position: absolute;
+            right: 0;
+            margin-top: -85px;
+
+            @include footer-list;
+
         }
 
         .social-networks {

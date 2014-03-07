@@ -332,6 +332,25 @@ body header.global.slim {
 // Footer
 //-----------------
 
+@mixin footer-list {
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline;
+        list-style-type: none;
+        padding-left: 5px;
+
+        a, a:hover, a:visited {
+            height: 33px;
+            line-height: 35px;
+            border-bottom: none;
+        }
+    }
+}
+
 body .wrapper-footer {
     background-color: $main-color-content-background;
     border-top: none;
@@ -379,28 +398,23 @@ body .wrapper-footer {
             }
         }
 
+        .powered-by {
+            position: absolute;
+            right: 0;
+            margin-top: -85px;
+
+            @include footer-list;
+
+        }
+
         .social-networks {
             position: absolute;
             right: 0;
             top: 50%;
             margin-top: -15px;
 
-            ul {
-                margin: 0;
-                padding: 0;
-            }
+            @include footer-list;
 
-            li {
-                display: inline;
-                list-style-type: none;
-                padding-left: 5px;
-
-                a, a:hover, a:visited {
-                    height: 33px;
-                    line-height: 35px;
-                    border-bottom: none;
-                }
-            }
         }
     }
 }

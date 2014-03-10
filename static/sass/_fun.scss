@@ -400,8 +400,8 @@ body .wrapper-footer {
 
         .powered-by {
             position: absolute;
-            right: 0;
-            margin-top: -45px;
+            right: -10px;
+            margin-top: -55px;
 
             @include footer-list;
 
@@ -411,7 +411,7 @@ body .wrapper-footer {
             position: absolute;
             right: 0;
             top: 50%;
-            margin-top: 25px;
+            margin-top: 5px;
 
             @include footer-list;
 

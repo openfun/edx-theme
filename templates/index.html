@@ -5,10 +5,9 @@
 <%! from universities.models import University %>
 <%inherit file="main.html" />
 <%namespace name='static' file='static_content.html'/>
-
-% if self.fun_theme_enabled():
+<%doc> The title block is commented because defined elsewhere
 <%block name="title"><title>FUN - France Université Numérique</title></%block>
-% endif
+</%doc>
 
 <section class="home">
   <header>
@@ -56,14 +55,12 @@
 
     </div>
 
-  % if self.fun_theme_enabled():
   <div class="tagline">
     <div class="main">Vivez l’expérience FUN</div>
     <div class="secondary">
       Retrouvez les cours des universités et écoles françaises, où vous voulez et quand vous voulez
     </div>
   </div>
-  % endif
   </header>
 
   <section class="container">
@@ -179,7 +176,6 @@
         </section>
       % endif
 
-      % if self.fun_theme_enabled():
       <section class="courses-overview">
         <div class="als-container" id="universities-slider">
           <span class="als-prev"><img src="${static.url('themes/fun/images/previous.png')}" alt="previous" title="previous" /></span>
@@ -199,21 +195,9 @@
           <span class="als-next"><img src="${static.url('themes/fun/images/next.png')}" alt="next" title="next" /></span>
         </div>
       </section>
-      % else:
-      <section class="courses">
-          <ul class="courses-listing">
-          %for course in courses:
-            <li class="courses-listing-item">
-              <%include file="course.html" args="course=course" />
-            </li>
-          %endfor
-          </ul>
-      </section>
-      % endif
     </section>
   </section>
 
-  % if self.fun_theme_enabled():
   <section class="discover">
     <div class="discover-inner">
       <div class="course-highlight">
@@ -227,7 +211,6 @@
       </div>
     </div>
   </section>
-  % endif
 </section>
 
 <!-- Variable:FUN Here is where to modify index.html to put a custom intro video
@@ -255,7 +238,6 @@ so as to avoid that the video becomes unavailable after one week-->
       })
    </script>
 
-    % if self.fun_theme_enabled():
     <script type="text/javascript" src="${static.url('themes/fun/js/vendor/jquery.als-1.2.min.js')}" ></script>
     <script type="text/javascript">
       $(document).ready(function(){
@@ -268,7 +250,6 @@ so as to avoid that the video becomes unavailable after one week-->
         });
       });
     </script>
-    % endif
 </%block>
 
 % if show_signup_immediately is not UNDEFINED:

@@ -1,0 +1,261 @@
+<%! from django.utils.translation import ugettext as _ %>
+
+<%! from django.core.urlresolvers import reverse %>
+<%! from time import strftime %>
+<%! from universities.models import University %>
+<%inherit file="main.html" />
+<%namespace name='static' file='static_content.html'/>
+<%doc> The title block is commented because defined elsewhere
+<%block name="title"><title>FUN - France Université Numérique</title></%block>
+</%doc>
+
+<section class="home">
+  <header>
+    <div class="outer-wrapper">
+      <div class="title">
+        <hgroup>
+          % if self.stanford_theme_enabled():
+            <h1>${_("Free courses from <strong>{university_name}</strong>").format(university_name="Stanford")}</h1>
+          % else:
+            <h1>${_("The Future of Online Education")}</h1>
+          % endif
+          <h2>${_("For anyone, anywhere, anytime")}</h2>
+        </hgroup>
+
+        ## Disable social buttons for non-edX sites
+        % if not self.theme_enabled():
+          <section class="actions">
+            <div class="main-cta">
+              <a href="#signup-modal" id="signup_action" class="find-courses" rel="leanModal">${_("Sign Up")}</a>
+            </div>
+
+            <div class="secondary-actions">
+              <div class="social-sharing">
+                <div class="sharing-message">${_("Stay up to date with all {platform_name} has to offer!").format(platform_name=settings.PLATFORM_NAME)}</div>
+                <a href="https://twitter.com/edXOnline" class="share" target="_blank">
+                  <img src="${static.url('images/social/twitter-sharing.png')}">
+                </a>
+                <a href="http://www.facebook.com/EdxOnline" class="share" target="_blank">
+                  <img src="${static.url('images/social/facebook-sharing.png')}">
+                </a>
+                <a href="https://plus.google.com/108235383044095082735/posts" class="share" target="_blank">
+                  <img src="${static.url('images/social/google-plus-sharing.png')}">
+                </a>
+              </div>
+            </div>
+          </section>
+        % endif
+      </div>
+
+        <a href="#video-modal" class="media" rel="leanModal">
+          <div class="hero">
+            <div class="play-intro"></div>
+          </div>
+        </a>
+
+    </div>
+
+  <div class="tagline">
+    <div class="main">Vivez l’expérience FUN</div>
+    <div class="secondary">
+      Retrouvez les cours des universités et écoles françaises, où vous voulez et quand vous voulez
+    </div>
+  </div>
+  </header>
+
+  <section class="container">
+    <section class="highlighted-courses">
+      ## Disable university partner logos and sites for non-edX sites
+      % if not self.theme_enabled():
+        <h2>${_('Explore free courses from {span_start}{platform_name}{span_end} universities').format(platform_name="edX", span_start='<span class="edx">', span_end='</span>')}</h2>
+
+        <section class="university-partners university-partners2x6">
+          <ol class="partners">
+            <li class="partner mit">
+              <a href="#">
+                <img src="${static.url('images/university/mit/mit.png')}" />
+                <div class="name">
+                  <span>MITx</span>
+                </div>
+              </a>
+            </li>
+            <li class="partner">
+              <a href="#">
+                <img src="${static.url('images/university/harvard/harvard.png')}" />
+                <div class="name">
+                  <span>HarvardX</span>
+                </div>
+              </a>
+            </li>
+            <li class="partner">
+              <a href="#">
+                <img src="${static.url('images/university/berkeley/berkeley.png')}" />
+                <div class="name">
+                  <span>BerkeleyX</span>
+                </div>
+              </a>
+            </li>
+            <li class="partner">
+              <a href="#">
+                <img src="${static.url('images/university/ut/ut-rollover_350x150.png')}" />
+                <div class="name">
+                  <span>UTx</span>
+                </div>
+              </a>
+            </li>
+            <li class="partner">
+              <a href="#">
+                <img src="${static.url('images/university/mcgill/mcgill.png')}" />
+                <div class="name">
+                  <span>McGillX</span>
+                </div>
+              </a>
+            </li>
+            <li class="partner">
+              <a href="#">
+                <img src="${static.url('images/university/anu/anu.png')}" />
+                <div class="name">
+                  <span>ANUx</span>
+                </div>
+              </a>
+            </li>
+          </ol>
+
+          <hr />
+
+          <ol class="partners">
+            <li class="partner">
+              <a href="#">
+                <img src="${static.url('images/university/wellesley/wellesley-rollover_350x150.png')}" />
+                <div class="name">
+                  <span>WellesleyX</span>
+                </div>
+              </a>
+            </li>
+            <li class="partner">
+              <a href="#">
+                <img src="${static.url('images/university/georgetown/georgetown-rollover_350x150.png')}" />
+                <div class="name">
+                  <span>GeorgetownX</span>
+                </div>
+              </a>
+            </li>
+            <li class="partner">
+              <a href="#">
+                <img src="${static.url('images/university/toronto/toronto.png')}" />
+                <div class="name">
+                  <span>University of TorontoX</span>
+                </div>
+              </a>
+            </li>
+            <li class="partner">
+              <a href="#">
+                <img src="${static.url('images/university/epfl/epfl.png')}" />
+                <div class="name">
+                  <span>EPFLx</span>
+                </div>
+              </a>
+            </li>
+            <li class="partner">
+              <a href="#">
+                <img src="${static.url('images/university/delft/delft.png')}" />
+                <div class="name">
+                  <span>DelftX</span>
+                </div>
+              </a>
+            </li>
+            <li class="partner">
+              <a href="#">
+                <img src="${static.url('images/university/rice/rice.png')}" />
+                <div class="name">
+                  <span>RiceX</span>
+                </div>
+              </a>
+            </li>
+          </ol>
+        </section>
+      % endif
+
+      <section class="courses-overview">
+        <div class="als-container" id="universities-slider">
+          <span class="als-prev"><img src="${static.url('themes/fun/images/previous.png')}" alt="previous" title="previous" /></span>
+          <div class="als-viewport">
+            <ul class="als-wrapper">
+              % for university in University.objects.filter(featured=True):
+              <li class="als-item">
+                <a href="${ university.get_absolute_url() }">
+                  %if university.logo:
+                  <img src="${ university.logo.url }" alt="${ university.name }" title="${ university.name }" />
+                  %endif
+                </a>
+              </li>
+              % endfor
+            </ul>
+          </div>
+          <span class="als-next"><img src="${static.url('themes/fun/images/next.png')}" alt="next" title="next" /></span>
+        </div>
+      </section>
+    </section>
+  </section>
+
+  <section class="discover">
+    <div class="discover-inner">
+      <div class="course-highlight">
+         <iframe frameborder="0" width="440" height="248" src="//www.dailymotion.com/embed/video/k6eAwEb4hn3gN04NUHB"></iframe>
+      </div>
+      <div class="discover-description">
+        <h1>Découvrez les cours sur FUN</h1>
+        <p>Tous les cours présents sur FUN s’adressent aux étudiants et à tous les publics désireux d’apprendre. Suivez ces cours de manière interactive et collaborative, à votre rythme.</p>
+        <p>Ces cours sont élaborés par les professeurs des universités et écoles françaises et abordent des thèmes aussi variés que l’histoire, les mathématiques, la santé, la philosophie, le droit, les technologies…</p>
+        <a class="button" href="/courses">Tous les cours +</a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- Variable:FUN Here is where to modify index.html to put a custom intro video
+don't forget that if the intro video is stored on dmcloud the expiry date should be carefully set
+so as to avoid that the video becomes unavailable after one week-->
+<section id="video-modal" class="modal home-page-video-modal video-modal">
+  <div class="inner-wrapper">
+    <%
+      if self.stanford_theme_enabled():
+        youtube_video_id = "2gmreZObCY4"
+      else:
+        youtube_video_id = "XNaiOGxWeto"
+    %>
+    <iframe width="640" height="360" src="//www.youtube.com/embed/${youtube_video_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
+  </div>
+</section>
+<!--Variable:FUN-->
+
+<%block name="js_extra">
+   <script type="text/javascript">
+      $(window).load(function() {
+         if(getParameterByName('next')) {
+              $('#login').trigger("click");
+         }
+      })
+   </script>
+
+    <script type="text/javascript" src="${static.url('themes/fun/js/vendor/jquery.als-1.2.min.js')}" ></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("#universities-slider").als({
+          circular: "yes",
+          visible_items: 5,
+          scrolling_items: 2,
+          autoscroll: "yes",
+          interval: 5000
+        });
+      });
+    </script>
+</%block>
+
+% if show_signup_immediately is not UNDEFINED:
+  ## NOTE: This won't work in production, because anonymous views are cached, so it will
+  ## show either with or without this extra js for 3 minutes at a time.
+<script type="text/javascript">
+  $(window).load(function() {$('#signup_action').trigger("click");});
+</script>
+% endif

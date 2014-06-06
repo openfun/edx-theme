@@ -1,0 +1,46 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%! from django.core.urlresolvers import reverse %>
+<%! from universities.models import University %>
+<%inherit file="../main.html" />
+
+<%namespace name='static' file='../static_content.html'/>
+
+<%block name="title"><title>${_("Courses")}</title></%block>
+<br>
+<section class="find-courses">
+  <section class="container">
+    <section class="courses">
+      <a name="courses-list"></a>
+      <select class="university-filter">
+        <option value="">${_('Filter by university')}</option>
+        % for university in University.objects.filter(featured=True):
+        <option value="${ university.code }">${ university.name }</option>
+        % endfor
+        <option value="other">${_('Others')}</option>
+      </select>
+
+      <ul class="courses-listing">
+        %for course in courses:
+        <li class="courses-listing-item">
+          <%include file="../course.html" args="course=course" />
+        </li>
+        %endfor
+      </ul>
+    </section>
+  </section>
+</section>
+
+<%block name="js_extra">
+    % if self.fun_theme_enabled():
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.university-filter').change(function() {
+          var university = $('.university-filter').val();
+          window.location.href = '${reverse("courses")}/university/' + university + '/#courses-list';
+        });
+      });
+    </script>
+    % endif
+</%block>
+
+

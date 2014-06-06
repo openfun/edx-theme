@@ -31,7 +31,6 @@
 </section>
 
 <%block name="js_extra">
-    % if self.fun_theme_enabled():
     <script type="text/javascript">
       $(document).ready(function(){
         $('.university-filter').change(function() {
@@ -40,7 +39,6 @@
         });
       });
     </script>
-    % endif
 </%block>
 
 

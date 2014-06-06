@@ -1,6 +1,6 @@
 ## mako
 <%namespace name='static' file='static_content.html'/>
-<%namespace file='main.html' import="login_query, stanford_theme_enabled, fun_theme_enabled"/>
+<%namespace file='main.html' import="login_query"/>
 <%!
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext as _
@@ -35,11 +35,7 @@ site_status_msg = get_site_status_msg(course_id)
 
 
 
-% if course and not (fun_theme_enabled() and request.path.endswith('/about')):
-  <header class="global slim" aria-label="${_('Global Navigation')}">
-% else:
   <header class="global" aria-label="${_('Global Navigation')}">
-% endif
   <nav>
 
   <h1 class="logo">
@@ -53,9 +49,6 @@ site_status_msg = get_site_status_msg(course_id)
     % if course:
       <h2>
         <span class="provider">${course.display_org_with_default | h}:</span> 
-        % if not fun_theme_enabled():
-        ${course.display_number_with_default | h}
-        % endif
         ${course.display_name_with_default}
       </h2>
     % endif

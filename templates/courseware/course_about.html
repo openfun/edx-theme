@@ -1,0 +1,306 @@
+<%! from django.utils.translation import ugettext as _ %>
+<%!
+  from urllib import quote_plus
+  from django.core.urlresolvers import reverse
+  from courseware.courses import course_image_url, get_course_about_section
+  from courseware.access import has_access
+  from universities.models import University
+%>
+<%namespace name='static' file='../static_content.html'/>
+
+<%inherit file="../main.html" />
+
+<%block name="headextra">
+  % if self.theme_enabled():
+    <%include file="../theme-google-analytics.html" />
+  % else:
+    <%include file="../google_analytics.html" />
+  % endif
+</%block>
+
+<%block name="js_extra">
+
+  <script type="text/javascript">
+  (function() {
+    $(".register").click(function(event) {
+      $("#class_enroll_form").submit();
+      event.preventDefault();
+    });
+
+    ## making the conditional around this entire JS block for sanity
+    %if settings.MITX_FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+    $('#class_enroll_form').on('ajax:complete', function(event, xhr) {
+      if(xhr.status == 200) {
+        location.href = "${reverse('dashboard')}";
+      } else if (xhr.status == 403) {
+        location.href = "${reverse('course-specific-register', args=[course.id])}?course_id=${course.id}&enrollment_action=enroll";
+      } else if (xhr.status == 400) { //This means the user did not have permission
+        $('#register_error').html('This course has restricted enrollment.  Sorry, you do not have permission to enroll.<br />' +
+                                  'You may need to log out and re-login with a university account, such as WebAuth'
+        ).css("display", "block");
+      } else {
+        $('#register_error').html(
+            (xhr.responseText ? xhr.responseText : 'An error occurred. Please try again later.')
+        ).css("display", "block");
+      }
+    });
+
+    %else:
+
+    $('#class_enroll_form').on('ajax:complete', function(event, xhr) {
+      if(xhr.status == 200) {
+        if (xhr.responseText == "") {
+          location.href = "${reverse('dashboard')}";
+        }
+        else {
+          location.href = xhr.responseText;
+        }
+      } else if (xhr.status == 403) {
+        location.href = "${reverse('register_user')}?course_id=${course.id}&enrollment_action=enroll";
+      } else {
+        $('#register_error').html(
+            (xhr.responseText ? xhr.responseText : 'An error occurred. Please try again later.')
+        ).css("display", "block");
+      }
+    });
+
+    %endif
+
+  })(this)
+  </script>
+
+  <script src="${static.url('js/course_info.js')}"></script>
+</%block>
+
+<%block name="title">
+% if not self.fun_theme_enabled():
+<title>${_("About {course.display_number_with_default}").format(course=course) | h}</title>
+% else:
+<title>${_("About {course_name}").format(course_name=get_course_about_section(course, "title")) | h}</title>
+% endif
+</%block>
+
+<section class="course-info">
+<header class="course-profile"
+        % if self.fun_theme_enabled():
+        style="background-image: url('${course_image_url(course)}');"
+        % endif
+    >
+    <div class="intro-inner-wrapper">
+      <div class="table">
+      <section class="intro">
+        <hgroup>
+          <h1>
+            % if not self.fun_theme_enabled():
+            ${course.display_number_with_default | h}:
+            % endif
+            ${get_course_about_section(course, "title")}
+            % if not self.theme_enabled():
+              <a href="#">${get_course_about_section(course, "university")}</a>
+            % endif
+          </h1>
+        </hgroup>
+
+        <div class="main-cta">
+        %if user.is_authenticated() and registered:
+                %if show_courseware_link and course.has_started():
+                    <a href="${course_target}">
+                %endif
+
+                % if self.fun_theme_enabled():
+                <span class="register disabled">${_("You are registered") | h}</span>
+                % else:
+                <span class="register disabled">${_("You are registered for this course {course.display_number_with_default}").format(course=course) | h}</span>
+                % endif
+                %if show_courseware_link and course.has_started():
+                    <strong>${_("View Courseware")}</strong>
+                    </a>
+                %endif
+
+        %else:
+            <a href="#" class="register">
+              % if self.fun_theme_enabled():
+              ${_("Register for {}").format(get_course_about_section(course, "title"))}
+              % else:
+              ${_("Register for {course.display_number_with_default}").format(course=course) | h}
+              % endif
+            </a>
+            <div id="register_error"></div>
+        %endif
+            <div class="register-license">${_("I hereby accept the following <a href=\"/licenses\">terms and conditions</a>")}</div>
+        </div>
+
+      </section>
+      % if self.fun_theme_enabled():
+      <div class="media">
+        <div class="hero">
+            <%
+                try:
+                    university = University.objects.get(code=course.org)
+                except University.DoesNotExist:
+                    university = None
+            %>
+            %if university and university.logo:
+          <img src="${ university.logo.url }" />
+          %endif
+        </div>
+      </div>
+      % elif get_course_about_section(course, "video"):
+      <a href="#video-modal" class="media" rel="leanModal">
+        <div class="hero">
+          <img src="${course_image_url(course)}" />
+          <div class="play-intro"></div>
+        </div>
+      </a>
+      %else:
+      <div class="media">
+        <div class="hero">
+          <img src="${course_image_url(course)}" />
+        </div>
+      </div>
+      % endif
+    </div>
+      </div>
+  </header>
+
+  <section class="container">
+    <section class="details">
+      <nav>
+        <a href="#" class="active">${_("Overview")}</a>
+      ##  <a href="#">${_("FAQ")}</a>
+      ##  <a href="#">${_("Requirements")}</a>
+      ##  <a href="#">${_("Text-book")}</a>
+      ##  <a href="#">${_("Syllabus")}</a>
+      ##  <a href="#">${_("Reviews")}</a>
+      </nav>
+
+      <div class="inner-wrapper">
+        ${get_course_about_section(course, "overview")}
+      </div>
+    </section>
+
+    <section class="course-sidebar">
+      % if self.fun_theme_enabled() and get_course_about_section(course, "video"):
+      <section class="video-teaser">
+        <div class="video-header">Voir la vidéo de présentation du cours</div>
+        <a href="#video-modal" class="media" rel="leanModal">
+          <div class="hero">
+            <img src="${course_image_url(course, image_name='video_image.jpg')}" />
+            <div class="play-intro"></div>
+          </div>
+        </a>
+      </section>
+      % endif
+      <section class="course-summary">
+        <header>
+          <div class="social-sharing">
+            <div class="sharing-message">${_("Share with friends and family!")}</div>
+            ## TODO: this should probably be an overrideable block,
+            ##       or something allowing themes to do whatever they
+            ##       want here (and on this whole page, really).
+            % if self.stanford_theme_enabled():
+              <a href="http://twitter.com/intent/tweet?text=I+just+registered+for+${course.number}+${get_course_about_section(course, 'title')}!+(http://class.stanford.edu)" class="share" target="_blank">
+                <img src="${static.url('images/social/twitter-sharing.png')}">
+              </a>
+              <a href="mailto:?subject=Take%20a%20course%20at%20Stanford%20online!&body=I%20just%20registered%20for%20${course.number}%20${get_course_about_section(course, 'title')}+(http://class.stanford.edu)" class="share" target="_blank">
+                <img src="${static.url('images/social/email-sharing.png')}">
+              </a>
+            % elif self.fun_theme_enabled():
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id])}" class="share"> <img src="${static.url('images/social/facebook-sharing.png')}" target="_blank">
+              <a href="http://twitter.com/intent/tweet?text=Je+viens+de+m%27inscrire+au+cours+${get_course_about_section(course, 'title')}+sur+@FUN+:+http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id])}" class="share" target="_blank">
+                <img src="${static.url('images/social/twitter-sharing.png')}">
+              </a>
+              <a href="mailto:?subject=Suivre%20un%20cours%20sur%20FUN&body=Je%20viens%20de%20m%E2%80%99inscrire%20au%20cours%20${get_course_about_section(course, 'title')}%20sur%20FUN%20:+http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id])}" class="share" target="_blank">
+                <img src="${static.url('images/social/email-sharing.png')}">
+              </a>
+            % else:
+              <a href="http://twitter.com/intent/tweet?text=I+just+registered+for+${course.number}+${get_course_about_section(course, 'title')}+through+@edxonline:+http://www.edx.org${reverse('about_course', args=[course.id])}" class="share" target="_blank">
+                <img src="${static.url('images/social/twitter-sharing.png')}">
+              </a>
+              <a href="http://www.facebook.com/EdxOnline" class="share" target="_blank"> <img src="${static.url('images/social/facebook-sharing.png')}">
+              </a>
+              <a href="mailto:?subject=Take%20a%20course%20with%20edX%20online&body=I%20just%20registered%20for%20${course.number}%20${get_course_about_section(course, 'title')}%20through%20edX:+http://edx.org/${reverse('about_course', args=[course.id])}" class="share"  target="_blank">
+                <img src="${static.url('images/social/email-sharing.png')}">
+              </a>
+            % endif
+          </div>
+        </header>
+
+        <ol class="important-dates">
+          % if not self.fun_theme_enabled():
+          <li><div class="icon course-number"></div><p>${_("Course Number")}</p><span class="course-number">${course.display_number_with_default | h}</span></li>
+          % endif 
+          
+          % if course.has_ended_enrollment():  
+            <li><div class="icon start"></div><p>${_("End of Registration")}</p><span class="start-date">${_("Closed")}</span></li>
+          % elif course.end_enrollment_text:
+            <li><div class="icon start"></div><p>${_("End of Registration")}</p><span class="start-date">${course.end_enrollment_text}</span></li>
+          % endif
+          <li><div class="icon start"></div><p>${_("Classes Start")}</p><span class="start-date">${course.start_date_text}</span></li>
+
+            ## We plan to ditch end_date (which is not stored in course metadata),
+            ## but for backwards compatibility, show about/end_date blob if it exists.
+            % if get_course_about_section(course, "end_date") or course.end:
+            <li>
+                <div class="icon end"></div>
+                <p>${_("Classes End")}</p><span class="final-date">
+                % if get_course_about_section(course, "end_date"):
+                    ${get_course_about_section(course, "end_date")}
+                % else:
+                    ${course.end_date_text}
+                % endif
+                </span>
+            </li>
+            % endif
+
+          % if get_course_about_section(course, "effort"):
+            <li><div class="icon effort"></div><p>${_("Estimated Effort")}</p><span class="start-date">${get_course_about_section(course, "effort")}
+            % if self.fun_theme_enabled():
+              ${_('h/week')}
+            % endif
+            </span></li>
+          % endif
+
+          ##<li><div class="icon length"></div><p>${_('Course Length')}</p><span class="course-length">${_('{number} weeks').format(number=15)}</span></li>
+
+          % if get_course_about_section(course, "prerequisites"):
+            <li class="prerequisites"><div class="icon prereq"></div><p>${_("Prerequisites")}</p><span class="start-date">${get_course_about_section(course, "prerequisites")}</span></li>
+          % endif
+          </ol>
+      </section>
+
+
+      ## For now, ocw links are the only thing that goes in additional resources
+      % if get_course_about_section(course, "ocw_links"):
+      <section class="additional-resources">
+        <header>
+          <h1>${_("Additional Resources")}</h1>
+        </header>
+
+        <section>
+          ## "MITOpenCourseware" should *not* be translated
+          <h2 class="opencourseware">MITOpenCourseware</h2>
+             ${get_course_about_section(course, "ocw_links")}
+        </section>
+      </section>
+      %endif
+    </section>
+
+  </section>
+</section>
+
+%if not registered:
+  <div style="display: none;">
+    <form id="class_enroll_form" method="post" data-remote="true" action="${reverse('change_enrollment')}">
+      <fieldset class="enroll_fieldset">
+        <input name="course_id" type="hidden" value="${course.id}">
+        <input name="enrollment_action" type="hidden" value="enroll">
+      </fieldset>
+      <div class="submit">
+        <input name="submit" type="submit" value="enroll">
+      </div>
+    </form>
+  </div>
+%endif
+
+<%include file="../video_modal.html" />

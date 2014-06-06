@@ -90,13 +90,9 @@
 
 <section class="introduction">
   <header>
-    % if self.fun_theme_enabled():
     <img class="illustration" src="${static.url('themes/fun/images/illustrations/register.jpg')}" />
     <h1 class="sr">Bienvenue !</h1>
     <h2>Inscrivez-vous maintenant pour créer votre compte FUN</h2>
-    % else:
-    <h1 class="sr">${_("Welcome! Register below to create your {platform_name} account").format(platform_name=settings.PLATFORM_NAME)}</h1>
-    % endif
   </header>
 </section>
 
@@ -261,10 +257,7 @@
               <input id="honorcode-yes" type="checkbox" name="honor_code" value="true" />
               <%
                 ## TODO: provide a better way to override these links
-                if self.stanford_theme_enabled():
-                  honor_code_path = marketing_link('TOS') + "#honor"
-                else:
-                  honor_code_path = marketing_link('HONOR')
+                honor_code_path = marketing_link('HONOR')
               %>
               <label for="honorcode-yes">${_('I agree to the {link_start}Honor Code{link_end}').format(
                 link_start='<a href="{url}" class="new-vp">'.format(url=honor_code_path),
@@ -306,20 +299,14 @@
 
     ## TODO: Use a %block tag or something to allow themes to
     ##       override in a more generalizable fashion.
-    % if not self.stanford_theme_enabled():
       <div class="cta cta-welcome">
         <h3>${_("Welcome to {platform_name}").format(platform_name=settings.PLATFORM_NAME)}</h3>
         <p>${_("Registering with {platform_name} gives you access to all of our current and future free courses. Not ready to take a course just yet? Registering puts you on our mailing list - we will update you as courses are added.").format(platform_name=settings.PLATFORM_NAME)}</p>
       </div>
-    % endif
 
     <div class="cta cta-nextsteps">
       <h3>${_("Next Steps")}</h3>
-      % if self.stanford_theme_enabled():
-        <p>${_("You will receive an activation email.  You must click on the activation link to complete the process.  Don't see the email?  Check your spam folder and mark emails from class.stanford.edu as 'not spam', since you'll want to be able to receive email from your courses.")}</p>
-      % else:
       <p>${_("As part of joining {platform_name}, you will receive an activation email.  You must click on the activation link to complete the process.  Don't see the email?  Check your spam folder and mark {platform_name} emails as 'not spam'.  At {platform_name}, we communicate mostly through email.").format(platform_name=settings.PLATFORM_NAME)}</p>
-      % endif
     </div>
 
     % if settings.MKTG_URL_LINK_MAP.get('FAQ'):

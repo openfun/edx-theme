@@ -11,11 +11,7 @@
 <%inherit file="../main.html" />
 
 <%block name="headextra">
-  % if self.theme_enabled():
-    <%include file="../theme-google-analytics.html" />
-  % else:
-    <%include file="../google_analytics.html" />
-  % endif
+  <%include file="../theme-google-analytics.html" />
 </%block>
 
 <%block name="js_extra">
@@ -73,31 +69,17 @@
 </%block>
 
 <%block name="title">
-% if not self.fun_theme_enabled():
-<title>${_("About {course.display_number_with_default}").format(course=course) | h}</title>
-% else:
 <title>${_("About {course_name}").format(course_name=get_course_about_section(course, "title")) | h}</title>
-% endif
 </%block>
 
 <section class="course-info">
-<header class="course-profile"
-        % if self.fun_theme_enabled():
-        style="background-image: url('${course_image_url(course)}');"
-        % endif
-    >
+<header class="course-profile" style="background-image: url('${course_image_url(course)}');">
     <div class="intro-inner-wrapper">
       <div class="table">
       <section class="intro">
         <hgroup>
           <h1>
-            % if not self.fun_theme_enabled():
-            ${course.display_number_with_default | h}:
-            % endif
             ${get_course_about_section(course, "title")}
-            % if not self.theme_enabled():
-              <a href="#">${get_course_about_section(course, "university")}</a>
-            % endif
           </h1>
         </hgroup>
 
@@ -107,11 +89,7 @@
                     <a href="${course_target}">
                 %endif
 
-                % if self.fun_theme_enabled():
                 <span class="register disabled">${_("You are registered") | h}</span>
-                % else:
-                <span class="register disabled">${_("You are registered for this course {course.display_number_with_default}").format(course=course) | h}</span>
-                % endif
                 %if show_courseware_link and course.has_started():
                     <strong>${_("View Courseware")}</strong>
                     </a>
@@ -119,11 +97,7 @@
 
         %else:
             <a href="#" class="register">
-              % if self.fun_theme_enabled():
               ${_("Register for {}").format(get_course_about_section(course, "title"))}
-              % else:
-              ${_("Register for {course.display_number_with_default}").format(course=course) | h}
-              % endif
             </a>
             <div id="register_error"></div>
         %endif
@@ -131,7 +105,6 @@
         </div>
 
       </section>
-      % if self.fun_theme_enabled():
       <div class="media">
         <div class="hero">
             <%
@@ -142,7 +115,6 @@
             %>
             %if university and university.logo:
           <img src="${ university.logo.url }" />
-          %endif
         </div>
       </div>
       % elif get_course_about_section(course, "video"):
@@ -180,7 +152,7 @@
     </section>
 
     <section class="course-sidebar">
-      % if self.fun_theme_enabled() and get_course_about_section(course, "video"):
+      % if get_course_about_section(course, "video"):
       <section class="video-teaser">
         <div class="video-header">Voir la vidéo de présentation du cours</div>
         <a href="#video-modal" class="media" rel="leanModal">
@@ -198,14 +170,6 @@
             ## TODO: this should probably be an overrideable block,
             ##       or something allowing themes to do whatever they
             ##       want here (and on this whole page, really).
-            % if self.stanford_theme_enabled():
-              <a href="http://twitter.com/intent/tweet?text=I+just+registered+for+${course.number}+${get_course_about_section(course, 'title')}!+(http://class.stanford.edu)" class="share" target="_blank">
-                <img src="${static.url('images/social/twitter-sharing.png')}">
-              </a>
-              <a href="mailto:?subject=Take%20a%20course%20at%20Stanford%20online!&body=I%20just%20registered%20for%20${course.number}%20${get_course_about_section(course, 'title')}+(http://class.stanford.edu)" class="share" target="_blank">
-                <img src="${static.url('images/social/email-sharing.png')}">
-              </a>
-            % elif self.fun_theme_enabled():
               <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id])}" class="share"> <img src="${static.url('images/social/facebook-sharing.png')}" target="_blank">
               <a href="http://twitter.com/intent/tweet?text=Je+viens+de+m%27inscrire+au+cours+${get_course_about_section(course, 'title')}+sur+@FUN+:+http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id])}" class="share" target="_blank">
                 <img src="${static.url('images/social/twitter-sharing.png')}">
@@ -213,23 +177,10 @@
               <a href="mailto:?subject=Suivre%20un%20cours%20sur%20FUN&body=Je%20viens%20de%20m%E2%80%99inscrire%20au%20cours%20${get_course_about_section(course, 'title')}%20sur%20FUN%20:+http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id])}" class="share" target="_blank">
                 <img src="${static.url('images/social/email-sharing.png')}">
               </a>
-            % else:
-              <a href="http://twitter.com/intent/tweet?text=I+just+registered+for+${course.number}+${get_course_about_section(course, 'title')}+through+@edxonline:+http://www.edx.org${reverse('about_course', args=[course.id])}" class="share" target="_blank">
-                <img src="${static.url('images/social/twitter-sharing.png')}">
-              </a>
-              <a href="http://www.facebook.com/EdxOnline" class="share" target="_blank"> <img src="${static.url('images/social/facebook-sharing.png')}">
-              </a>
-              <a href="mailto:?subject=Take%20a%20course%20with%20edX%20online&body=I%20just%20registered%20for%20${course.number}%20${get_course_about_section(course, 'title')}%20through%20edX:+http://edx.org/${reverse('about_course', args=[course.id])}" class="share"  target="_blank">
-                <img src="${static.url('images/social/email-sharing.png')}">
-              </a>
-            % endif
           </div>
         </header>
 
         <ol class="important-dates">
-          % if not self.fun_theme_enabled():
-          <li><div class="icon course-number"></div><p>${_("Course Number")}</p><span class="course-number">${course.display_number_with_default | h}</span></li>
-          % endif 
           
           % if course.has_ended_enrollment():  
             <li><div class="icon start"></div><p>${_("End of Registration")}</p><span class="start-date">${_("Closed")}</span></li>
@@ -255,9 +206,7 @@
 
           % if get_course_about_section(course, "effort"):
             <li><div class="icon effort"></div><p>${_("Estimated Effort")}</p><span class="start-date">${get_course_about_section(course, "effort")}
-            % if self.fun_theme_enabled():
               ${_('h/week')}
-            % endif
             </span></li>
           % endif
 

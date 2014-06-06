@@ -195,16 +195,10 @@
                 <h3>
                   % if course.id in show_courseware_links_for:
                     <a href="${course_target}">
-                      % if not self.fun_theme_enabled():
-                      ${course.display_number_with_default | h}
-                      % endif
                       ${course.display_name_with_default}
                     </a>
                   % else:
                     <span>
-                      % if not self.fun_theme_enabled():
-                      ${course.display_number_with_default | h}
-                      % endif
                       ${course.display_name_with_default}
                     </span>
                   % endif
@@ -376,11 +370,7 @@
 <section id="email-settings-modal" class="modal">
   <div class="inner-wrapper">
     <header>
-      % if self.fun_theme_enabled():
       <h2>${_('Email Settings for {course_name}').format(course_name='<span id="email_settings_course_name"></span>')}</h2>
-      % else:
-      <h2>${_('Email Settings for {course_number}').format(course_number='<span id="email_settings_course_number"></span>')}</h2>
-      % endif
       <hr/>
     </header>
 
@@ -403,11 +393,7 @@
 <section id="unenroll-modal" class="modal unenroll-modal">
   <div class="inner-wrapper">
     <header>
-      % if self.fun_theme_enabled():
       <h2>${_('Are you sure you want to unregister from {course_name}?').format(course_name='<span id="unenroll_course_name"></span>')}</h2>
-      % else:
-      <h2>${_('Are you sure you want to unregister from {course_number}?').format(course_number='<span id="unenroll_course_number"></span>')}</h2>
-      % endif
       <hr/>
     </header>
 

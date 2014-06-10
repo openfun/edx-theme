@@ -330,7 +330,7 @@
 
               <a href="#unenroll-modal" class="unenroll" rel="leanModal" data-course-id="${course.id}" data-course-number="${course.number}" data-course-name="${course.display_name_with_default}">${_('Unregister')}</a>
 
-  	    % if settings.MITX_FEATURES['ENABLE_INSTRUCTOR_EMAIL'] and modulestore().get_modulestore_type(course.id) == MONGO_MODULESTORE_TYPE and CourseAuthorization.instructor_email_enabled(course.id):
+  	    % if settings.FEATURES['ENABLE_INSTRUCTOR_EMAIL'] and modulestore().get_modulestore_type(course.id) == MONGO_MODULESTORE_TYPE and CourseAuthorization.instructor_email_enabled(course.id):
   	      <!-- Only show the Email Settings link/modal if this course has bulk email feature enabled -->
                 <a href="#email-settings-modal" class="email-settings" rel="leanModal" data-course-id="${course.id}" data-course-number="${course.number}" data-course-name="${course.display_name_with_default}" data-optout="${course.id in course_optouts}">${_('Email Settings')}</a>
   	    % endif

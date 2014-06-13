@@ -5,9 +5,11 @@
 
 <%namespace name='static' file='../static_content.html'/>
 
-<%block name="title"><title>${_("Courses")}</title></%block>
-<br>
+<%block name="pagetitle">${_("Courses")}</%block>
+<%! from microsite_configuration import microsite %>
+
 <section class="find-courses">
+
   <section class="container">
     <section class="courses">
       <a name="courses-list"></a>
@@ -40,5 +42,3 @@
       });
     </script>
 </%block>
-
-

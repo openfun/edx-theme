@@ -219,6 +219,7 @@ body header.global {
     background: none repeat scroll 0% 0% $main-color-content-background;
     border-bottom: none;
     box-shadow: none;
+    height: 292px;
 
     h1.logo {
         margin: 0;
@@ -228,6 +229,8 @@ body header.global {
         height: auto;
         text-transform: uppercase;
         color: #fff;
+        margin-right: 10%;
+        margin-left: 10%;
 
         &:before {
             content: 'Découvrir, apprendre et réussir';
@@ -357,8 +360,11 @@ body .wrapper-footer {
     box-shadow: none;
 
     footer {
-        width: 980px;
-        margin: 30px auto;
+        width: auto;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 30px;
+        margin-bottom: 30px;
         position: relative;
 
         .colophon .nav-colophon {

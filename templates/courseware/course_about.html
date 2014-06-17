@@ -170,19 +170,19 @@
             ## TODO: this should probably be an overrideable block,
             ##       or something allowing themes to do whatever they
             ##       want here (and on this whole page, really).
-              <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id])}" class="share"> <img src="${static.url('images/social/facebook-sharing.png')}" target="_blank">
-              <a href="http://twitter.com/intent/tweet?text=Je+viens+de+m%27inscrire+au+cours+${get_course_about_section(course, 'title')}+sur+@FUN+:+http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id])}" class="share" target="_blank">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id.to_deprecated_string()])}" class="share"> <img src="${static.url('images/social/facebook-sharing.png')}" target="_blank">
+              <a href="http://twitter.com/intent/tweet?text=Je+viens+de+m%27inscrire+au+cours+${get_course_about_section(course, 'title')}+sur+@FUN+:+http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id.to_deprecated_string()])}" class="share" target="_blank">
                 <img src="${static.url('images/social/twitter-sharing.png')}">
               </a>
-              <a href="mailto:?subject=Suivre%20un%20cours%20sur%20FUN&body=Je%20viens%20de%20m%E2%80%99inscrire%20au%20cours%20${get_course_about_section(course, 'title')}%20sur%20FUN%20:+http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id])}" class="share" target="_blank">
+              <a href="mailto:?subject=Suivre%20un%20cours%20sur%20FUN&body=Je%20viens%20de%20m%E2%80%99inscrire%20au%20cours%20${get_course_about_section(course, 'title')}%20sur%20FUN%20:+http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id.to_deprecated_string()])}" class="share" target="_blank">
                 <img src="${static.url('images/social/email-sharing.png')}">
               </a>
           </div>
         </header>
 
         <ol class="important-dates">
-          
-          % if course.has_ended_enrollment():  
+
+          % if course.has_ended_enrollment():
             <li><div class="icon start"></div><p>${_("End of Registration")}</p><span class="start-date">${_("Closed")}</span></li>
           % elif course.end_enrollment_text:
             <li><div class="icon start"></div><p>${_("End of Registration")}</p><span class="start-date">${course.end_enrollment_text}</span></li>

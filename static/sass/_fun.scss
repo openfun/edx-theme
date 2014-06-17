@@ -1209,5 +1209,12 @@ body.view-dashboard {
     .modal h2 span {
         color: rgb(88, 87, 84);
     }
+    header.profile h1.user-name {
+        background: #3668a1;
+        color: #fff !important;  /* out style seems to cascade before dashboard.css */
+    }
+    section.user-info ul {
+        background-color: white !important;
+    }
 }
 

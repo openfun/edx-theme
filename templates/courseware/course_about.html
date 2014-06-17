@@ -182,12 +182,10 @@
 
         <ol class="important-dates">
 
-          % if course.has_ended_enrollment():
-            <li><div class="icon start"></div><p>${_("End of Registration")}</p><span class="start-date">${_("Closed")}</span></li>
-          % elif course.end_enrollment_text:
-            <li><div class="icon start"></div><p>${_("End of Registration")}</p><span class="start-date">${course.end_enrollment_text}</span></li>
-          % endif
+          <li><div class="icon course-number"></div><p>${_("Course Number")}</p><span class="course-number">${course.display_number_with_default | h}</span></li>
+          % if not course.start_date_is_still_default:
           <li><div class="icon start"></div><p>${_("Classes Start")}</p><span class="start-date">${course.start_date_text}</span></li>
+          % endif
 
             ## We plan to ditch end_date (which is not stored in course metadata),
             ## but for backwards compatibility, show about/end_date blob if it exists.

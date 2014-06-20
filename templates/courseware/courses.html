@@ -16,7 +16,7 @@
       <select class="university-filter">
         <option value="">${_('Filter by university')}</option>
         % for university in University.objects.filter(featured=True):
-        <option value="${ university.code }">${ university.name }</option>
+        <option value="${ university.code }" data-url="${ university.get_absolute_url() }">${ university.name }</option>
         % endfor
         <option value="other">${_('Others')}</option>
       </select>
@@ -37,7 +37,7 @@
       $(document).ready(function(){
         $('.university-filter').change(function() {
           var university = $('.university-filter').val();
-          window.location.href = '${reverse("courses")}/university/' + university + '/#courses-list';
+          window.location.href = $('.university-filter option:selected').data('url') + '#courses-list';
         });
       });
     </script>

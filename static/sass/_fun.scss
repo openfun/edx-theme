@@ -1196,9 +1196,23 @@ body .find-courses {
 //---------------------
 // Courseware
 //---------------------
-
+body nav.course-material {
+    background-color: black;
+}
 body nav.course-material .inner-wrapper {
     max-width: $content-max-width;
+    color: white;
+    height: 40px;
+}
+body nav.course-material ol.course-tabs {
+    padding-top: 2px;
+}
+body nav.course-material ol.course-tabs li a, a:hover {
+    color: white !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
 }
 
 //---------------------

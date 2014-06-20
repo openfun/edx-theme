@@ -35,7 +35,7 @@ site_status_msg = get_site_status_msg(course_id)
 
 
 
-  <header class="global" aria-label="${_('Global Navigation')}">
+  <header class="global ${"slim" if course else ""}" aria-label="${_('Global Navigation')}">
   <nav>
 
   <h1 class="logo">
@@ -48,7 +48,7 @@ site_status_msg = get_site_status_msg(course_id)
 
     % if course:
       <h2>
-        <span class="provider">${course.display_org_with_default | h}:</span> 
+        <span class="provider">${course.display_org_with_default | h}:</span>
         ${course.display_name_with_default}
       </h2>
     % endif
@@ -137,7 +137,7 @@ site_status_msg = get_site_status_msg(course_id)
       <h2>${_("You are about to logout from your session. Do you want to proceed?")}</h2>
       <hr/>
     </header>
-    
+
     <div id="goodbye-message" class="modal-form-error"></div>
 
     <form id="logout_form" action="${reverse('logout')}">

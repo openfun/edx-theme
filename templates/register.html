@@ -76,7 +76,7 @@
         $submitButton.
           removeClass('is-disabled').
           removeProp('disabled').
-          html("${_('Create my {platform_name} Account').format(platform_name=settings.PLATFORM_NAME)}");
+          html("${_('Create My {platform_name} Account').format(platform_name=settings.PLATFORM_NAME)}");
       }
       else {
         $submitButton.
@@ -192,7 +192,7 @@
               <select id="education-level" name="level_of_education">
                 <option value="">--</option>
                 %for code, ed_level in UserProfile.LEVEL_OF_EDUCATION_CHOICES:
-                <option value="${code}">${ed_level}</option>
+                <option value="${code}">${_(ed_level)}</option>
                 %endfor
               </select>
             </div>
@@ -202,7 +202,7 @@
               <select id="gender" name="gender">
                 <option value="">--</option>
                 %for code, gender in UserProfile.GENDER_CHOICES:
-                <option value="${code}">${gender}</option>
+                <option value="${code}">${_(gender)}</option>
                 %endfor
               </select>
             </div>

@@ -450,22 +450,40 @@ body.view-register {
         position: relative;
         height: 140px;
 
-        .illustration {
-            float: right;
-        }
-
-        h1 {
-            width: 630px;
-            margin-top: 70px;
-        }
-
-        h2 {
-            text-transform: none;
-            top: 105px;
-            position: absolute;
+        h1.title {
+            width: 640px;
+            left: 0;
+            margin: 24px 0;
+            span.title-super {
+                -webkit-font-smoothing: antialiased;
+                color: rgb(14, 69, 134);
+                letter-spacing: 1px;
+            }
+            span.title-sub {
+                -webkit-font-smoothing: antialiased;
+                color: rgb(88, 87, 84);
+                margin: 0;
+                font-weight: normal;
+                font-size: 19px;
+                letter-spacing: 1px;
+                text-transform: none;
+            }
         }
     }
-
+    .introduction header:after {
+        content: url(/static/themes/fun/images/illustrations/register.jpg);
+        float: right;
+    }
+    ol.list-input {
+        clear: both;
+        li.field-group {  /* make select fields education level, genre and birth on the same line */
+            float: left;
+            margin-top: 20px;
+        }
+    }
+    .form-actions {
+        clear: both;
+    }
     .register .content .instructions {
         display: none;
     }

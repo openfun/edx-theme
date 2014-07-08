@@ -1248,5 +1248,14 @@ body.view-dashboard {
     section.user-info ul {
         background-color: white !important;
     }
+    section.dashboard {
+        section.my-courses {
+            section.info h3 a { /* registered courses title */
+                    font-size: 19px;
+                    color: rgb(54, 104, 161);
+            }
+
+        }
+    }
 }
 

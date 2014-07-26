@@ -1259,3 +1259,58 @@ body.view-dashboard {
     }
 }
 
+
+/* Override lms forum rich editor buttons */
+body.discussion {
+    .wmd-spacer1 {
+      left: 100px;
+    }
+    .wmd-spacer2 {
+      left: 225px;
+    }
+    .wmd-spacer3 {
+      left: 350px;
+    }
+
+    .wmd-button > span {  /* New comment  */
+      background-image: url(/static/themes/fun/highlight/images/wmd-buttons-transparent.png);
+    }
+    .container .discussion-body {  /* Reply to a comment */
+        .wmd-button {
+          span {
+            background-image: url(/static/themes/fun/highlight/images/wmd-buttons-transparent.png);
+          }
+        }
+    }
+
+
+
+    .comment-form {
+        .wmd-button > span {
+              background-image: url(/static/themes/fun/highlight/images/wmd-buttons-transparent.png);
+        }
+    }
+
+    .new-post-body {
+        .wmd-button > span {
+            background-image: url(/static/themes/fun/highlight/images/new-post-icons-full.png);
+        }
+    }
+    .new-post-article {
+        .wmd-button > span {
+            background-image: url(/static/themes/fun/highlight/images/new-post-icons-full.png);
+        }
+    }
+
+}
+
+.discussion-module {
+    .wmd-button {
+        span {
+            background-image: url(/static/themes/fun/highlight/images/wmd-buttons.png);
+        }
+    }
+
+}
+
+

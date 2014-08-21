@@ -487,7 +487,13 @@ body.view-register {
     .register .content .instructions {
         display: none;
     }
+    #field-country {  /* We want the country form field alone on its line */
+        margin-right: 70px;
+    }
+
 }
+
+
 
 // FAQ / Help
 body .content-wrapper .help-page {

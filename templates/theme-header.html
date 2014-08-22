@@ -73,13 +73,13 @@ document.write('<iframe src="https://3005751.fls.doubleclick.net/activityi;src=3
 ## We don't want extra links inside the navigation dropdown
 <%block name="navigation_dropdown_menu_links" />
 
-## When unauthenticated, only show the about page link
+## When not authenticated, only show the about page link
 <%block name="navigation_global_links">
 <li class="nav-global-outer">
   <ul class="nav-global-inner">
     <li class="nav-global-element"><a href="/about">Qu'est-ce que FUN&nbsp;?</a></li>
     <li class="nav-global-separator"></li>
-    <li class="nav-global-element"><a href="/courses">Les cours</a></li>
+    <li class="nav-global-element"><a href="${reverse('fun-courses-index')}">Les cours</a></li>
     <li class="nav-global-separator"></li>
     <li class="nav-global-element"><a href="${reverse('universities-landing')}">Les établissements</a></li>
     <li class="nav-global-separator"></li>
@@ -94,7 +94,7 @@ document.write('<iframe src="https://3005751.fls.doubleclick.net/activityi;src=3
   <ul class="nav-global-inner">
     <li class="nav-global-element"><a href="/about">Qu'est-ce que FUN&nbsp;?</a></li>
     <li class="nav-global-separator"></li>
-    <li class="nav-global-element"><a href="/courses">Les cours</a></li>
+    <li class="nav-global-element"><a href="${reverse('fun-courses-index')}">Les cours</a></li>
     <li class="nav-global-separator"></li>
     <li class="nav-global-element"><a href="${reverse('universities-landing')}">Les établissements</a></li>
     <li class="nav-global-separator"></li>

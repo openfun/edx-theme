@@ -671,7 +671,9 @@ body {
     .home .discover {
         margin-top: 15px;
         background: url("../themes/fun/images/bg_discover.jpg") repeat-y scroll center 0px #e7e7e9;
-
+        .fun-button-discover{
+            color: white;
+        }
         .discover-inner {
             width: $content-max-width;
             margin: 0 auto;

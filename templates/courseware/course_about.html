@@ -171,7 +171,7 @@
             ##       or something allowing themes to do whatever they
             ##       want here (and on this whole page, really).
               <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id.to_deprecated_string()])}" class="share"> <img src="${static.url('images/social/facebook-sharing.png')}" target="_blank">
-              <a href="http://twitter.com/intent/tweet?text=Je+viens+de+m%27inscrire+au+cours+${get_course_about_section(course, 'title')}+sur+@FUN+:+http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id.to_deprecated_string()])}" class="share" target="_blank">
+              <a href="http://twitter.com/intent/tweet?text=Je+viens+de+m%27inscrire+au+cours+${get_course_about_section(course, 'title')}+sur+@universite_num+:+http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id.to_deprecated_string()])}+%23funmooc" class="share" target="_blank">
                 <img src="${static.url('images/social/twitter-sharing.png')}">
               </a>
               <a href="mailto:?subject=Suivre%20un%20cours%20sur%20FUN&body=Je%20viens%20de%20m%E2%80%99inscrire%20au%20cours%20${get_course_about_section(course, 'title')}%20sur%20FUN%20:+http://www.france-universite-numerique-mooc.fr${reverse('about_course', args=[course.id.to_deprecated_string()])}" class="share" target="_blank">

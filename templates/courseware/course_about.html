@@ -1,5 +1,6 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%!
+  from django.utils import timezone
   from urllib import quote_plus
   from django.core.urlresolvers import reverse
   from courseware.courses import course_image_url, get_course_about_section
@@ -182,7 +183,10 @@
 
         <ol class="important-dates">
 
-          <li><div class="icon course-number"></div><p>${_("Course Number")}</p><span class="course-number">${course.display_number_with_default | h}</span></li>
+          % if course.enrollment_end < timezone.now():
+            <li><div class="icon start"></div><p>${_("End of Registration")}</p><span class="start-date">${_("Closed")}</span></li>
+          % endif
+
           % if not course.start_date_is_still_default:
           <li><div class="icon start"></div><p>${_("Classes Start")}</p><span class="start-date">${course.start_date_text}</span></li>
           % endif

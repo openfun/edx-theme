@@ -183,8 +183,13 @@
 
         <ol class="important-dates">
 
-          % if course.enrollment_end < timezone.now():
-            <li><div class="icon start"></div><p>${_("End of Registration")}</p><span class="start-date">${_("Closed")}</span></li>
+          % if course.enrollment_end:
+	    % if course.enrollment_end < timezone.now():
+	      <li><div class="icon start"></div><p>${_("End of Registration")}</p><span class="start-date">${_("Closed")}</span></li>
+	    % else:
+              <li><div class="icon start"></div><p>${_("End of Registration")}</p><span class="start-date">${course.enrollment_end.strftime('%d %b %Y')}</span></li>
+            % endif
+	    
           % endif
 
           % if not course.start_date_is_still_default:

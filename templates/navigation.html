@@ -35,7 +35,7 @@ site_status_msg = get_site_status_msg(course_id)
 
 
   <%doc>We do not want slim header on course about page </%doc>
-  % if course and not  request.path.endswith('/about'):
+  % if course and not request.path.endswith('/about') or '/wiki/' in request.path:
     <header class="global slim" aria-label="${_('Global Navigation')}">
   % else:
     <header class="global" aria-label="${_('Global Navigation')}">

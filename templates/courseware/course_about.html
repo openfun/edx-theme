@@ -5,7 +5,9 @@
   from django.core.urlresolvers import reverse
   from courseware.courses import course_image_url, get_course_about_section
   from courseware.access import has_access
+  from courses.views import get_dmcloud_url
   from universities.models import University
+
 %>
 <%namespace name='static' file='../static_content.html'/>
 
@@ -259,4 +261,9 @@
   </div>
 %endif
 
-<%include file="../video_modal.html" />
+<section id="video-modal" class="modal video-modal">
+  <div class="inner-wrapper">
+    ${get_dmcloud_url(course, get_course_about_section(course, "video"))}
+  </div>
+</section>
+

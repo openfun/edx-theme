@@ -1239,7 +1239,7 @@ body nav.course-material .inner-wrapper {
 body nav.course-material ol.course-tabs {
     padding-top: 2px;
 }
-body nav.course-material ol.course-tabs li a {
+body nav.course-material ol.course-tabs li a:not(.new-post-btn) {
     color: white !important;
     background-color: transparent !important;
     background-image: none !important;

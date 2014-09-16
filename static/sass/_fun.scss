@@ -1287,12 +1287,12 @@ body.discussion {
     }
 
     .wmd-button > span {  /* New comment  */
-      background-image: url(../themes/fun/images/wmd-buttons-transparent.png);
+      /* background-image: url(../themes/fun/images/wmd-buttons-transparent.png); *
     }
     .container .discussion-body {  /* Reply to a comment */
         .wmd-button {
           span {
-            background-image: url(../themes/fun/highlight/images/wmd-buttons-transparent.png);
+            /* background-image: url(../themes/fun/highlight/images/wmd-buttons-transparent.png); */
           }
         }
     }
@@ -1301,7 +1301,7 @@ body.discussion {
 
     .comment-form {
         .wmd-button > span {
-              background-image: url(../themes/fun/highlight/images/wmd-buttons-transparent.png);
+              /* background-image: url(../themes/fun/highlight/images/wmd-buttons-transparent.png); */
         }
     }
 

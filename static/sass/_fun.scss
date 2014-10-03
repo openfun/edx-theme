@@ -1275,6 +1275,7 @@ body.view-dashboard {
 
 
 /* Override lms forum rich editor buttons */
+/* forum page */
 body.discussion {
     .wmd-spacer1 {
       left: 100px;
@@ -1306,13 +1307,34 @@ body.discussion {
 
 }
 
+/* course embeded forum topic */
 .discussion-module {
-    .wmd-button {
-        span {
-            background-image: url(../themes/fun/highlight/images/wmd-buttons.png);
+    .new-post-body {  /* new comment */
+        .wmd-spacer1 {
+          left: 100px;
+        }
+        .wmd-spacer2 {
+          left: 225px;
+        }
+        .wmd-spacer3 {
+          left: 350px;
+        }
+        .wmd-button > span {
+            background-image: url(../themes/fun/highlight/images/wmd-buttons-transparent.png);
         }
     }
-
+    .wmd-spacer1 {
+      left: 100px;
+    }
+    .wmd-spacer2 {
+      left: 225px;
+    }
+    .wmd-spacer3 {
+      left: 350px;
+    }
+    .wmd-button span { /* reply to a comment */
+        background-image: url(../themes/fun/highlight/images/wmd-buttons.png);
+    }
 }
 
 

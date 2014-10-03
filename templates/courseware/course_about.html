@@ -3,9 +3,9 @@
   from django.utils import timezone
   from urllib import quote_plus
   from django.core.urlresolvers import reverse
-  from courseware.courses import course_image_url, get_course_about_section
+  from courseware.courses import get_course_about_section
   from courseware.access import has_access
-  from courses.views import get_dmcloud_url
+  from courses.views import get_dmcloud_url, course_image_url
   from universities.models import University
 
 %>
@@ -117,10 +117,11 @@
                     university = None
             %>
             %if university and university.logo:
-          <img src="${ university.logo.url }" />
+              <img src="${ university.logo.url }" />
+            %endif
         </div>
       </div>
-      % elif get_course_about_section(course, "video"):
+      %if get_course_about_section(course, "video"):
       <a href="#video-modal" class="media" rel="leanModal">
         <div class="hero">
           <img src="${course_image_url(course)}" />
@@ -160,7 +161,7 @@
         <div class="video-header">Voir la vidéo de présentation du cours</div>
         <a href="#video-modal" class="media" rel="leanModal">
           <div class="hero">
-            <img src="${course_image_url(course)}" />
+          <img src="${course_image_url(course, image_name='video_image.jpg')}" />
             <div class="play-intro"></div>
           </div>
         </a>
@@ -191,7 +192,7 @@
 	    % else:
               <li><div class="icon start"></div><p>${_("End of Registration")}</p><span class="start-date">${course.enrollment_end.strftime('%d %b %Y')}</span></li>
             % endif
-	    
+
           % endif
 
           % if not course.start_date_is_still_default:

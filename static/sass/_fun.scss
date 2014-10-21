@@ -1268,6 +1268,9 @@ body.view-dashboard {
                     font-size: 19px;
                     color: rgb(54, 104, 161);
             }
+            section.info h3 span { /* not yet opened registered courses title */
+                    font-size: 19px;
+            }
 
         }
     }

@@ -233,11 +233,16 @@ body header.global {
         margin-left: 10%;
 
         &:before {
-            content: 'Découvrir, apprendre et réussir';
             position: absolute;
             top: 162px;
             font-size: 16px;
             z-index: 10;
+        }
+        &.lang_en:before {
+            content: 'Discover, learn and succeed';
+        }
+        &.lang_fr:before {
+            content: 'Découvrir, apprendre et réussir';
         }
 
         .nav-courseware {

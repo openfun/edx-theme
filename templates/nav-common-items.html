@@ -1,0 +1,10 @@
+## mako
+<%! from django.core.urlresolvers import reverse %>
+<%! from django.utils.translation import ugettext as _ %>
+
+<li class="nav-global-element"><a href="/about">${_("What is FUN?")}</a></li>
+<li class="nav-global-separator"></li>
+<li class="nav-global-element"><a href="${reverse('fun-courses-index')}">${_("Courses")}</a></li>
+<li class="nav-global-separator"></li>
+<li class="nav-global-element"><a href="${reverse('universities-landing')}">${_("Universities")}</a></li>
+<li class="nav-global-separator"></li>

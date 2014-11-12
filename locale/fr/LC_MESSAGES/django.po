@@ -1,0 +1,491 @@
+# edX translation file
+#
+# Translators:
+# France Université Numerique <team@openfun.fr>, 2013
+msgid ""
+msgstr ""
+"Project-Id-Version:  edx-platform\n"
+"Report-Msgid-Bugs-To: team@openfun.fr\n"
+"POT-Creation-Date: 2014-11-14 15:09+0100\n"
+"PO-Revision-Date: 2014-07-04 13:50-0400\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: French (http://www.transifex.com/projects/p/edx-"
+"platform/language/fr/)\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 1.3\n"
+
+#: /edx/app/edxapp/themes/fun/templates/navigation.html:130
+msgid ""
+"<strong>Warning:</strong> Your browser is not fully supported. We "
+"strongly recommend using {chrome_link_start}Chrome{chrome_link_end} or "
+"{ff_link_start}Firefox{ff_link_end}."
+msgstr ""
+"Les applications de la plateforme FUN nécessitent une version récente de "
+"votre navigateur pour un fonctionnement optimal. Pour profiter pleinement"
+" de l'expérience FUN, nous vous invitons à télécharger et utiliser les "
+"dernières version de {ff_link_start}Firefox{ff_link_end}, "
+"{chrome_link_start}Chrome{chrome_link_end} ou Internet Explorer 10."
+
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:75
+msgid "About {course_name}"
+msgstr "A propos de {course_name}"
+
+#: /edx/app/edxapp/themes/fun/templates/theme-footer.html:22
+msgid "About..."
+msgstr "A propos..."
+
+# Translated in edx by 'Accès aux cours'
+#: /edx/app/edxapp/themes/fun/templates/login.html:79
+msgid "Access My Courses"
+msgstr "Accéder à mes Cours"
+
+msgid "Activation Invalid"
+msgstr "Activation non valide"
+
+msgid "Admin"
+msgstr "Administrateurs"
+
+msgid "All (students, staff and instructors)"
+msgstr "Tous (Apprenants et équipe pédagogique)"
+
+#: /edx/app/edxapp/themes/fun/templates/index.html:211
+msgid "All courses"
+msgstr "Tous les cours"
+
+#: /edx/app/edxapp/themes/fun/templates/index.html:208
+msgid ""
+"All courses present on FUN are designed for students and everyone wishing"
+" to learn. Follow these courses interactively and collaboratively, at "
+"your rhythm."
+msgstr ""
+"Tous les cours présents sur FUN s’adressent aux étudiants et à tous les "
+"publics désireux d’apprendre. Suivez ces cours de manière interactive et "
+"collaborative, à votre rythme."
+
+msgid "Also receive emails about article edits"
+msgstr "Recevoir aussi des emails concernant la modification des articles"
+
+#: /edx/app/edxapp/themes/fun/templates/500.html:15
+#: /edx/app/edxapp/themes/fun/templates/_500.html:15
+msgid ""
+"An error occurred and the page could not be loaded. Please try again in a"
+" few moments."
+msgstr ""
+"Une erreur a eu lieu pendant le chargement de la page, veuillez réessayer"
+" plus tard."
+
+msgid "Associate's degree"
+msgstr "Licence professionnelle"
+
+msgid "Bachelor's degree"
+msgstr "Licence"
+
+msgid "Check"
+msgstr "Vérifier"
+
+msgid "Class Feedback"
+msgstr "Réactions de la classe"
+
+# Translated in edx by 'Documents de cours'
+#: /edx/app/edxapp/themes/fun/templates/courseware/info.html:45
+msgid "Course Handouts"
+msgstr "Documents pédagogiques"
+
+msgid "Course Info"
+msgstr "Info Cours"
+
+msgid "Course Updates"
+msgstr "Infos du Cours"
+
+# Translated in edx by 'Infos et actualités'
+#: /edx/app/edxapp/themes/fun/templates/courseware/info.html:32
+#: /edx/app/edxapp/themes/fun/templates/courseware/info.html:41
+msgid "Course Updates &amp; News"
+msgstr "Infos du Cours &amp"
+
+msgid "Course-loading errors"
+msgstr "erreurs de chargement des cours"
+
+msgid "Current Courses"
+msgstr "Cours actuels :"
+
+msgid "Current course creator state"
+msgstr "État actuel du créateur de cours"
+
+msgid "DISCUSSION HOME:"
+msgstr "ACCUEIL DISCUSSION:"
+
+msgid "Deny all users access to edit this article."
+msgstr "Interdire à tous les utilisateurs de modifier l'article."
+
+#: /edx/app/edxapp/themes/fun/templates/index.html:207
+msgid "Discover the courses on FUN"
+msgstr "Découvrez les cours sur FUN"
+
+#: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:96
+msgid "Document your accomplishment!"
+msgstr ""
+
+msgid "Don't have a Studio Account? Sign up!"
+msgstr "Pas de compte Studio ? Inscrivez-vous !"
+
+msgid "E-mail change failed"
+msgstr "changement d'adresse email échoué"
+
+msgid "Elementary/primary school"
+msgstr "Brevet des collèges"
+
+msgid "Email or password is incorrect."
+msgstr "Adresse mail ou mot de passe incorrect"
+
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:191
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:193
+msgid "End of Registration"
+msgstr "Fin des inscriptions"
+
+msgid "Engage with posts"
+msgstr "S'investir dans les discussions"
+
+msgid "Enter the username of the owner."
+msgstr "Rentrez le nom d'utilisateur du propriétaire."
+
+#: /edx/app/edxapp/themes/fun/templates/index.html:70
+msgid ""
+"Explore free courses from {span_start}{platform_name}{span_end} "
+"universities"
+msgstr ""
+"Consultez les cours gratuits des établissements "
+"{span_start}{platform_name}{span_end}"
+
+#: /edx/app/edxapp/themes/fun/templates/register.html:245
+#: /edx/app/edxapp/themes/fun/templates/register.html:315
+msgid "Extra Personal Information"
+msgstr ""
+
+msgid "Female"
+msgstr "Féminin"
+
+msgid "Final Check"
+msgstr "Vérification finale"
+
+#: /edx/app/edxapp/themes/fun/templates/index.html:61
+msgid "Find the French university and school courses, where and when you want"
+msgstr ""
+"Retrouvez les cours des universités et écoles françaises, où vous voulez "
+"et quand vous voulez"
+
+#: /edx/app/edxapp/themes/fun/templates/register.html:152
+msgid "Finish your account registration below to start learning."
+msgstr "Terminez votre inscription ci-dessous pour commencer votre apprentissage."
+
+msgid "Follow posts for updates"
+msgstr "Suivre les mises à jour des posts"
+
+msgid "Following"
+msgstr "Suivi"
+
+msgid "Forum Admin"
+msgstr "Administrateurs des forums"
+
+msgid "HOW TO USE EDX DISCUSSIONS"
+msgstr "COMMENT UTILISER LE FORUM FUN"
+
+# Translated in edx by 'Plus haut niveau de formation obtenu'
+#: /edx/app/edxapp/themes/fun/templates/register.html:275
+msgid "Highest Level of Education Completed"
+msgstr "Plus haut niveau de formation atteint"
+
+# Translated in edx by 'Code d'honneur'
+#: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:52
+msgid "Honor Code"
+msgstr "Charte utilisateur"
+
+msgid "Honor Code Certificate"
+msgstr "déclaration sur l'honneur"
+
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:107
+msgid ""
+"I hereby accept the following <a href=\"/licenses\">terms and "
+"conditions</a>"
+msgstr ""
+"En m’inscrivant à ce cours, j’accepte les <a "
+"href=\"/licenses\">conditions d'utilisation relatives à ce cours</a> "
+"mentionnées dans la page de présentation"
+
+msgid "Inherit permissions"
+msgstr "Héritage des autorisations"
+
+msgid "Instructor"
+msgstr "Enseignant"
+
+msgid "Jobs"
+msgstr "Nous recrutons"
+
+msgid "Junior secondary/junior high/middle school"
+msgstr "Baccalauréat"
+
+msgid "Learning is More than Just Lectures"
+msgstr "L'apprentissage réclame plus que des cours magistraux"
+
+#: /edx/app/edxapp/themes/fun/templates/index.html:59
+msgid "Live the FUN experience"
+msgstr "Vivez l'expérience FUN"
+
+msgid "Log In"
+msgstr "Se Connecter"
+
+# Translated in edx by 'Connexion'
+#: /edx/app/edxapp/themes/fun/templates/navigation.html:119
+#: /edx/app/edxapp/themes/fun/templates/navigation.html:121
+#: /edx/app/edxapp/themes/fun/templates/static_templates/theme-copyrights.html:33
+msgid "Log in"
+msgstr "Se connecter"
+
+#: /edx/app/edxapp/themes/fun/templates/theme-header.html:64
+msgid "Log out"
+msgstr "Se déconnecter"
+
+msgid "Looks like you haven't registered for any courses yet."
+msgstr "Apparemment, vous ne vous êtes pas encore inscrit à un cours."
+
+msgid "Male"
+msgstr "Masculin"
+
+msgid "Master's or professional degree"
+msgstr "Master / Diplôme d'ingénieur"
+
+#: /edx/app/edxapp/themes/fun/templates/contact_form/contact_form_sent.html:11
+msgid "Message sent!"
+msgstr "Message envoyé !"
+
+msgid "Myself"
+msgstr "Moi-même"
+
+#: /edx/app/edxapp/themes/fun/templates/login.html:94
+msgid "PLEASE LOG IN to access your account and courses"
+msgstr "Merci de vous CONNECTER pour accéder à votre compte et vos cours"
+
+msgid "Please enter your new email address:"
+msgstr "Merci d'entrer votre nouvelle adresse email :"
+
+msgid "Please go to the following page and choose a new password:"
+msgstr "Visitez la page suivante et choisissez un nouveau mot de passe :"
+
+#: /edx/app/edxapp/themes/fun/templates/theme-footer.html:35
+msgid "Privacy policy"
+msgstr "Politique de confidentialité"
+
+#: /edx/app/edxapp/themes/fun/templates/login.html:85
+msgid "Processing your account information"
+msgstr "Identification en cours"
+
+#: /edx/app/edxapp/themes/fun/templates/register.html:96
+msgid "Processing your account information..."
+msgstr "Enregistrement de vos informations"
+
+# Translated in edx by 'Nom d'utilisateur public'
+#: /edx/app/edxapp/themes/fun/templates/register.html:183
+msgid "Public Username"
+msgstr "Nom d'utilisateur FUN"
+
+msgid "Receive course emails"
+msgstr "Recevoir les emails du cours"
+
+# Translated in edx by 'Inscription'
+#: /edx/app/edxapp/themes/fun/templates/register.html:374
+msgid "Register"
+msgstr "S'inscrire"
+
+# Translated in edx by 'Inscrivez-vous ci-dessous pour créer votre compte sur
+# {platform_name}'
+#: /edx/app/edxapp/themes/fun/templates/register.html:106
+msgid "Register below to create your {platform_name} account"
+msgstr "Inscrivez-vous maintenant pour créer votre compte {platform_name}"
+
+#: /edx/app/edxapp/themes/fun/templates/register.html:131
+msgid "Register to start learning today!"
+msgstr "Créez un compte pour commencer votre apprentissage aujourd'hui !"
+
+msgid "Report Forum Misuse"
+msgstr "Signaler les abus sur le forum"
+
+msgid "Report a problem"
+msgstr "Soumettre un problème"
+
+msgid "Rescore ALL students' problem submissions"
+msgstr "Renoter TOUTES les soumissions d'exercice des étudiants"
+
+msgid "Secondary/high school"
+msgstr "DUT / BTS"
+
+msgid "See all children"
+msgstr "Voir tous les articles enfants"
+
+msgid "Sort by date, vote, or comments"
+msgstr "Trier par date, votes ou commentaires"
+
+msgid "Staff and instructors"
+msgstr "Equipe pédagogique"
+
+msgid "Studio user"
+msgstr "L'utilisateur de Studio"
+
+#: /edx/app/edxapp/themes/fun/templates/theme-header.html:54
+msgid "Subscribe now"
+msgstr "S'inscrire maintenant"
+
+#: /edx/app/edxapp/themes/fun/templates/theme-footer.html:37
+msgid "Terms and conditions"
+msgstr "Mentions légales"
+
+#: /edx/app/edxapp/themes/fun/templates/theme-footer.html:31
+msgid "Terms of use"
+msgstr "Conditions générales d'utilisation"
+
+#: /edx/app/edxapp/themes/fun/templates/contact_form/contact_form_sent.html:14
+msgid ""
+"Thank you for your message. It has been successfully recorded, we will "
+"answer you as soon as possible."
+msgstr ""
+"Merci pour votre message. Nous l'avons bien reçu, et nous vous répondrons"
+" dès que possible."
+
+msgid "The edX Team"
+msgstr "L'équipe FUN"
+
+#: /edx/app/edxapp/themes/fun/templates/login.html:109
+msgid "The following errors occured while logging you in:"
+msgstr "Les erreurs suivantes se sont produites pendant votre connexion :"
+
+# Translated in edx by 'La page que vous recherchiez n'a pas été trouvée.'
+#: /edx/app/edxapp/themes/fun/templates/_404.html:16
+msgid "The page that you were looking for was not found."
+msgstr "La page que vous recherchez n'a pas été trouvée."
+
+#: /edx/app/edxapp/themes/fun/templates/500.html:11
+#: /edx/app/edxapp/themes/fun/templates/_500.html:11
+msgid "The servers encountered an error"
+msgstr "Une erreur a eu lieu"
+
+#: /edx/app/edxapp/themes/fun/templates/index.html:210
+msgid ""
+"These courses are designed by French university and school teachers and "
+"address varied subjects, such as history, mathematics, health, "
+"philosophy, law, technology\\u2026"
+msgstr ""
+"Ces cours sont élaborés par les professeurs des universités et écoles "
+"françaises et abordent des thèmes aussi variés que l’histoire, les "
+"mathématiques, la santé, la philosophie, le droit, les "
+"technologies\\u2026"
+
+msgid "This article was last modified:"
+msgstr "Cet article a été modifié :"
+
+msgid "Unanswered"
+msgstr "Sans réponse"
+
+msgid "University"
+msgstr "Établissement"
+
+msgid "Upload New File"
+msgstr "Upload Nouveau Fichier"
+
+msgid "Upvote posts and good responses"
+msgstr "Voter pour des posts et des bonnes réponses"
+
+#: /edx/app/edxapp/themes/fun/templates/theme-footer.html:33
+msgid "Usage policy"
+msgstr "Charte utilisateurs"
+
+msgid "Useful examples:"
+msgstr "Exemples utiles :"
+
+msgid "Username should only consist of A-Z and 0-9, with no spaces."
+msgstr ""
+"Le nom d'utilisateur doit être composé de lettres (A – Z) et de chiffres "
+"(0 – 9), sans espace."
+
+msgid "Valid e-mail address required."
+msgstr "Une adresse email valide est requise."
+
+# Translated in edx by 'Voir le cours'
+#: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:123
+msgid "View Archived Course"
+msgstr "Voir les Cours archivés"
+
+# Translated in edx by 'Voir le Cours'
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:97
+msgid "View Courseware"
+msgstr "Voir le contenu du Cours"
+
+#: /edx/app/edxapp/themes/fun/templates/static_templates/theme-copyrights.html:25
+msgid "What is FUN"
+msgstr "Qu'est-ce que FUN"
+
+#: /edx/app/edxapp/themes/fun/templates/nav-common-items.html:5
+msgid "What is FUN?"
+msgstr "Quest-ce que FUN&nbsp;?"
+
+msgid "When this article is edited"
+msgstr "Quand cet article est modifié"
+
+msgid "Write a brief message for the article's history log."
+msgstr ""
+"Ecrivez un court message qui apparaîtra sur le log de suivi des "
+"modifications"
+
+msgid "Yes, I am sure"
+msgstr "Oui, je confirme"
+
+#: /edx/app/edxapp/themes/fun/templates/navigation.html:141
+msgid "You are about to logout from your session. Do you want to proceed?"
+msgstr ""
+"Vous êtes sur le point de vous déconnecter. Souhaitez-vous poursuivre "
+"cette action ?"
+
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:95
+msgid "You are registered"
+msgstr "Vous êtes inscrit"
+
+msgid "`role` is required"
+msgstr "Le rôle est requis"
+
+msgid "edX Additions:"
+msgstr "edX Suppléments :"
+
+# Translated in edx by 'exemple : Jean Dupont'
+#: /edx/app/edxapp/themes/fun/templates/register.html:179
+msgid "example: Jane Doe"
+msgstr "exemple : Marie Dupont"
+
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:219
+msgid "h/week"
+msgstr "h/semaine"
+
+#: /edx/app/edxapp/themes/fun/templates/register.html:144
+msgid ""
+"or create your own {platform_name} account by completing all "
+"<strong>required*</strong> fields below."
+msgstr ""
+"ou créez votre propre compte {platform_name} en remplissant tous les "
+"champs <strong>requis*</strong> ci-dessous."
+
+msgid "pending"
+msgstr "En attente"
+
+msgid "post anonymously to classmates"
+msgstr "Ecrire anonymement aux camarades de classe"
+
+#: /edx/app/edxapp/themes/fun/templates/navigation.html:48
+msgid "{0} home"
+msgstr "{0} accueil"
+
+#: /edx/app/edxapp/themes/fun/templates/courseware/info.html:12
+msgid "{course.display_name_with_default} Course Info"
+msgstr "Info cours {course.display_number_with_default}"
+
+msgid "{platform_name}-wide Summary"
+msgstr "{platform_name}-Sommaire général"

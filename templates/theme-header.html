@@ -1,5 +1,6 @@
 ## mako
 <%! from django.core.urlresolvers import reverse %>
+<%! from django.utils.translation import ugettext as _ %>
 <%namespace name='static' file='/static_content.html'/>
 <%inherit file="/navigation.html"/>
 
@@ -49,13 +50,8 @@ from urllib import quote_plus
 <%block name="navigation_global_links">
 <li class="nav-global-outer">
   <ul class="nav-global-inner">
-    <li class="nav-global-element"><a href="/about">Qu'est-ce que FUN&nbsp;?</a></li>
-    <li class="nav-global-separator"></li>
-    <li class="nav-global-element"><a href="${reverse('fun-courses-index')}">Les cours</a></li>
-    <li class="nav-global-separator"></li>
-    <li class="nav-global-element"><a href="${reverse('universities-landing')}">Les établissements</a></li>
-    <li class="nav-global-separator"></li>
-    <li class="nav-global-element"><a href="/register">S'inscrire maintenant</a></li>
+    <%include file="nav-common-items.html"/>
+    <li class="nav-global-element"><a href="/register">${_("Subscribe now")}</a></li>
   </ul>
 </li>
 </%block>
@@ -64,13 +60,8 @@ from urllib import quote_plus
 <%block name="navigation_global_links_authenticated">
 <li class="nav-global-outer">
   <ul class="nav-global-inner">
-    <li class="nav-global-element"><a href="/about">Qu'est-ce que FUN&nbsp;?</a></li>
-    <li class="nav-global-separator"></li>
-    <li class="nav-global-element"><a href="${reverse('fun-courses-index')}">Les cours</a></li>
-    <li class="nav-global-separator"></li>
-    <li class="nav-global-element"><a href="${reverse('universities-landing')}">Les établissements</a></li>
-    <li class="nav-global-separator"></li>
-    <li class="nav-global-element"><a href="#log-out" rel="leanModal">Se déconnecter</a></li>
+    <%include file="nav-common-items.html"/>
+    <li class="nav-global-element"><a href="#log-out" rel="leanModal">${_("Log out")}</a></li>
   </ul>
 </li>
 </%block>

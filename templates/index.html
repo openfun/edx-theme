@@ -56,9 +56,9 @@
     </div>
 
   <div class="tagline">
-    <div class="main">Vivez l’expérience FUN</div>
+    <div class="main">${_("Live the FUN experience")}</div>
     <div class="secondary">
-      Retrouvez les cours des universités et écoles françaises, où vous voulez et quand vous voulez
+      ${_("Find the French university and school courses, where and when you want")}
     </div>
   </div>
   </header>
@@ -204,10 +204,11 @@
          <iframe frameborder="0" width="440" height="248" src="//www.dailymotion.com/embed/video/k6eAwEb4hn3gN04NUHB"></iframe>
       </div>
       <div class="discover-description">
-        <h1>Découvrez les cours sur FUN</h1>
-        <p>Tous les cours présents sur FUN s’adressent aux étudiants et à tous les publics désireux d’apprendre. Suivez ces cours de manière interactive et collaborative, à votre rythme.</p>
-        <p>Ces cours sont élaborés par les professeurs des universités et écoles françaises et abordent des thèmes aussi variés que l’histoire, les mathématiques, la santé, la philosophie, le droit, les technologies…</p>
-        <a class="button fun-button-discover" href="${reverse('fun-courses-index')}">Tous les cours +</a>
+        <h1>${_("Discover the courses on FUN")}</h1>
+        <p>${_("All courses present on FUN are designed for students and everyone wishing to learn. Follow these courses interactively and collaboratively, at your rhythm.")}</p>
+
+        <p>${_("These courses are designed by French university and school teachers and address varied subjects, such as history, mathematics, health, philosophy, law, technology\\u2026")}</p>
+        <a class="button fun-button-discover" href="${reverse('fun-courses-index')}">${_("All courses")} +</a>
       </div>
     </div>
   </section>

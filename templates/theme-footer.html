@@ -1,5 +1,6 @@
 ## mako
 <%! from django.core.urlresolvers import reverse %>
+<%! from django.utils.translation import ugettext as _ %>
 <%namespace name='static' file='/static_content.html'/>
 <div class="wrapper-footer">
   <footer>
@@ -18,22 +19,22 @@
     <div class="colophon">
       <nav class="nav-colophon">
         <ol>
-          <li><a href="/about">À propos de...</a></li>
+          <li><a href="/about">${_("About...")}</a></li>
           <li>|</li>
-          <li><a href="/help">Aide</a></li>
+          <li><a href="/help">${_("Help")}</a></li>
           <li>|</li>
-          <li><a href="${reverse('contact')}">Contact</a></li>
+          <li><a href="${reverse('contact')}">${_("Contact")}</a></li>
         </ol>
       </nav>
       <nav class="nav-colophon nav-colophon2">
         <ol>
-          <li><a href="/tos">Conditions Générales d’Utilisation</a></li>
+          <li><a href="/tos">${_("Terms of use")}</a></li>
           <li>|</li>
-          <li><a href="/honor">Charte utilisateurs</a></li>
+          <li><a href="/honor">${_("Usage policy")}</a></li>
           <li>|</li>
-          <li><a href="/privacy">Politique de confidentialité</a></li>
+          <li><a href="/privacy">${_("Privacy policy")}</a></li>
           <li>|</li>
-          <li><a href="/legal">Mentions Légales</a></li>
+          <li><a href="/legal">${_("Terms and conditions")}</a></li>
         </ol>
       </nav>
     </div>

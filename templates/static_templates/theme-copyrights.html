@@ -1,3 +1,4 @@
+<%! from django.utils.translation import ugettext as _ %>
 <%! from django.core.urlresolvers import reverse %>
 <%inherit file="/main.html" />
 
@@ -15,29 +16,29 @@
     <table class="copyrights-images">
       <thead>
         <tr>
-          <th>Rubrique</th>
-          <th>Copyright</th>
+          <th>${_("Rubric")}</th>
+          <th>${_("Copyright")}</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Qu'est-ce que FUN</td>
+          <td>${_("What is FUN")}</td>
           <td>Prisme / Pierre Jayet</td>
         </tr>
         <tr>
-          <td>S'inscrire maintenant</td>
+        <td>{_("Subscribe now")}</td>
           <td>Prisme / Pierre Jayet</td>
         </tr>
         <tr>
-          <td>Se connecter</td>
+          <td>${_("Log in")}</td>
           <td>Prisme / Pierre Jayet</td>
         </tr>
         <tr>
-          <td>Aide</td>
+          <td>{_("Help")}</td>
           <td>MESR / PICTURETANK</td>
         </tr>
         <tr>
-          <td>Les établissements</td>
+          <td>${_("Universities")}</td>
           <td>paris8</td>
         </tr>
         <tr>

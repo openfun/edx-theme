@@ -1340,4 +1340,35 @@ body.discussion {
     }
 }
 
+/* forum special users colors */
+.user-label-active {
+    font-size: 12px;
+    vertical-align: middle;
+    border-radius: 2px;
+    padding: 0;
+    background: #98b3ff;
+    font-style: normal;
+    text-transform: uppercase;
+    color: white;
 
+}
+.user-label-recommended {
+    font-size: 12px;
+    vertical-align: middle;
+    border-radius: 2px;
+    padding: 0;
+    background: #618aff;
+    font-style: normal;
+    text-transform: uppercase;
+    color: white;
+}
+.user-label-official {
+    font-size: 12px;
+    vertical-align: middle;
+    border-radius: 2px;
+    padding: 0;
+    background: #0747ff;
+    font-style: normal;
+    text-transform: uppercase;
+    color: white;
+}

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  edx-platform\n"
 "Report-Msgid-Bugs-To: team@openfun.fr\n"
-"POT-Creation-Date: 2014-11-14 15:09+0100\n"
+"POT-Creation-Date: 2014-11-20 18:29+0100\n"
 "PO-Revision-Date: 2014-07-04 13:50-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/edx-"
@@ -264,6 +264,11 @@ msgstr "Message envoyé !"
 msgid "Myself"
 msgstr "Moi-même"
 
+# Translated in edx by 'Nouvelles'
+#: /edx/app/edxapp/themes/fun/templates/nav-common-items.html:7
+msgid "News"
+msgstr "Actualités"
+
 #: /edx/app/edxapp/themes/fun/templates/login.html:94
 msgid "PLEASE LOG IN to access your account and courses"
 msgstr "Merci de vous CONNECTER pour accéder à votre compte et vos cours"
@@ -489,3 +494,4 @@ msgstr "Info cours {course.display_number_with_default}"
 
 msgid "{platform_name}-wide Summary"
 msgstr "{platform_name}-Sommaire général"
+

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  edx-platform\n"
 "Report-Msgid-Bugs-To: team@openfun.fr\n"
-"POT-Creation-Date: 2014-11-20 18:29+0100\n"
+"POT-Creation-Date: 2014-12-03 15:19+0100\n"
 "PO-Revision-Date: 2014-07-04 13:50-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/edx-"
@@ -83,6 +83,12 @@ msgstr "Licence professionnelle"
 msgid "Bachelor's degree"
 msgstr "Licence"
 
+#: /edx/app/edxapp/themes/fun/templates/main.html:113
+msgid ""
+"By continuing browsing the france-universite-numerique-mooc.fr site, you "
+"accept the use of cookies to enhance your user experience."
+msgstr "En poursuivant votre navigation sur le site france-universite-numerique-mooc.fr, vous acceptez l'utilisation de cookies permettant d'améliorer votre expérience utilisateur."
+
 msgid "Check"
 msgstr "Vérifier"
 
@@ -125,6 +131,7 @@ msgstr "Interdire à tous les utilisateurs de modifier l'article."
 msgid "Discover the courses on FUN"
 msgstr "Découvrez les cours sur FUN"
 
+# Translated in edx by 'Documentez votre réussite !'
 #: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:96
 msgid "Document your accomplishment!"
 msgstr ""
@@ -160,6 +167,7 @@ msgstr ""
 "Consultez les cours gratuits des établissements "
 "{span_start}{platform_name}{span_end}"
 
+# Translated in edx by 'Informations personnelles additionnelles'
 #: /edx/app/edxapp/themes/fun/templates/register.html:245
 #: /edx/app/edxapp/themes/fun/templates/register.html:315
 msgid "Extra Personal Information"
@@ -177,6 +185,8 @@ msgstr ""
 "Retrouvez les cours des universités et écoles françaises, où vous voulez "
 "et quand vous voulez"
 
+# Translated in edx by 'Terminez l'enregistrement de votre compte ci-dessous
+# pour commencer votre cours.'
 #: /edx/app/edxapp/themes/fun/templates/register.html:152
 msgid "Finish your account registration below to start learning."
 msgstr "Terminez votre inscription ci-dessous pour commencer votre apprentissage."
@@ -205,6 +215,10 @@ msgstr "Charte utilisateur"
 
 msgid "Honor Code Certificate"
 msgstr "déclaration sur l'honneur"
+
+#: /edx/app/edxapp/themes/fun/templates/main.html:116
+msgid "I agree"
+msgstr "J'accepte"
 
 #: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:107
 msgid ""
@@ -264,7 +278,6 @@ msgstr "Message envoyé !"
 msgid "Myself"
 msgstr "Moi-même"
 
-# Translated in edx by 'Nouvelles'
 #: /edx/app/edxapp/themes/fun/templates/nav-common-items.html:7
 msgid "News"
 msgstr "Actualités"
@@ -296,6 +309,10 @@ msgstr "Enregistrement de vos informations"
 msgid "Public Username"
 msgstr "Nom d'utilisateur FUN"
 
+#: /edx/app/edxapp/themes/fun/templates/main.html:114
+msgid "Read more"
+msgstr "En savoir plus"
+
 msgid "Receive course emails"
 msgstr "Recevoir les emails du cours"
 
@@ -310,6 +327,8 @@ msgstr "S'inscrire"
 msgid "Register below to create your {platform_name} account"
 msgstr "Inscrivez-vous maintenant pour créer votre compte {platform_name}"
 
+# Translated in edx by 'Inscrivez-vous pour commencer à apprendre dès
+# aujourd'hui !'
 #: /edx/app/edxapp/themes/fun/templates/register.html:131
 msgid "Register to start learning today!"
 msgstr "Créez un compte pour commencer votre apprentissage aujourd'hui !"
@@ -357,9 +376,6 @@ msgid ""
 msgstr ""
 "Merci pour votre message. Nous l'avons bien reçu, et nous vous répondrons"
 " dès que possible."
-
-msgid "The edX Team"
-msgstr "L'équipe FUN"
 
 #: /edx/app/edxapp/themes/fun/templates/login.html:109
 msgid "The following errors occured while logging you in:"
@@ -470,6 +486,8 @@ msgstr "exemple : Marie Dupont"
 msgid "h/week"
 msgstr "h/semaine"
 
+# Translated in edx by 'ou créez votre propre compte {platform_name} en
+# complétant tous les champs <strong>requis*</strong> ci-dessous.'
 #: /edx/app/edxapp/themes/fun/templates/register.html:144
 msgid ""
 "or create your own {platform_name} account by completing all "
@@ -494,4 +512,7 @@ msgstr "Info cours {course.display_number_with_default}"
 
 msgid "{platform_name}-wide Summary"
 msgstr "{platform_name}-Sommaire général"
+
+#~ msgid "The edX Team"
+#~ msgstr "L'équipe FUN"
 

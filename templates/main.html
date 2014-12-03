@@ -101,9 +101,22 @@
   <link rel="stylesheet" type="text/css" href="${static.url(style_overrides_file)}" />
 % endif
 
+<!-- Cookie banner -->
+<link rel="stylesheet" type="text/css" href="${static.url('themes/fun/css/cookie-banner.css')}" />
+<script src="${static.url('themes/fun/js/cookie-banner.js')}"></script>
 </head>
 
 <body class="<%block name='bodyclass'/> lang_${LANGUAGE_CODE}">
+
+ <div id="cookie-banner" style="display:none">
+   
+    ${_("By continuing browsing the france-universite-numerique-mooc.fr site, you accept the use of cookies to enhance your user experience.")}.
+    <br><a href="/privacy">&gt; ${_("Read more")}</a>
+    
+    <a href="#" class="cookie-banner-button">${_("I agree")}</a>
+ </div>
+
+
   <a class="nav-skip" href="<%block name="nav_skip">#content</%block>">${_("Skip to this view's content")}</a>
 
   <%include file="mathjax_accessible.html" />

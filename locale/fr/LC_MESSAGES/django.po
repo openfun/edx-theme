@@ -432,7 +432,7 @@ msgstr "Qu'est-ce que FUN"
 
 #: /edx/app/edxapp/themes/fun/templates/nav-common-items.html:5
 msgid "What is FUN?"
-msgstr "Quest-ce que FUN&nbsp;?"
+msgstr "Qu'est-ce que FUN&nbsp;?"
 
 msgid "When this article is edited"
 msgstr "Quand cet article est modifié"

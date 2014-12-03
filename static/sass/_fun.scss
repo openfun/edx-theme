@@ -1427,27 +1427,31 @@ body .featured-articles {
 }
 
 body .recent-articles {
+    display: table;
     .recent-article {
         width: 100%;
+        margin-bottom: 20px;
 
         .article-content {
+            display: table-row;
             .article-preview {
-                width: 70%;
-                float: left;
-                margin-bottom: 20px;
+                width: 686px;
+                display: table-cell;
+                vertical-align: middle;
+
+                .read-more {
+                    font-weight: bold;
+                }
             }
             .article-image {
-                width: 30%;
-                margin-left: 686px;
+                width: 294px;
+                display: table-cell;
+                vertical-align: middle;
                 text-align: center;
                 img {
-                    max-width: 100%;
+                    max-width: 294px;
                     max-height: 200px;
                 }
-                margin-bottom: 20px;
-            }
-            .read-more {
-                font-weight: bold;
             }
         }
     }

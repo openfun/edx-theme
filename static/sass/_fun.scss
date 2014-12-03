@@ -1417,6 +1417,9 @@ body .featured-articles {
         }
         .article-title {
             margin-left: 151px;
+            h2 {
+                margin-bottom: 5px;
+            }
         }
     }
 }
@@ -1424,12 +1427,12 @@ body .featured-articles {
 body .recent-articles {
     .recent-article {
         width: 100%;
-        margin-bottom: 20px;
 
         .article-content {
             .article-preview {
                 width: 70%;
                 float: left;
+                margin-bottom: 20px;
             }
             .article-image {
                 width: 30%;
@@ -1439,6 +1442,7 @@ body .recent-articles {
                     max-width: 100%;
                     max-height: 200px;
                 }
+                margin-bottom: 20px;
             }
             .read-more {
                 font-weight: bold;

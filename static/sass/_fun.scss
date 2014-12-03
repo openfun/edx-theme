@@ -1392,15 +1392,17 @@ body .featured-articles {
         position: relative;
         overflow: hidden;
 
-        .article-title {
-            h2 {
-                color: #FFF;
-            }
+        .article-preview {
+            width: 100%;
             position: absolute;
             bottom: 0px;
-            /*width: 100%;*/
-            padding: 8px;
             background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.7);
+            .article-title {
+                h2 {
+                    color: #FFF;
+                }
+                padding: 8px;
+            }
         }
     }
     .featured-article {

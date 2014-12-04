@@ -1419,6 +1419,9 @@ body .featured-articles {
         }
         .article-title {
             margin-left: 151px;
+	    a {
+		text-decoration: none;
+	    }
             h2 {
                 margin-bottom: 5px;
             }
@@ -1438,7 +1441,9 @@ body .recent-articles {
                 width: 686px;
                 display: table-cell;
                 vertical-align: middle;
-
+		.article-title a {
+		    text-decoration: none;
+		}
                 .read-more {
                     font-weight: bold;
                 }
@@ -1468,9 +1473,13 @@ body .recent-articles {
 }
 
 body .news-article {
+    a:hover {
+        text-decoration: none;
+    }
     h2 {
         font-weight: bold;
         margin-top: 50px;
+	-webkit-font-smoothing: antialiased;
     }
     .subtitle {
         border-bottom: 1px solid $lighter-base-font-color;

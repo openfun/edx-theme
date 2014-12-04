@@ -7,10 +7,38 @@
     box-sizing: border-box;
     color: #fff;
     left: 0;
-    padding: 0.5% 10% 0.5% 4%;
+    padding: 0.5% 4% 0.5% 4%;
     position: fixed;
     width: 100%;
     z-index: 9999;
+    display: table;
+}
+#cookie-banner .row {
+    display: table-row;
+}
+#cookie-banner .left {
+    display: table-cell;
+}
+#cookie-banner .right {
+    display: table-cell;
+    vertical-align: middle;
+}
+#cookie-banner .text {
+    margin-top: 6px;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.2px;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+#cookie-banner .link {
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+#cookie-banner .link a {
+    color: #92bed7;
+    font-weight: bold;
+    -webkit-font-smoothing: antialiased;
 }
 #cookie-banner .cookie-banner-mention{
     /*float:left;*/

@@ -1,5 +1,6 @@
 
 
+
 var cookieName = 'acceptCookieFun';
 var cookieValue = "on";
 var cookieDuration = 365;
@@ -30,38 +31,30 @@ function removeDiv(event) {
 }
 
 function addCookieBanner() {
-    /*var divbanner = document.createElement('div');
-    divbanner.setAttribute('id',"cookie-banner");
-    divbanner.innerHTML = cookieBannerHtml;
-    document.getElementsByTagName('body')[0].appendChild(divbanner);*/
     var divbanner = document.getElementById("cookie-banner");
-    divbanner.style.display = "block";
+    divbanner.style.display = "table";
 }
 
 function animateBanner(event) {
     var elem = document.getElementById("cookie-banner");
-    //var bottom = parseInt(elem.style.bottom);
-    //console.log(elem.style.bottom);
     var bottom = -80;
 
     function frame() {
-      bottom++;  // update parameters
-      console.log(bottom);
-      elem.style.bottom = bottom + 'px'; // show frame 
+      bottom++;  
+      elem.style.bottom = bottom + 'px'; 
     
       if (bottom >= 0)  {
-        // si left est Žgale ˆ 100
         clearInterval(id);
       }
     }
-    var id = setInterval(frame, 10) // draw every 10ms
+    var id = setInterval(frame, 4) 
 
 }
 
 function manageCookieBanner(event) {
     if(checkCookie(window.cookieName) != window.cookieValue) {
         addCookieBanner();
-        document.getElementsByClassName('cookie-banner-button')[0].addEventListener("click",removeDiv);
+        document.getElementsByClassName('cookie-banner-button')[0].addEventListener("click", removeDiv);
         animateBanner();
     }
 }

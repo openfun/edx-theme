@@ -86,8 +86,8 @@ msgstr "Licence"
 #: /edx/app/edxapp/themes/fun/templates/main.html:113
 msgid ""
 "By continuing browsing the france-universite-numerique-mooc.fr site, you "
-"accept the use of cookies to enhance your user experience."
-msgstr "En poursuivant votre navigation sur le site france-universite-numerique-mooc.fr, vous acceptez l'utilisation de cookies permettant d'améliorer votre expérience utilisateur."
+"accept the use of cookies to enhance your user experience"
+msgstr "En poursuivant votre navigation sur le site france-universite-numerique-mooc.fr, vous acceptez l'utilisation de cookies permettant d'améliorer votre expérience utilisateur"
 
 msgid "Check"
 msgstr "Vérifier"

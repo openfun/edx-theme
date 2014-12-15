@@ -196,7 +196,7 @@
           % endif
 
           % if not course.start_date_is_still_default:
-          <li><div class="icon start"></div><p>${_("Classes Start")}</p><span class="start-date">${course.start_date_text}</span></li>
+          <li><div class="icon start"></div><p>${_("Classes Start")}</p><span class="start-date">${course.start_datetime_text("DATE_TIME")}</span></li>
           % endif
 
             ## We plan to ditch end_date (which is not stored in course metadata),

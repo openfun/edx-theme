@@ -50,15 +50,17 @@ site_status_msg = get_site_status_msg(course_id)
     </a>
   </h1>
 
-    % if course:
-      <h2>
-        <span class="provider">${course.display_org_with_default | h}:</span>
-        ${course.display_name_with_default}
-      </h2>
+    % if course and not disable_courseware_header:
+    <h2><span class="provider">${course.display_org_with_default | h}:</span> ${course.display_number_with_default | h} ${course.display_name_with_default}</h2>
+    % else:
+      ## Wiki application do not set course in the context but in the request.
+      % if hasattr(request, 'course'):
+        <h2><span class="provider">${request.course.display_org_with_default | h}:</span> ${request.course.display_number_with_default | h} ${request.course.display_name_with_default}</h2>
+
+        % endif
     % endif
 
     % if user.is_authenticated():
-
     <ol class="left nav-global authenticated">
       <%block name="navigation_global_links_authenticated">
         <li class="nav-global-01">

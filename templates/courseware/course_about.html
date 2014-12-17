@@ -185,8 +185,7 @@
         </header>
 
         <ol class="important-dates">
-
-          % if course.enrollment_end:
+      % if course.enrollment_end:
 	    % if course.enrollment_end < timezone.now():
 	      <li><div class="icon start"></div><p>${_("End of Registration")}</p><span class="start-date">${_("Closed")}</span></li>
 	    % else:
@@ -208,7 +207,7 @@
                 % if get_course_about_section(course, "end_date"):
                     ${get_course_about_section(course, "end_date")}
                 % else:
-                    ${course.end_date_text}
+                    ${course.end_datetime_text("DATE_TIME")}
                 % endif
                 </span>
             </li>

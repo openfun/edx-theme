@@ -1379,6 +1379,26 @@ body.discussion {
 }
 
 //---------------------
+// tos page
+//---------------------
+section.tos {
+    div.inner-wrapper {
+        h3 {
+            color: black;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        p.last-change {
+            margin-top: 50px;
+            font-size: 15px;
+            color: rgb(88, 87, 84);
+        }
+    }
+}
+
+//---------------------
 // News
 //---------------------
 body .featured-articles {

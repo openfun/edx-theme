@@ -1406,8 +1406,8 @@ body .featured-articles {
     margin-bottom: 50px;
 
     .top-article {
-        width: 485px;
-        height: 242px;
+        width: 455px;
+        height: 227px;
         float: left;
         position: relative;
         overflow: hidden;
@@ -1426,19 +1426,19 @@ body .featured-articles {
         }
     }
     .featured-article {
-        width: 485px;
-        height: 63px;
-        margin-left: 495px;
+        width: 455px;
+        height: 58px;
+        margin-left: 465px;
         margin-bottom: 10px;
         padding-bottom: 10px;
         border-bottom: 1px solid $lighter-base-font-color;
         .featured-article-image {
-            width: 141px;
-            height: 70px;
+            width: 116px;
+            height: 58px;
             float: left;
         }
         .article-title {
-            margin-left: 151px;
+            margin-left: 126px;
             a {
                 text-decoration: none;
             }
@@ -1452,7 +1452,6 @@ body .featured-articles {
 body .recent-articles {
     display: table;
     .recent-article {
-        width: $content-inner-width;
         margin-bottom: 20px;
 
         .article-content {

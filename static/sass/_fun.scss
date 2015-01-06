@@ -1407,7 +1407,7 @@ body .featured-articles {
 
     .top-article {
         width: 485px;
-        height: 311px;
+        height: 242px;
         float: left;
         position: relative;
         overflow: hidden;
@@ -1427,21 +1427,21 @@ body .featured-articles {
     }
     .featured-article {
         width: 485px;
-        height: 86px;
+        height: 63px;
         margin-left: 495px;
         margin-bottom: 10px;
         padding-bottom: 10px;
         border-bottom: 1px solid $lighter-base-font-color;
         .featured-article-image {
             width: 141px;
-            height: 90px;
+            height: 70px;
             float: left;
         }
         .article-title {
             margin-left: 151px;
-	    a {
-		text-decoration: none;
-	    }
+            a {
+                text-decoration: none;
+            }
             h2 {
                 margin-bottom: 5px;
             }
@@ -1452,7 +1452,7 @@ body .featured-articles {
 body .recent-articles {
     display: table;
     .recent-article {
-        width: 100%;
+        width: $content-inner-width;
         margin-bottom: 20px;
 
         .article-content {
@@ -1461,34 +1461,20 @@ body .recent-articles {
                 width: 686px;
                 display: table-cell;
                 vertical-align: middle;
-		.article-title a {
-		    text-decoration: none;
-		}
+                .article-title a {
+                    text-decoration: none;
+                }
                 .read-more {
                     font-weight: bold;
                 }
             }
-            .article-image {
+            .recent-article-image {
                 width: 294px;
+                height: 147px;
                 display: table-cell;
                 vertical-align: middle;
-                text-align: center;
-                img {
-                    max-width: 294px;
-                    max-height: 200px;
-                }
             }
         }
-    }
-}
-
-.recent-articles, .featured-articles {
-    .subtitle {
-        font-style: italic;
-        color: $gray-75;
-    }
-    .top-article .subtitle {
-        color: $gray-3;
     }
 }
 
@@ -1499,13 +1485,7 @@ body .news-article {
     h2 {
         font-weight: bold;
         margin-top: 50px;
-	-webkit-font-smoothing: antialiased;
-    }
-    .subtitle {
-        border-bottom: 1px solid $lighter-base-font-color;
-        font-style: italic;
-        color: $gray-75;
-        padding-bottom: 10px;
+        -webkit-font-smoothing: antialiased;
     }
     img {
         margin: 10px;

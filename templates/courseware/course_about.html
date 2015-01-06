@@ -1,8 +1,9 @@
 <%! from django.utils.translation import ugettext as _ %>
 <%!
   from django.utils import timezone
-  from urllib import quote_plus
+  from django.utils.formats import date_format
   from django.core.urlresolvers import reverse
+  from urllib import quote_plus
   from courseware.courses import get_course_about_section
   from courseware.access import has_access
   from courses.views import get_dmcloud_url, course_image_url
@@ -71,6 +72,12 @@
   <script src="${static.url('js/course_info.js')}"></script>
 </%block>
 
+<style>
+.important-dates-item-text{
+margin-left : 1px;
+}
+
+</style>
 <%block name="title">
 <title>${_("About {course_name}").format(course_name=get_course_about_section(course, "title")) | h}</title>
 </%block>
@@ -185,7 +192,7 @@
                         <li class="important-dates-item">
                             <i class="icon icon-calendar"></i>
                             <p class="important-dates-item-title">${_("End of Registration")}</p>
-                            <span class="important-dates-item-text start-date">${course.enrollment_end.strftime('%d %b %Y')}</span>
+                            <span class="important-dates-item-text start-date">${date_format(course.enrollment_end)}</span>
                         </li>
                         % endif
                     % endif

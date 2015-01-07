@@ -197,11 +197,6 @@
                         </li>
                         % endif
                     % endif
-                    <li class="important-dates-item">
-                        <i class="icon icon-info-sign"></i>
-                        <p class="important-dates-item-title">${_("Course Number")}</p>
-                        <span class="important-dates-item-text course-number">${course.display_number_with_default | h}</span>
-                    </li>
                     % if not course.start_date_is_still_default:
                         <li class="important-dates-item">
                             <i class="icon icon-calendar"></i>

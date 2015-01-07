@@ -226,11 +226,6 @@
                             <span class="important-dates-item-text effort">${get_course_about_section(course, "effort")}</span>
                         </li>
                     % endif
-                    <li class="important-dates-item">
-                        <i class="icon icon-time"></i>
-                        <p class="important-dates-item-title">${_('Course Length')}</p>
-                        <span class="important-dates-item-text course-length">${_('{number} weeks').format(number=15)}</span>
-                    </li>
 
                     % if get_course_about_section(course, "prerequisites"):
                         <li class="important-dates-item">

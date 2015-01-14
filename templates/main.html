@@ -101,8 +101,13 @@
   <link rel="stylesheet" type="text/css" href="${static.url(style_overrides_file)}" />
 % endif
 
+% if settings.ENVIRONEMENT == 'ketch':
+  <link rel="stylesheet" type="text/css" href="${static.url('fun/css/teacher-sandbox.css')}" />
+% endif
+
 <!-- Cookie banner -->
 <link rel="stylesheet" type="text/css" href="${static.url('themes/fun/css/cookie-banner.css')}" />
+
 <script src="${static.url('themes/fun/js/cookie-banner.js')}"></script>
 </head>
 
@@ -116,7 +121,7 @@
        </div>
        <div class="link">
            <a href="/privacy">&gt; ${_("Read more")}</a>
-       </div>   
+       </div>
     </div>
     <div class="right">
         <a href="#" class="cookie-banner-button">${_("I agree")}</a>

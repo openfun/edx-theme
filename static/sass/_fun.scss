@@ -1463,6 +1463,10 @@ body .recent-articles {
                 .article-title a {
                     text-decoration: none;
                 }
+                .subtitle {
+                    font-style: italic;
+                    color: $gray-75;
+                }
                 .read-more {
                     font-weight: bold;
                 }

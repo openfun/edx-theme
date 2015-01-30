@@ -7,10 +7,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <%! from django.utils.translation import ugettext as _ %>
+<%! from django.core.urlresolvers import reverse %>
+
+
 <%! from microsite_configuration import microsite %>
 <%! from microsite_configuration import page_title_breadcrumbs %>
 <%! import platform %>
   <meta name="platform.node" CONTENT="${platform.node()}">
+  <link rel="alternate" type="application/rss+xml" title="${_('FUN courses RSS feed')}" href="${reverse('fun-courses-feed')}" />
 
 <%namespace name='static' file='static_content.html'/>
 <%! from django.utils import html %>

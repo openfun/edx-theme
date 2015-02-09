@@ -38,21 +38,15 @@ $gray-1: #fbfbf9; //Main BG Color
 $black: #2e2d29;
 $black-80: #585754;
 
-
-
 //-----------------
 //  Font Assignment
 //-----------------
 
-$theme-sans-font: 'Arial';
-$sans-serif: $theme-sans-font, "Helvetica", sans-serif;
-$body-font-family: $sans-serif;
 
 $theme-serif-font: 'Arial';
 $serif: $theme-serif-font, "Helvetica", sans-serif;
-
 $f-serif: $serif;
-$f-sans-serif: $sans-serif;
+
 
 
 
@@ -174,8 +168,8 @@ $modal-bg-color: $gray-1;
 // Sizes
 // ----------------
 
-$content-inner-width: 980px;
-$content-min-width: $content-inner-width;
+$content-inner-width: 1170px;
+$content-min-width: 980px;
 $content-max-width: $content-inner-width;
 
 $header-height: 293px;
@@ -211,6 +205,19 @@ $video-thumb-url: '../themes/fun/images/stanford-video-thumb.png';
     text-align: right;
 }
 
+// Slim version (courseware)
+body header.global.slim {
+    background-color: white;
+    nav {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav:before {
+        display: none !important;
+    }
+}
+
+
 //-----------------
 // Header
 //-----------------
@@ -245,9 +252,6 @@ body header.global {
             content: 'Découvrir, apprendre et réussir';
         }
 
-        .nav-courseware {
-            margin-top: 71px;
-        }
 
         .nav-global {
             position: absolute;
@@ -267,7 +271,7 @@ body header.global {
 
             .nav-global-inner {
                 height: 100%;
-                width: $content-max-width;
+                width: $content-min-width;
                 margin: auto;
                 position: relative;
 
@@ -310,30 +314,6 @@ body header.global {
     }
 }
 
-// Slim version (courseware)
-body header.global.slim {
-    background-color: $main-color-content-background;
-
-    nav:before,
-    nav .logo:before,
-    nav .logo:after {
-        display: none !important;
-    }
-
-    h1.logo {
-        img {
-            height: 70px;
-        }
-    }
-
-    h2 {
-        font-size:1.1em;
-        max-width: 630px;
-        width: auto;
-        margin-top: 29px;
-        white-space: normal;
-    }
-}
 
 body.view-passwordreset.js {
     nav{
@@ -1230,27 +1210,6 @@ body .find-courses {
     background-color: $main-color-content-background;
 }
 
-//---------------------
-// Courseware
-//---------------------
-body nav.course-material {
-    background-color: black;
-}
-body nav.course-material .inner-wrapper {
-    max-width: $content-max-width;
-    color: white;
-    height: 40px;
-}
-body nav.course-material ol.course-tabs {
-    padding-top: 2px;
-}
-body nav.course-material ol.course-tabs li a:not(.new-post-btn) {
-    color: white !important;
-    background-color: transparent !important;
-    background-image: none !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-}
 
 //---------------------
 // Dashboard

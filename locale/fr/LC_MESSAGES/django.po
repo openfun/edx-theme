@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  edx-platform\n"
 "Report-Msgid-Bugs-To: team@openfun.fr\n"
-"POT-Creation-Date: 2015-02-13 13:00+0100\n"
+"POT-Creation-Date: 2015-02-10 11:12+0000\n"
 "PO-Revision-Date: 2014-07-04 13:50-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/edx-"
@@ -450,6 +450,10 @@ msgstr "edX Suppléments :"
 #: /edx/app/edxapp/themes/fun/templates/register.html:179
 msgid "example: Jane Doe"
 msgstr "exemple : Marie Dupont"
+
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:226
+msgid "h/week"
+msgstr "h/semaine"
 
 msgid "pending"
 msgstr "En attente"

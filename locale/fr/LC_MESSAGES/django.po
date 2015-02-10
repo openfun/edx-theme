@@ -162,7 +162,7 @@ msgstr "Rentrez le nom d'utilisateur du propriétaire."
 
 #: /edx/app/edxapp/themes/fun/templates/main.html:17
 msgid "FUN courses RSS feed"
-msgstr ""
+msgstr "Flux RSS des cours de FUN"
 
 msgid "Female"
 msgstr "Féminin"

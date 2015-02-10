@@ -1363,6 +1363,9 @@ section.tos {
 body .featured-articles {
     margin-top: 50px;
     margin-bottom: 50px;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
 
     .top-article {
         width: 455px;
@@ -1385,9 +1388,9 @@ body .featured-articles {
         }
     }
     .featured-article {
-        width: 455px;
+        width: 468px;
         height: 58px;
-        margin-left: 465px;
+        margin-left: 473px;
         margin-bottom: 10px;
         padding-bottom: 10px;
         border-bottom: 1px solid $lighter-base-font-color;
@@ -1410,13 +1413,17 @@ body .featured-articles {
 
 body .recent-articles {
     display: table;
+    width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+
     .recent-article {
         margin-bottom: 20px;
 
         .article-content {
             display: table-row;
             .article-preview {
-                width: 686px;
+                width: 648px;
                 display: table-cell;
                 vertical-align: middle;
                 .article-title a {

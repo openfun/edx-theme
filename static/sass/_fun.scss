@@ -215,6 +215,9 @@ body header.global.slim {
     nav:before {
         display: none !important;
     }
+    h2 {
+        overflow: visible !important;
+    }
 }
 
 

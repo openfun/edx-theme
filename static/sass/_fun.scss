@@ -888,8 +888,7 @@ body .course-info {
         border-bottom: none;
 
         .intro-inner-wrapper {
-            width: $content-max-width;
-
+            width: 978px !important;
             .intro .main-cta {
                 a.register, .register {
                     width: 623px;
@@ -909,6 +908,7 @@ body .course-info {
             .media .hero {
                 height: 150px;
                 background-color: #fff;
+                border: 0;
 
                 img {
                     width: auto;

@@ -491,7 +491,9 @@ body.view-register {
 
 // FAQ / Help
 body .content-wrapper .help-page {
+    width: 980px;
     .illustration {
+
         float: right;
         margin-top: -20px;
         margin-right: 1px;
@@ -1021,6 +1023,7 @@ body .course-info {
 
 body .container.about .vision {
     margin-top: 30px;
+    width: 980px;
 
     .message {
         padding-bottom: 0;
@@ -1059,6 +1062,7 @@ body .container.about .vision {
 
 body .container.contact {
     @extend .login;
+    width: 980px;
 
     & > .illustration {
         float: right;
@@ -1185,6 +1189,7 @@ body {  /* we may need to affect a class to body to narrow selection */
 
 body .university-courses {
     .introduction.container {
+        width: 980px;
         height: 199px;
         background-color:rgba(255,255,255,0.5);
         position: relative;
@@ -1207,6 +1212,7 @@ body .university-courses {
 
     .courses-list.container {
         margin-top: 30px;
+        width: 980px;
 
         p {
             font-size: 15px;
@@ -1350,6 +1356,7 @@ body.discussion {
 // tos page
 //---------------------
 section.tos {
+    width: 980px;
     div.inner-wrapper {
         h3 {
             color: black;

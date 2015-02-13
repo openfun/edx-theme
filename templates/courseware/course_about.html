@@ -102,10 +102,14 @@
                         <strong>${_("View Courseware")}</strong></a>
                         %endif
                     %else:
-                        <a href="#" class="register">${_("Register for {}").format(get_course_about_section(course, "title"))}</a>
-                        <div id="register_error"></div>
+                        %if not can_enroll:
+                            <span class="course-ended register disabled">${_("Enrollment to this course is ended") | h}</span>
+                        %else:
+                            <a href="#" class="register">${_("Register for {}").format(get_course_about_section(course, "title"))}</a>
+                            <div id="register_error"></div>
+                        %endif
                     %endif
-                    <div class="register-license">${_("I hereby accept the following <a href=\"/licenses\">terms and conditions</a>")}</div>
+                    <div style="clear: both" class="register-license">${_("I hereby accept the following <a href=\"/licenses\">terms and conditions</a>")}</div>
                 </div>
                 </section>
                 <div class="media">

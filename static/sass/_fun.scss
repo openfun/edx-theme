@@ -920,6 +920,12 @@ body .course-info {
                 }
             }
 
+            .course-ended, .register {
+                margin-right: auto !important;
+                margin-left: auto !important;
+                float: none !important;
+            }
+
             .register-license {
                 font-size: 10px;
                 font-style: italic;

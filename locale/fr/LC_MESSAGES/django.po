@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  edx-platform\n"
 "Report-Msgid-Bugs-To: team@openfun.fr\n"
-"POT-Creation-Date: 2015-01-19 18:30+0100\n"
+"POT-Creation-Date: 2015-02-13 13:00+0100\n"
 "PO-Revision-Date: 2014-07-04 13:50-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/edx-"
@@ -51,11 +51,11 @@ msgstr "Administrateurs"
 msgid "All (students, staff and instructors)"
 msgstr "Tous (Apprenants et équipe pédagogique)"
 
-#: /edx/app/edxapp/themes/fun/templates/index.html:211
+#: /edx/app/edxapp/themes/fun/templates/index.html:61
 msgid "All courses"
 msgstr "Tous les cours"
 
-#: /edx/app/edxapp/themes/fun/templates/index.html:208
+#: /edx/app/edxapp/themes/fun/templates/index.html:58
 msgid ""
 "All courses present on FUN are designed for students and everyone wishing"
 " to learn. Follow these courses interactively and collaboratively, at "
@@ -83,7 +83,7 @@ msgstr "Licence professionnelle"
 msgid "Bachelor's degree"
 msgstr "Licence"
 
-#: /edx/app/edxapp/themes/fun/templates/main.html:115
+#: /edx/app/edxapp/themes/fun/templates/main.html:124
 msgid ""
 "By continuing browsing the france-universite-numerique-mooc.fr site, you "
 "accept the use of cookies to enhance your user experience"
@@ -130,7 +130,7 @@ msgstr "ACCUEIL DISCUSSION:"
 msgid "Deny all users access to edit this article."
 msgstr "Interdire à tous les utilisateurs de modifier l'article."
 
-#: /edx/app/edxapp/themes/fun/templates/index.html:207
+#: /edx/app/edxapp/themes/fun/templates/index.html:57
 msgid "Discover the courses on FUN"
 msgstr "Découvrez les cours sur FUN"
 
@@ -146,23 +146,23 @@ msgstr "Brevet des collèges"
 msgid "Email or password is incorrect."
 msgstr "Adresse mail ou mot de passe incorrect"
 
-#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:195
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:199
 msgid "End of Registration"
 msgstr "Fin des inscriptions"
 
 msgid "Engage with posts"
 msgstr "S'investir dans les discussions"
 
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:106
+msgid "Enrollment to this course is ended"
+msgstr "Les inscriptions pour ce cours sont terminées"
+
 msgid "Enter the username of the owner."
 msgstr "Rentrez le nom d'utilisateur du propriétaire."
 
-#: /edx/app/edxapp/themes/fun/templates/index.html:70
-msgid ""
-"Explore free courses from {span_start}{platform_name}{span_end} "
-"universities"
+#: /edx/app/edxapp/themes/fun/templates/main.html:17
+msgid "FUN courses RSS feed"
 msgstr ""
-"Consultez les cours gratuits des établissements "
-"{span_start}{platform_name}{span_end}"
 
 msgid "Female"
 msgstr "Féminin"
@@ -170,7 +170,7 @@ msgstr "Féminin"
 msgid "Final Check"
 msgstr "Vérification finale"
 
-#: /edx/app/edxapp/themes/fun/templates/index.html:61
+#: /edx/app/edxapp/themes/fun/templates/index.html:21
 msgid "Find French university and school courses, where and whenever you want"
 msgstr ""
 "Retrouvez les cours des universités et écoles françaises, où vous voulez "
@@ -202,11 +202,11 @@ msgstr "Charte utilisateur"
 msgid "Honor Code Certificate"
 msgstr "déclaration sur l'honneur"
 
-#: /edx/app/edxapp/themes/fun/templates/main.html:122
+#: /edx/app/edxapp/themes/fun/templates/main.html:131
 msgid "I agree"
 msgstr "J'accepte"
 
-#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:108
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:112
 msgid ""
 "I hereby accept the following <a href=\"/licenses\">terms and "
 "conditions</a>"
@@ -230,7 +230,7 @@ msgstr "Baccalauréat"
 msgid "Learning is More than Just Lectures"
 msgstr "L'apprentissage réclame plus que des cours magistraux"
 
-#: /edx/app/edxapp/themes/fun/templates/index.html:59
+#: /edx/app/edxapp/themes/fun/templates/index.html:19
 msgid "Live the FUN experience"
 msgstr "Vivez l'expérience FUN"
 
@@ -289,7 +289,7 @@ msgstr "Identification en cours"
 msgid "Public Username"
 msgstr "Nom d'utilisateur FUN"
 
-#: /edx/app/edxapp/themes/fun/templates/main.html:118
+#: /edx/app/edxapp/themes/fun/templates/main.html:127
 msgid "Read more"
 msgstr "En savoir plus"
 
@@ -363,7 +363,7 @@ msgstr "La page que vous recherchez n'a pas été trouvée."
 msgid "The servers encountered an error"
 msgstr "Une erreur a eu lieu"
 
-#: /edx/app/edxapp/themes/fun/templates/index.html:210
+#: /edx/app/edxapp/themes/fun/templates/index.html:60
 msgid ""
 "These courses are designed by French university and school teachers and "
 "address varied subjects, such as history, mathematics, health, "
@@ -461,9 +461,16 @@ msgstr "Ecrire anonymement aux camarades de classe"
 msgid "{0} home"
 msgstr "{0} accueil"
 
-#: /edx/app/edxapp/themes/fun/templates/courseware/info.html:12
-msgid "{course.display_name_with_default} Course Info"
-msgstr "Info cours {course.display_number_with_default}"
-
 msgid "{platform_name}-wide Summary"
 msgstr "{platform_name}-Sommaire général"
+
+#~ msgid ""
+#~ "Explore free courses from "
+#~ "{span_start}{platform_name}{span_end} universities"
+#~ msgstr ""
+#~ "Consultez les cours gratuits des "
+#~ "établissements {span_start}{platform_name}{span_end}"
+
+#~ msgid "{course.display_name_with_default} Course Info"
+#~ msgstr "Info cours {course.display_number_with_default}"
+

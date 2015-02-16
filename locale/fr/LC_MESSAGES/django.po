@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  edx-platform\n"
 "Report-Msgid-Bugs-To: team@openfun.fr\n"
-"POT-Creation-Date: 2015-02-10 11:12+0000\n"
+"POT-Creation-Date: 2015-02-16 13:15+0000\n"
 "PO-Revision-Date: 2014-07-04 13:50-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/edx-"
@@ -206,7 +206,7 @@ msgstr "déclaration sur l'honneur"
 msgid "I agree"
 msgstr "J'accepte"
 
-#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:112
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:110
 msgid ""
 "I hereby accept the following <a href=\"/licenses\">terms and "
 "conditions</a>"
@@ -411,6 +411,10 @@ msgstr "Voir les Cours archivés"
 msgid "View Courseware"
 msgstr "Voir le contenu du Cours"
 
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:161
+msgid "View the course presentation video"
+msgstr "Voir la vidéo de présentation du cours"
+
 #: /edx/app/edxapp/themes/fun/templates/static_templates/theme-copyrights.html:25
 msgid "What is FUN"
 msgstr "Qu'est-ce que FUN"
@@ -451,7 +455,7 @@ msgstr "edX Suppléments :"
 msgid "example: Jane Doe"
 msgstr "exemple : Marie Dupont"
 
-#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:226
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:230
 msgid "h/week"
 msgstr "h/semaine"
 
@@ -467,14 +471,4 @@ msgstr "{0} accueil"
 
 msgid "{platform_name}-wide Summary"
 msgstr "{platform_name}-Sommaire général"
-
-#~ msgid ""
-#~ "Explore free courses from "
-#~ "{span_start}{platform_name}{span_end} universities"
-#~ msgstr ""
-#~ "Consultez les cours gratuits des "
-#~ "établissements {span_start}{platform_name}{span_end}"
-
-#~ msgid "{course.display_name_with_default} Course Info"
-#~ msgstr "Info cours {course.display_number_with_default}"
 

@@ -846,8 +846,11 @@ body .home {
 body .find-courses {
 
     .courses {
+        width: 920px;
         position: relative;
         margin-top: 17px;
+        margin-left: auto;
+        margin-right: auto;
         .university-filter {
             position: absolute;
             top: 0;

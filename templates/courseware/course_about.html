@@ -94,10 +94,10 @@
                 </hgroup>
                 <div class="main-cta">
                     %if user.is_authenticated() and registered:
+                        <span class="register disabled">${_("You are registered") | h}</span>
                         %if show_courseware_link and course.has_started():
                         <a href="${course_target}">
                         %endif
-                            <span class="register disabled">${_("You are registered") | h}</span>
                         %if show_courseware_link and course.has_started():
                         <strong>${_("View Courseware")}</strong></a>
                         %endif

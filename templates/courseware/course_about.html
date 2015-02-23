@@ -158,7 +158,7 @@
         <section class="course-sidebar">
             % if get_course_about_section(course, "video"):
                 <section class="video-teaser">
-                    <div class="video-header">Voir la vidéo de présentation du cours</div>
+                    <div class="video-header">${_("View the course presentation video")}</div>
                     <a href="#video-modal" class="media" rel="leanModal">
                         <div class="hero">
                             <img src="${course_image_url(course, image_name='video_image.jpg')}" />

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  edx-platform\n"
 "Report-Msgid-Bugs-To: team@openfun.fr\n"
-"POT-Creation-Date: 2015-02-23 08:20+0000\n"
+"POT-Creation-Date: 2015-02-25 11:02+0000\n"
 "PO-Revision-Date: 2014-07-04 13:50-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/edx-"
@@ -95,9 +95,6 @@ msgstr ""
 msgid "Check"
 msgstr "Vérifier"
 
-msgid "Class Feedback"
-msgstr "Réactions de la classe"
-
 # Translated in edx by 'Documents de cours'
 #: /edx/app/edxapp/themes/fun/templates/courseware/info.html:45
 msgid "Course Handouts"
@@ -133,9 +130,6 @@ msgstr "Interdire à tous les utilisateurs de modifier l'article."
 #: /edx/app/edxapp/themes/fun/templates/index.html:57
 msgid "Discover the courses on FUN"
 msgstr "Découvrez les cours sur FUN"
-
-msgid "Don't have a Studio Account? Sign up!"
-msgstr "Pas de compte Studio ? Inscrivez-vous !"
 
 msgid "E-mail change failed"
 msgstr "changement d'adresse email échoué"
@@ -184,9 +178,6 @@ msgstr "Suivi"
 
 msgid "Forum Admin"
 msgstr "Administrateurs des forums"
-
-msgid "HOW TO USE EDX DISCUSSIONS"
-msgstr "COMMENT UTILISER LE FORUM FUN"
 
 # Translated in edx by 'Plus haut niveau de formation obtenu'
 #: /edx/app/edxapp/themes/fun/templates/register.html:275
@@ -237,6 +228,10 @@ msgstr "Vivez l'expérience FUN"
 msgid "Log In"
 msgstr "Se Connecter"
 
+#: /edx/app/edxapp/themes/fun/templates/navigation.html:84
+msgid "Log Out"
+msgstr "Se déconnecter"
+
 # Translated in edx by 'Connexion'
 #: /edx/app/edxapp/themes/fun/templates/navigation.html:121
 #: /edx/app/edxapp/themes/fun/templates/navigation.html:123
@@ -273,6 +268,16 @@ msgstr "Merci de vous CONNECTER pour accéder à votre compte et vos cours"
 msgid "Please enter your new email address:"
 msgstr "Merci d'entrer votre nouvelle adresse email :"
 
+#: /edx/app/edxapp/themes/fun/templates/registration/password_reset_confirm.html:64
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly. <br /> Required fields are noted by <strong "
+"class=\"indicator\">bold text and an asterisk (*)</strong>."
+msgstr "Veuillez entrer votre mot de passe deux fois pour que nous puissions vérifier que vous l'avez tapé correctement. <br /> Les champs requis sont indiqués en <strong class=\"indicator\">gras et avec un astérisque (*)</strong>."
+
+# Translated in edx by 'Veuillez aller à la page suivante et choisissez un
+# nouveau mot de passe :'
+#: /edx/app/edxapp/themes/fun/templates/registration/password_reset_email.html:4
 msgid "Please go to the following page and choose a new password:"
 msgstr "Visitez la page suivante et choisissez un nouveau mot de passe :"
 
@@ -280,6 +285,7 @@ msgstr "Visitez la page suivante et choisissez un nouveau mot de passe :"
 msgid "Privacy policy"
 msgstr "Politique de confidentialité"
 
+# Translated in edx by ''
 #: /edx/app/edxapp/themes/fun/templates/login.html:85
 msgid "Processing your account information"
 msgstr "Identification en cours"
@@ -311,6 +317,12 @@ msgstr "Soumettre un problème"
 msgid "Rescore ALL students' problem submissions"
 msgstr "Renoter TOUTES les soumissions d'exercice des étudiants"
 
+#: /edx/app/edxapp/themes/fun/templates/registration/password_reset_confirm.html:7
+#: /edx/app/edxapp/themes/fun/templates/registration/password_reset_confirm.html:14
+#, python-format
+msgid "Reset Your %(platform_name)s Password"
+msgstr "Réinitialisez votre mot de passe %(platform_name)s"
+
 msgid "Secondary/high school"
 msgstr "DUT / BTS"
 
@@ -323,8 +335,10 @@ msgstr "Trier par date, votes ou commentaires"
 msgid "Staff and instructors"
 msgstr "Equipe pédagogique"
 
-msgid "Studio user"
-msgstr "L'utilisateur de Studio"
+#: /edx/app/edxapp/themes/fun/templates/500.html:4
+#: /edx/app/edxapp/themes/fun/templates/_500.html:4
+msgid "Studio Server Error"
+msgstr "Erreur de Studio Server"
 
 #: /edx/app/edxapp/themes/fun/templates/theme-header.html:54
 msgid "Subscribe now"
@@ -346,7 +360,8 @@ msgstr ""
 "Merci pour votre message. Nous l'avons bien reçu, et nous vous répondrons"
 " dès que possible."
 
-msgid "The edX Team"
+#: /edx/app/edxapp/themes/fun/templates/registration/password_reset_email.html:13
+msgid "The FUN Team"
 msgstr "L'équipe FUN"
 
 #: /edx/app/edxapp/themes/fun/templates/login.html:109
@@ -376,7 +391,6 @@ msgstr ""
 msgid "Unanswered"
 msgstr "Sans réponse"
 
-# Translated in edx by 'Universités'
 #: /edx/app/edxapp/themes/fun/templates/nav-common-items.html:11
 #: /edx/app/edxapp/themes/fun/templates/static_templates/theme-copyrights.html:41
 msgid "Universities"
@@ -405,6 +419,10 @@ msgstr ""
 
 msgid "Valid e-mail address required."
 msgstr "Une adresse email valide est requise."
+
+#: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:63
+msgid "Verified Pending"
+msgstr "En attente de vérification"
 
 # Translated in edx by 'Voir le cours'
 #: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:205
@@ -446,15 +464,27 @@ msgstr ""
 "Vous êtes sur le point de vous déconnecter. Souhaitez-vous poursuivre "
 "cette action ?"
 
-#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:100
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:97
 msgid "You are registered"
 msgstr "Vous êtes inscrit"
 
-msgid "`role` is required"
-msgstr "Le rôle est requis"
+#: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:191
+msgid ""
+"You can no longer access this course because payment has not yet been "
+"received. You can {link_start}contact the account holder{link_end} to "
+"request payment, or you can "
+"{unenroll_link_start}unenroll{unenroll_link_end} from this course"
+msgstr ""
 
-msgid "edX Additions:"
-msgstr "edX Suppléments :"
+#: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:140
+msgid "You only have {days} days left to verify for this course."
+msgstr ""
+
+#: /edx/app/edxapp/themes/fun/templates/registration/password_reset_email.html:2
+msgid ""
+"You're receiving this e-mail because you requested a password reset for "
+"your user account at FUN."
+msgstr "Vous recevez cet e-mail parce que vous avez fait une demande de réinitialisation du mot de passe de votre compte utilisateur FUN."
 
 # Translated in edx by 'exemple : Jean Dupont'
 #: /edx/app/edxapp/themes/fun/templates/register.html:179
@@ -465,9 +495,6 @@ msgstr "exemple : Marie Dupont"
 msgid "h/week"
 msgstr "h/semaine"
 
-msgid "pending"
-msgstr "En attente"
-
 msgid "post anonymously to classmates"
 msgstr "Ecrire anonymement aux camarades de classe"
 
@@ -477,4 +504,3 @@ msgstr "{0} accueil"
 
 msgid "{platform_name}-wide Summary"
 msgstr "{platform_name}-Sommaire général"
-

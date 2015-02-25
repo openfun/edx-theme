@@ -1480,3 +1480,9 @@ body .news-article {
         margin: 10px;
     }
 }
+
+/* fix zindex issue with modal dialog close button on student dashboard.
+email reset, name change and language preference use a button, while logout modal use a div */
+button.close-modal, div.close-modal {
+    z-index: 100 !important;
+}

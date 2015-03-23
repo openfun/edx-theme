@@ -1279,6 +1279,15 @@ body.discussion {
           }
         }
     }
+    /* Enlarge action button zone in response header to allow french transalation which is wider than english*/
+    .discussion-response {
+        .response-header-content {
+            width: 65%;
+        }
+        .response-header-actions {
+            width: 35%;
+        }
+    }
     .new-post-body {  /* New comment  */
         .wmd-button > span {
             background-image: url(../themes/fun/highlight/images/new-post-icons-full.png);

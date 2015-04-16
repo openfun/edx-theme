@@ -62,7 +62,28 @@
   <%static:css group='style-app-extend1'/>
   <%static:css group='style-app-extend2'/>
 
-  <%static:js group='main_vendor'/>
+  % if disable_courseware_js:
+    <%static:js group='base_vendor'/>
+  % else:
+    <%static:js group='main_vendor'/>
+  % endif
+
+  <script>
+    window.baseUrl = "${settings.STATIC_URL}";
+    (function (require) {
+    % if settings.DEBUG is True:
+        ## Using what amounts to a random number in the Development environment for cache-busting
+        var urlArgs = "bust=" + (new Date()).getTime();
+    % else:
+        var urlArgs = "v=${settings.EDX_PLATFORM_REVISION}";
+    % endif
+      require.config({
+          baseUrl: baseUrl,
+          urlArgs: urlArgs
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script type="text/javascript" src="${static.url("require-config-lms.js")}"></script>
 
   <%block name="headextra"/>
 

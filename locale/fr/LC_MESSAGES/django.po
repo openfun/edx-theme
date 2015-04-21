@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  edx-platform\n"
 "Report-Msgid-Bugs-To: team@openfun.fr\n"
-"POT-Creation-Date: 2015-02-25 11:02+0000\n"
+"POT-Creation-Date: 2015-04-21 10:52+0200\n"
 "PO-Revision-Date: 2014-07-04 13:50-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/edx-"
@@ -179,6 +179,11 @@ msgstr "Suivi"
 msgid "Forum Admin"
 msgstr "Administrateurs des forums"
 
+#: /edx/app/edxapp/themes/fun/templates/navigation.html:39
+#: /edx/app/edxapp/themes/fun/templates/navigation.html:41
+msgid "Global Navigation"
+msgstr "Navigation globale"
+
 # Translated in edx by 'Plus haut niveau de formation obtenu'
 #: /edx/app/edxapp/themes/fun/templates/register.html:275
 msgid "Highest Level of Education Completed"
@@ -273,7 +278,11 @@ msgid ""
 "Please enter your new password twice so we can verify you typed it in "
 "correctly. <br /> Required fields are noted by <strong "
 "class=\"indicator\">bold text and an asterisk (*)</strong>."
-msgstr "Veuillez entrer votre mot de passe deux fois pour que nous puissions vérifier que vous l'avez tapé correctement. <br /> Les champs requis sont indiqués en <strong class=\"indicator\">gras et avec un astérisque (*)</strong>."
+msgstr ""
+"Veuillez entrer votre mot de passe deux fois pour que nous puissions "
+"vérifier que vous l'avez tapé correctement. <br /> Les champs requis sont"
+" indiqués en <strong class=\"indicator\">gras et avec un astérisque "
+"(*)</strong>."
 
 # Translated in edx by 'Veuillez aller à la page suivante et choisissez un
 # nouveau mot de passe :'
@@ -285,7 +294,7 @@ msgstr "Visitez la page suivante et choisissez un nouveau mot de passe :"
 msgid "Privacy policy"
 msgstr "Politique de confidentialité"
 
-# Translated in edx by ''
+# Translated in edx by 'Traitement de vos informations...'
 #: /edx/app/edxapp/themes/fun/templates/login.html:85
 msgid "Processing your account information"
 msgstr "Identification en cours"
@@ -308,6 +317,10 @@ msgstr "Recevoir les emails du cours"
 msgid "Register below to create your {platform_name} account"
 msgstr "Inscrivez-vous maintenant pour créer votre compte {platform_name}"
 
+#: /edx/app/edxapp/themes/fun/templates/courseware/course_about.html:108
+msgid "Register for {}"
+msgstr "S'inscrire à {}"
+
 msgid "Report Forum Misuse"
 msgstr "Signaler les abus sur le forum"
 
@@ -328,6 +341,10 @@ msgstr "DUT / BTS"
 
 msgid "See all children"
 msgstr "Voir tous les articles enfants"
+
+#: /edx/app/edxapp/themes/fun/templates/main.html:137
+msgid "Skip to this view's content"
+msgstr "Passer ce contenu"
 
 msgid "Sort by date, vote, or comments"
 msgstr "Trier par date, votes ou commentaires"
@@ -478,13 +495,15 @@ msgstr ""
 
 #: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:140
 msgid "You only have {days} days left to verify for this course."
-msgstr ""
+msgstr "Il ne vous reste plus que {days} jours pour valider ce cours"
 
 #: /edx/app/edxapp/themes/fun/templates/registration/password_reset_email.html:2
 msgid ""
 "You're receiving this e-mail because you requested a password reset for "
 "your user account at FUN."
-msgstr "Vous recevez cet e-mail parce que vous avez fait une demande de réinitialisation du mot de passe de votre compte utilisateur FUN."
+msgstr ""
+"Vous recevez cet e-mail parce que vous avez fait une demande de "
+"réinitialisation du mot de passe de votre compte utilisateur FUN."
 
 # Translated in edx by 'exemple : Jean Dupont'
 #: /edx/app/edxapp/themes/fun/templates/register.html:179
@@ -504,3 +523,8 @@ msgstr "{0} accueil"
 
 msgid "{platform_name}-wide Summary"
 msgstr "{platform_name}-Sommaire général"
+
+msgid "Your answers have been saved but not graded. Click 'Check' to grade them."
+msgstr ""
+"Vos réponses ont été enregistrées mais pas encore évaluées. Cliquez sur "
+"'Check' pour les évaluer. "

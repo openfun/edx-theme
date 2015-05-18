@@ -485,6 +485,24 @@ body.view-register {
         margin-right: 70px;
     }
 
+    div.cta-confidentiality p {
+        font-size: 12px !important;
+    }
+    div.cta-confidentiality ul {
+        margin-left: -12px !important;
+    }
+    div.cta-confidentiality li {
+        font-size: 12px !important;
+        list-style: none;
+        margin-top: 8px;
+    }
+    div.cta-confidentiality address {
+        font-size: 12px !important;
+        div.adr {
+            text-align: center;
+        }
+    }
+
 }
 
 

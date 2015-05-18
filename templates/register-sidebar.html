@@ -1,0 +1,84 @@
+<%!
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
+%>
+<%namespace file='main.html' import="login_query, stanford_theme_enabled"/>
+<%namespace name='static' file='static_content.html'/>
+
+
+<header>
+  <h3 class="sr">${_("Registration Help")}</h3>
+</header>
+
+% if has_extauth_info is UNDEFINED:
+
+<div class="cta cta-login">
+  <h3 class="title">${_("Already registered?")}</h3>
+  <p class="instructions">
+    <a class="cta-login-action" href="${reverse('signin_user')}${login_query()}">
+      ${_("Log in")}
+    </a>
+  </p>
+</div>
+
+% endif
+
+## TODO: Use a %block tag or something to allow themes to
+##       override in a more generalizable fashion.
+% if not stanford_theme_enabled():
+  <div class="cta cta-welcome">
+    <h3>${_("Welcome to {platform_name}").format(platform_name=platform_name)}</h3>
+    <p>${_("Registering with {platform_name} gives you access to all of our current and future free courses. Not ready to take a course just yet? Registering puts you on our mailing list - we will update you as courses are added.").format(platform_name=platform_name)}</p>
+  </div>
+% endif
+
+<div class="cta cta-nextsteps">
+  <h3>${_("Next Steps")}</h3>
+  % if stanford_theme_enabled():
+    <p>${_("You will receive an activation email.  You must click on the activation link to complete the process.  Don't see the email?  Check your spam folder and mark emails from class.stanford.edu as 'not spam', since you'll want to be able to receive email from your courses.")}</p>
+  % else:
+    <p>${_("As part of joining {platform_name}, you will receive an activation email.  You must click on the activation link to complete the process.  Don't see the email?  Check your spam folder and mark {platform_name} emails as 'not spam'.  At {platform_name}, we communicate mostly through email.").format(platform_name=platform_name)}</p>
+  % endif
+</div>
+
+<div class="cta cta-confidentiality">
+
+  <h3>${_("Confidentiality")}</h3>
+
+  <p>
+    Les informations recueillies font l’objet d’un traitement informatique destiné à permettre l’inscription, le suivi des cours, la participation aux activités pédagogiques et aux évaluations, la délivrance d’attestations et/ou de certificats.<br>
+    Les destinataires des données sont :
+    <ul>
+    <li>Les enseignants des équipes pédagogiques et les représentants officiels des établissements porteurs des cours, pour les données à caractère personnel.<li>
+    <li>Des équipes de recherche en sciences cognitives et de l’éducation, habilitées par le ministère en charge de l’Enseignement supérieur, pour les données d’usage anonymisées.</li>
+    </ul>
+  </p>
+  <p>
+    Conformément à la loi «&nbsp;informatique et libertés&nbsp;» du 6 janvier 1978 modifiée en 2004, vous bénéficiez d’un droit d’accès et de rectification aux informations qui vous concernent, que vous pouvez exercer en vous adressant à :</p>
+    <address class="vcard">
+      <div class="adr">
+
+        <span class="org">Ministère de l'Éducation nationale, de l'Enseignement supérieur et de la Recherche</span><br>
+        <span class="org">Direction générale de l'enseignement supérieur et de l'insertion professionnelle</span><br>
+        <span class="org">Plateforme FUN-MOOC</span><br>
+
+        <span class="street-address">1, rue Descartes</span><br>
+        <span class="postal-code">75231</span> <span class="locality">Paris Cedex 05</span><br><br>
+      </div>
+    </address>
+  <p>
+    Vous pouvez également, pour des motifs légitimes, vous opposer au traitement des données vous concernant.
+  </p>
+</div>
+
+
+% if settings.MKTG_URL_LINK_MAP.get('FAQ'):
+  <div class="cta cta-help">
+    <h3>${_("Need Help?")}</h3>
+    <p>${_("Need help in registering with {platform_name}?").format(platform_name=platform_name)}
+      <a href="${marketing_link('FAQ')}">
+          ${_("View our FAQs for answers to commonly asked questions.")}
+      </a>
+      ${_("Once registered, most questions can be answered in the course specific discussion forums or through the FAQs.")}</p>
+  </div>
+% endif

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  edx-platform\n"
 "Report-Msgid-Bugs-To: team@openfun.fr\n"
-"POT-Creation-Date: 2015-04-21 10:52+0200\n"
+"POT-Creation-Date: 2015-05-18 17:12+0200\n"
 "PO-Revision-Date: 2014-07-04 13:50-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/edx-"
@@ -42,12 +42,15 @@ msgstr "A propos..."
 msgid "Access My Courses"
 msgstr "Accéder à mes Cours"
 
+# Translated in edx by 'Activation invalide'
 msgid "Activation Invalid"
 msgstr "Activation non valide"
 
+# Translated in edx by 'Admin'
 msgid "Admin"
 msgstr "Administrateurs"
 
+# Translated in edx by 'Tous (élèves, personnel et professeur)'
 msgid "All (students, staff and instructors)"
 msgstr "Tous (Apprenants et équipe pédagogique)"
 
@@ -65,6 +68,8 @@ msgstr ""
 "publics désireux d’apprendre. Suivez ces cours de manière interactive et "
 "collaborative, à votre rythme."
 
+# Translated in edx by 'Recevoir aussi des e-mails concernant les éditions de
+# l'article'
 msgid "Also receive emails about article edits"
 msgstr "Recevoir aussi des emails concernant la modification des articles"
 
@@ -77,9 +82,11 @@ msgstr ""
 "Une erreur a eu lieu pendant le chargement de la page, veuillez réessayer"
 " plus tard."
 
+# Translated in edx by 'Grade de l'associé'
 msgid "Associate's degree"
 msgstr "Licence professionnelle"
 
+# Translated in edx by 'Diplôme de premier cycle supérieur'
 msgid "Bachelor's degree"
 msgstr "Licence"
 
@@ -92,17 +99,24 @@ msgstr ""
 "mooc.fr, vous acceptez l'utilisation de cookies permettant d'améliorer "
 "votre expérience utilisateur"
 
+# Translated in edx by 'Valider'
 msgid "Check"
 msgstr "Vérifier"
+
+#: /edx/app/edxapp/themes/fun/templates/register-sidebar.html:46
+msgid "Confidentiality"
+msgstr "Confidentialité"
 
 # Translated in edx by 'Documents de cours'
 #: /edx/app/edxapp/themes/fun/templates/courseware/info.html:45
 msgid "Course Handouts"
 msgstr "Documents pédagogiques"
 
+# Translated in edx by 'Infos'
 msgid "Course Info"
 msgstr "Info Cours"
 
+# Translated in edx by 'Actualités du Cours'
 msgid "Course Updates"
 msgstr "Infos du Cours"
 
@@ -112,18 +126,24 @@ msgstr "Infos du Cours"
 msgid "Course Updates &amp; News"
 msgstr "Infos du Cours &amp; Actualités"
 
+# Translated in edx by 'Erreurs de chargement du cours'
 msgid "Course-loading errors"
 msgstr "erreurs de chargement des cours"
 
+# Translated in edx by 'Mes cours'
 msgid "Current Courses"
 msgstr "Cours actuels :"
 
+# Translated in edx by 'État actuel du créateur du cours'
 msgid "Current course creator state"
 msgstr "État actuel du créateur de cours"
 
+# Translated in edx by 'Discussions :'
 msgid "DISCUSSION HOME:"
 msgstr "ACCUEIL DISCUSSION:"
 
+# Translated in edx by 'Priver tous les utilisateurs du droit d'édition de cet
+# article.'
 msgid "Deny all users access to edit this article."
 msgstr "Interdire à tous les utilisateurs de modifier l'article."
 
@@ -131,12 +151,17 @@ msgstr "Interdire à tous les utilisateurs de modifier l'article."
 msgid "Discover the courses on FUN"
 msgstr "Découvrez les cours sur FUN"
 
+# Translated in edx by 'Changement d'adresse email échoué'
 msgid "E-mail change failed"
 msgstr "changement d'adresse email échoué"
 
+# Translated in edx by 'Enseignement primaire'
 msgid "Elementary/primary school"
 msgstr "Brevet des collèges"
 
+# Translated in edx by '#-#-#-#-#  django-partial.po (edx-platform)  #-#-#-#-#
+# L'adresse email ou le mot de passe est incorrect #-#-#-#-#  mako.po
+# (edx-platform)  #-#-#-#-# Adresse mail ou mot de passe incorrect.'
 msgid "Email or password is incorrect."
 msgstr "Adresse mail ou mot de passe incorrect"
 
@@ -144,6 +169,7 @@ msgstr "Adresse mail ou mot de passe incorrect"
 msgid "End of Registration"
 msgstr "Fin des inscriptions"
 
+# Translated in edx by 'Participer avec des messages'
 msgid "Engage with posts"
 msgstr "S'investir dans les discussions"
 
@@ -151,6 +177,7 @@ msgstr "S'investir dans les discussions"
 msgid "Enrollment to this course is ended"
 msgstr "Les inscriptions pour ce cours sont terminées"
 
+# Translated in edx by 'Entrer le nom d'utilisateur du propriétaire.'
 msgid "Enter the username of the owner."
 msgstr "Rentrez le nom d'utilisateur du propriétaire."
 
@@ -158,9 +185,11 @@ msgstr "Rentrez le nom d'utilisateur du propriétaire."
 msgid "FUN courses RSS feed"
 msgstr "Flux RSS des cours de FUN"
 
+# Translated in edx by 'Femme'
 msgid "Female"
 msgstr "Féminin"
 
+# Translated in edx by 'Valider'
 msgid "Final Check"
 msgstr "Vérification finale"
 
@@ -170,12 +199,15 @@ msgstr ""
 "Retrouvez les cours des universités et écoles françaises, où vous voulez "
 "et quand vous voulez"
 
+# Translated in edx by 'Suivre les nouveautés dans les fils de discussion'
 msgid "Follow posts for updates"
 msgstr "Suivre les mises à jour des posts"
 
+# Translated in edx by 'Suivant'
 msgid "Following"
 msgstr "Suivi"
 
+# Translated in edx by 'Forum Admin'
 msgid "Forum Admin"
 msgstr "Administrateurs des forums"
 
@@ -195,6 +227,7 @@ msgstr "Plus haut niveau de formation atteint"
 msgid "Honor Code"
 msgstr "Charte utilisateur"
 
+# Translated in edx by 'Certificat sur l'honneur'
 msgid "Honor Code Certificate"
 msgstr "déclaration sur l'honneur"
 
@@ -211,18 +244,23 @@ msgstr ""
 "href=\"/licenses\">conditions d'utilisation relatives à ce cours</a> "
 "mentionnées dans la page de présentation"
 
+# Translated in edx by 'Hériter des permissions'
 msgid "Inherit permissions"
 msgstr "Héritage des autorisations"
 
+# Translated in edx by 'Instructeur'
 msgid "Instructor"
 msgstr "Enseignant"
 
+# Translated in edx by 'Recrutement'
 msgid "Jobs"
 msgstr "Nous recrutons"
 
+# Translated in edx by 'Collège / enseignement secondaire inférieur'
 msgid "Junior secondary/junior high/middle school"
 msgstr "Baccalauréat"
 
+# Translated in edx by 'L’apprentissage réclame plus que des cours magistraux'
 msgid "Learning is More than Just Lectures"
 msgstr "L'apprentissage réclame plus que des cours magistraux"
 
@@ -230,6 +268,7 @@ msgstr "L'apprentissage réclame plus que des cours magistraux"
 msgid "Live the FUN experience"
 msgstr "Vivez l'expérience FUN"
 
+# Translated in edx by 'Connexion'
 msgid "Log In"
 msgstr "Se Connecter"
 
@@ -240,6 +279,7 @@ msgstr "Se déconnecter"
 # Translated in edx by 'Connexion'
 #: /edx/app/edxapp/themes/fun/templates/navigation.html:121
 #: /edx/app/edxapp/themes/fun/templates/navigation.html:123
+#: /edx/app/edxapp/themes/fun/templates/register-sidebar.html:19
 #: /edx/app/edxapp/themes/fun/templates/static_templates/theme-copyrights.html:33
 msgid "Log in"
 msgstr "Se connecter"
@@ -248,9 +288,11 @@ msgstr "Se connecter"
 msgid "Log out"
 msgstr "Se déconnecter"
 
+# Translated in edx by 'Homme'
 msgid "Male"
 msgstr "Masculin"
 
+# Translated in edx by 'Master ou diplôme professionnel'
 msgid "Master's or professional degree"
 msgstr "Master / Diplôme d'ingénieur"
 
@@ -258,6 +300,7 @@ msgstr "Master / Diplôme d'ingénieur"
 msgid "Message sent!"
 msgstr "Message envoyé !"
 
+# Translated in edx by 'Moi même'
 msgid "Myself"
 msgstr "Moi-même"
 
@@ -270,6 +313,7 @@ msgstr "Actualités"
 msgid "PLEASE LOG IN to access your account and courses"
 msgstr "Merci de vous CONNECTER pour accéder à votre compte et vos cours"
 
+# Translated in edx by 'Renseigner votre nouvelle adresse email :'
 msgid "Please enter your new email address:"
 msgstr "Merci d'entrer votre nouvelle adresse email :"
 
@@ -308,6 +352,7 @@ msgstr "Nom d'utilisateur FUN"
 msgid "Read more"
 msgstr "En savoir plus"
 
+# Translated in edx by 'Recevoir les e-mails du cours'
 msgid "Receive course emails"
 msgstr "Recevoir les emails du cours"
 
@@ -324,9 +369,12 @@ msgstr "S'inscrire à {}"
 msgid "Report Forum Misuse"
 msgstr "Signaler les abus sur le forum"
 
+# Translated in edx by 'Soumettre un exercice'
 msgid "Report a problem"
 msgstr "Soumettre un problème"
 
+# Translated in edx by 'Réévaluer TOUTES les soumissions d'exercice des
+# étudiants'
 msgid "Rescore ALL students' problem submissions"
 msgstr "Renoter TOUTES les soumissions d'exercice des étudiants"
 
@@ -336,9 +384,11 @@ msgstr "Renoter TOUTES les soumissions d'exercice des étudiants"
 msgid "Reset Your %(platform_name)s Password"
 msgstr "Réinitialisez votre mot de passe %(platform_name)s"
 
+# Translated in edx by 'Lycée / enseignement secondaire'
 msgid "Secondary/high school"
 msgstr "DUT / BTS"
 
+# Translated in edx by 'Voir tous les articles'
 msgid "See all children"
 msgstr "Voir tous les articles enfants"
 
@@ -349,6 +399,7 @@ msgstr "Passer ce contenu"
 msgid "Sort by date, vote, or comments"
 msgstr "Trier par date, votes ou commentaires"
 
+# Translated in edx by 'L'équipe et les enseignants'
 msgid "Staff and instructors"
 msgstr "Equipe pédagogique"
 
@@ -405,6 +456,7 @@ msgstr ""
 "françaises et abordent des thèmes aussi variés que l’histoire, les "
 "mathématiques, la santé, la philosophie, le droit, les technologies…"
 
+# Translated in edx by 'Non répondu'
 msgid "Unanswered"
 msgstr "Sans réponse"
 
@@ -413,12 +465,15 @@ msgstr "Sans réponse"
 msgid "Universities"
 msgstr "Les Établissements"
 
+# Translated in edx by 'Université'
 msgid "University"
 msgstr "Établissement"
 
+# Translated in edx by 'Envoyer un Nouveau Fichier'
 msgid "Upload New File"
 msgstr "Upload Nouveau Fichier"
 
+# Translated in edx by 'Promouvoir des messages et des bonnes réponses'
 msgid "Upvote posts and good responses"
 msgstr "Voter pour des posts et des bonnes réponses"
 
@@ -426,14 +481,18 @@ msgstr "Voter pour des posts et des bonnes réponses"
 msgid "Usage policy"
 msgstr "Charte utilisateurs"
 
+# Translated in edx by 'Exemples utiles:'
 msgid "Useful examples:"
 msgstr "Exemples utiles :"
 
+# Translated in edx by 'Le nom d'utilisateur ne peut être composé que des
+# caractères A-Z et 0-9 et ne peut pas contenir d'espaces.'
 msgid "Username should only consist of A-Z and 0-9, with no spaces."
 msgstr ""
 "Le nom d'utilisateur doit être composé de lettres (A – Z) et de chiffres "
 "(0 – 9), sans espace."
 
+# Translated in edx by 'Une adresse courriel valide est requise.'
 msgid "Valid e-mail address required."
 msgstr "Une adresse email valide est requise."
 
@@ -464,14 +523,18 @@ msgstr "Qu'est-ce que FUN"
 msgid "What is FUN?"
 msgstr "Qu'est-ce que FUN&nbsp;?"
 
+# Translated in edx by 'Quand cet article est édité'
 msgid "When this article is edited"
 msgstr "Quand cet article est modifié"
 
+# Translated in edx by 'Ecrivez un court message pour l'historique de
+# l'article.'
 msgid "Write a brief message for the article's history log."
 msgstr ""
 "Ecrivez un court message qui apparaîtra sur le log de suivi des "
 "modifications"
 
+# Translated in edx by 'Oui, je suis sûr'
 msgid "Yes, I am sure"
 msgstr "Oui, je confirme"
 
@@ -514,6 +577,7 @@ msgstr "exemple : Marie Dupont"
 msgid "h/week"
 msgstr "h/semaine"
 
+# Translated in edx by 'Écrire anonymement aux camarades de classe'
 msgid "post anonymously to classmates"
 msgstr "Ecrire anonymement aux camarades de classe"
 
@@ -521,6 +585,7 @@ msgstr "Ecrire anonymement aux camarades de classe"
 msgid "{0} home"
 msgstr "{0} accueil"
 
+# Translated in edx by 'Résumé général de {platform_name}'
 msgid "{platform_name}-wide Summary"
 msgstr "{platform_name}-Sommaire général"
 

@@ -6,6 +6,10 @@
 *
 ****************************************************************************************************/
 
+// Import edx settings
+@import 'neat/neat';
+@import 'base/grid-settings';
+
 //-----------------
 //  Color variables
 //-----------------
@@ -863,7 +867,7 @@ body .home {
 
 body .find-courses {
 
-    .courses {
+    .courses-container {
         width: 920px;
         position: relative;
         margin-top: 17px;
@@ -877,24 +881,50 @@ body .find-courses {
             font-size: 13px;
         }
 
-        .courses-listing .course {
-            header.course-preview {
-                hgroup h2 .course-number {
-                    display: none;
+        .courses-listing {
+            .course {
+                header.course-preview {
+                    hgroup h2 .course-number {
+                        display: none;
+                    }
+                }
+
+                .info {
+                    .desc {
+                        font-size: 13px;
+                    }
+
+                    .bottom {
+                        font-size: 13px;
+
+                        .university {
+                            display: inline;
+                        }
+                    }
                 }
             }
+            .courses-listing-item-fun {
+                // Copied from _homepage.scss with a 4 column-span in huge mode
+                $course-card-height: ($baseline*18);
 
-            .info {
-                .desc {
-                    font-size: 13px;
+                @include rtl() { $layout-direction: "RTL"; }
+                @include fill-parent();
+                margin: ($baseline*0.75) 0 ($baseline*1.5) 0;
+                max-height: $course-card-height;
+
+                @include media($bp-medium) {
+                  @include span-columns(4); // 4 of 8
+                  @include omega(2n);
                 }
 
-                .bottom {
-                    font-size: 13px;
+                @include media($bp-large) {
+                  @include span-columns(4); // 4 of 12
+                  @include omega(3n);
+                }
 
-                    .university {
-                        display: inline;
-                    }
+                @include media($bp-huge) {
+                  @include span-columns(4); // 4 of 12
+                  @include omega(3n);
                 }
             }
         }
@@ -909,6 +939,7 @@ body .find-courses {
 body .course-info {
     header.course-profile {
         border-bottom: none;
+        height: 430px;// required since box-sizing: "border-box"
 
         .intro-inner-wrapper {
             width: 978px !important;

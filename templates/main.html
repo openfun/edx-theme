@@ -1,23 +1,30 @@
+## coding=utf-8
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.http import urlquote_plus
+from django.utils.translation import ugettext as _
+from django.utils.translation import get_language_bidi
+from microsite_configuration import microsite
+from microsite_configuration import page_title_breadcrumbs
+
+dir_rtl = 'rtl' if get_language_bidi() else 'ltr'
+%>
 <!DOCTYPE html>
-<!--[if IE 7]><html class="ie ie7 lte9 lte8 lte7" lang="${LANGUAGE_CODE}"><![endif]-->
-<!--[if IE 8]><html class="ie ie8 lte9 lte8" lang="${LANGUAGE_CODE}"><![endif]-->
-<!--[if IE 9]><html class="ie ie9 lte9" lang="${LANGUAGE_CODE}"><![endif]-->
-<!--[if gt IE 9]><!--><html lang="${LANGUAGE_CODE}"><!--<![endif]-->
-<head>
+<!--[if lte IE 9]><html class="ie ie9 lte9" lang="${LANGUAGE_CODE}"><![endif]-->
+<!--[if !IE]><!--><html lang="${LANGUAGE_CODE}"><!--<![endif]-->
+<head dir="${dir_rtl}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<%! from django.utils.translation import ugettext as _ %>
-<%! from django.core.urlresolvers import reverse %>
-
-
-<%! from microsite_configuration import microsite %>
-<%! from microsite_configuration import page_title_breadcrumbs %>
-<%! import platform %>
-  <meta name="platform.node" CONTENT="${platform.node()}">
-  <link rel="alternate" type="application/rss+xml" title="${_('FUN courses RSS feed')}" href="${reverse('fun-courses-feed')}" />
-
-<%namespace name='static' file='static_content.html'/>
-<%! from django.utils import html %>
+    % if responsive:
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    % endif
+    
+    <%
+        ## We override this template to insert the RSS feed and add the platform node name.
+    %>
+    <%! import platform %>
+    <meta name="platform.node" CONTENT="${platform.node()}">
+    <link rel="alternate" type="application/rss+xml" title="${_('FUN courses RSS feed')}" href="${reverse('fun-courses-feed')}" />
 
 ## Define a couple of helper functions to make life easier when
 ## embedding theme conditionals into templates. All inheriting
@@ -44,46 +51,25 @@
       </title>
   </%block>
 
-  <script type="text/javascript">
-    /* immediately break out of an iframe if coming from the marketing website */
-    (function(window) {
-      if (window.location !== window.top.location) {
-        window.top.location = window.location;
-      }
-    })(this);
-  </script>
+  % if not allow_iframing:
+      <script type="text/javascript">
+        /* immediately break out of an iframe if coming from the marketing website */
+        (function(window) {
+          if (window.location !== window.top.location) {
+            window.top.location = window.location;
+          }
+        })(this);
+      </script>
+  % endif
 
   <script type="text/javascript" src="/jsi18n/"></script>
 
   <link rel="icon" type="image/x-icon" href="${static.url(microsite.get_value('favicon_path', settings.FAVICON_PATH))}" />
 
   <%static:css group='style-vendor'/>
-  <%static:css group='style-app'/>
-  <%static:css group='style-app-extend1'/>
-  <%static:css group='style-app-extend2'/>
+  <%static:css group='style-main'/>
 
-  % if disable_courseware_js:
-    <%static:js group='base_vendor'/>
-  % else:
-    <%static:js group='main_vendor'/>
-  % endif
-
-  <script>
-    window.baseUrl = "${settings.STATIC_URL}";
-    (function (require) {
-    % if settings.DEBUG is True:
-        ## Using what amounts to a random number in the Development environment for cache-busting
-        var urlArgs = "bust=" + (new Date()).getTime();
-    % else:
-        var urlArgs = "v=${settings.EDX_PLATFORM_REVISION}";
-    % endif
-      require.config({
-          baseUrl: baseUrl,
-          urlArgs: urlArgs
-      });
-    }).call(this, require || RequireJS.require);
-  </script>
-  <script type="text/javascript" src="${static.url("require-config-lms.js")}"></script>
+  <%static:js group='main_vendor'/>
 
   <%block name="headextra"/>
 
@@ -109,9 +95,8 @@
     <%include file="${header_extra_file}" />
   % endif
 
-  <!--[if lt IE 9]>
-    <script src="${static.url('js/html5shiv.js')}"></script>
-  <![endif]-->
+  <%include file="widgets/optimizely.html" />
+  <%include file="widgets/segment-io.html" />
 
   <meta name="path_prefix" content="${EDX_ROOT_URL}">
 
@@ -154,14 +139,28 @@
     </div>
  </div>
 
-
-  <a class="nav-skip" href="<%block name="nav_skip">#content</%block>">${_("Skip to this view's content")}</a>
+    % if not disable_header:
+        <%include file="${header_file}" />
+    % endif
 
   <%include file="mathjax_accessible.html" />
 
-% if not suppress_toplevel_navigation:
-  <%include file="${header_file}" />
-%endif
+    % if not disable_footer:
+        <%block name="footer">
+          ## Can be overridden by child templates wanting to hide the footer.
+          <%
+            if theme_enabled() and not is_microsite():
+              footer_file = 'theme-footer.html'
+            elif settings.FEATURES.get('IS_EDX_DOMAIN', False) and  settings.FEATURES.get('ENABLE_FOOTER_V3', True) and not is_microsite():
+              footer_file = microsite.get_template_path('footer-edx-v3.html')
+            elif settings.FEATURES.get('IS_EDX_DOMAIN', False) and not is_microsite():
+              footer_file = microsite.get_template_path('footer-edx-v2.html')
+            else:
+              footer_file = microsite.get_template_path('footer.html')
+          %>
+          <%include file="${footer_file}" />
+        </%block>
+    % endif
 
   <div class="content-wrapper" id="content">
     ${self.body()}

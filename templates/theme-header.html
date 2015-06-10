@@ -43,9 +43,6 @@ from urllib import quote_plus
   <img src="${static.url('themes/fun/images/logo.png')}" alt="Logo FUN" title="Page d'accueil">
 </%block>
 
-## We don't want extra links inside the navigation dropdown
-<%block name="navigation_dropdown_menu_links" />
-
 ## When not authenticated, only show the about page link
 <%block name="navigation_global_links">
 <li class="nav-global-outer">
@@ -61,7 +58,7 @@ from urllib import quote_plus
 <li class="nav-global-outer">
   <ul class="nav-global-inner">
     <%include file="nav-common-items.html"/>
-    <li class="nav-global-element"><a href="#log-out" rel="leanModal">${_("Log out")}</a></li>
+    <li class="nav-global-element"><a href="${reverse('logout')}">${_("Log out")}</a></li>
   </ul>
 </li>
 </%block>

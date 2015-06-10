@@ -2,7 +2,10 @@
 
 <%! from django.core.urlresolvers import reverse %>
 <%! from time import strftime %>
-<%! from universities.models import University %>
+<%
+    from universities.models import University
+    universities = list(University.objects.filter(featured=True))
+%>
 <%inherit file="main.html" />
 <%namespace name='static' file='static_content.html'/>
 <%doc> The title block is commented because defined elsewhere
@@ -31,15 +34,20 @@
           <span class="als-prev"><img src="${static.url('themes/fun/images/previous.png')}" alt="previous" title="previous" /></span>
           <div class="als-viewport">
             <ul class="als-wrapper">
-              % for university in University.objects.filter(featured=True):
-              <li class="als-item">
-                <a href="${ university.get_absolute_url() }">
-                  %if university.logo:
-                  <img src="${ university.logo.url }" alt="${ university.name }" title="${ university.name }" />
-                  %endif
-                </a>
-              </li>
-              % endfor
+              % if universities:
+                % for university in universities:
+                <li class="als-item">
+                  <a href="${ university.get_absolute_url() }">
+                    %if university.logo:
+                    <img src="${ university.logo.url }" alt="${ university.name }" title="${ university.name }" />
+                    %endif
+                  </a>
+                </li>
+                % endfor
+              % else:
+                ## Dummy element to avoid js error
+                <li class="als-item">University</li>
+              % endif
             </ul>
           </div>
           <span class="als-next"><img src="${static.url('themes/fun/images/next.png')}" alt="next" title="next" /></span>

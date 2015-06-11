@@ -61,7 +61,7 @@ from urllib import quote_plus
 <li class="nav-global-outer">
   <ul class="nav-global-inner">
     <%include file="nav-common-items.html"/>
-    <li class="nav-global-element"><a href="#log-out" rel="leanModal">${_("Log out")}</a></li>
+    <li class="nav-global-element"><a href="${reverse('logout')}">${_("Log out")}</a></li>
   </ul>
 </li>
 </%block>

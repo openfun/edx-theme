@@ -882,7 +882,9 @@ body .find-courses {
             font-family: $sans-serif;
             font-size: 13px;
         }
-
+        .courses .course  {
+            border-bottom: 1px solid #c4bfab;
+        }
         .courses-listing {
             .course {
                 header.course-preview {
@@ -927,6 +929,23 @@ body .find-courses {
                 @include media($bp-huge) {
                   @include span-columns(4); // 4 of 12
                   @include omega(3n);
+
+                    .funstatus {
+                        background: none repeat scroll 0 0 #0E4586;
+                        border-radius: 2px;
+                        color: #FFFFFF;
+                        font-size: 10px;
+                        left: 10px;
+                        padding: 2px 10px;
+                        position: absolute;
+                        text-transform: uppercase;
+                        top: -18px;
+                        z-index: 100;
+                    }
+
+                    .courses ul {
+                        margin : 1.5em 0;
+                    }
                 }
             }
         }

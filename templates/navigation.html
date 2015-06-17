@@ -15,7 +15,9 @@ from status.status import get_site_status_msg
 <%! from microsite_configuration.templatetags.microsite import platform_name %>
 <%! from ccx.overrides import get_current_ccx %>
 
-## Template overridden by FUN to disable slim header on "about" and wiki pages
+## Template overridden by FUN to:
+## disable slim header on "about" and wiki pages
+## add lang_* class to nav element
 
 ## Provide a hook for themes to inject branding on top.
 <%block name="navigation_top" />
@@ -41,7 +43,7 @@ site_status_msg = get_site_status_msg(course_id)
 
   <%doc>We do not want slim header on certain pages</%doc>
   <header id="global-navigation" class="global ${"slim" if course and not request.path.endswith('/about') or '/wiki/' in request.path else ""}" >
-    <nav aria-label="${_('Global')}">
+    <nav aria-label="${_('Global')}" class="lang_${LANGUAGE_CODE}">
     <h1 class="logo">
       <a href="${marketing_link('ROOT')}">
         <%block name="navigation_logo">

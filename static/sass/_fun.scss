@@ -306,7 +306,6 @@ body header.global {
                     font-weight: bold;
                     font-size: 14px;
                     letter-spacing: 0;
-                    text-align: center;
                 }
             }
 
@@ -1298,7 +1297,6 @@ body .find-courses {
     background-color: $main-color-content-background;
 }
 
-
 //---------------------
 // Dashboard
 //---------------------
@@ -1323,7 +1321,20 @@ body.view-dashboard {
             section.info h3 span { /* not yet opened registered courses title */
                     font-size: 19px;
             }
+            article.course {
+                section.details {
+                    .course-info {
+                        width: flex-grid(7);
+                    }
+                    .wrapper-course-actions {
+                        width: flex-grid(5);
+                    }
 
+                    .course-title a {
+                        font-size: 26px;
+                    }
+                }
+            }
         }
     }
 }

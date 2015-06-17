@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  edx-platform\n"
 "Report-Msgid-Bugs-To: team@openfun.fr\n"
-"POT-Creation-Date: 2015-06-11 16:42+0200\n"
+"POT-Creation-Date: 2015-06-17 10:12+0200\n"
 "PO-Revision-Date: 2014-07-04 13:50-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: French (http://www.transifex.com/projects/p/edx-"
@@ -86,6 +86,10 @@ msgstr "Vérifier"
 msgid "Confidentiality"
 msgstr "Confidentialité"
 
+#: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:95
+msgid "Course Completed - {end_date}"
+msgstr "Cours terminé le {end_date}"
+
 # Translated in edx by 'Documents de cours'
 #: /edx/app/edxapp/themes/fun/templates/courseware/info.html:45
 msgid "Course Handouts"
@@ -94,6 +98,14 @@ msgstr "Documents pédagogiques"
 # Translated in edx by 'Infos'
 msgid "Course Info"
 msgstr "Info Cours"
+
+#: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:97
+msgid "Course Started - {start_date}"
+msgstr "Cours commencé le {start_date}"
+
+#: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:101
+msgid "Course Starts - {start_date}"
+msgstr "Le cours commence le {start_date}"
 
 # Translated in edx by 'Actualités du Cours'
 msgid "Course Updates"
@@ -104,6 +116,10 @@ msgstr "Infos du Cours"
 #: /edx/app/edxapp/themes/fun/templates/courseware/info.html:41
 msgid "Course Updates &amp; News"
 msgstr "Infos du Cours &amp; Actualités"
+
+#: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:99
+msgid "Course has not yet started"
+msgstr "Le cours n'a pas encore commencé"
 
 # Translated in edx by 'Erreurs de chargement du cours'
 msgid "Course-loading errors"
@@ -237,7 +253,7 @@ msgstr "Se Connecter"
 msgid "Log in"
 msgstr "Se connecter"
 
-#: /edx/app/edxapp/themes/fun/templates/theme-header.html:64
+#: /edx/app/edxapp/themes/fun/templates/theme-header.html:61
 msgid "Log out"
 msgstr "Se déconnecter"
 
@@ -350,7 +366,7 @@ msgstr "Equipe pédagogique"
 msgid "Studio Server Error"
 msgstr "Erreur de Studio Server"
 
-#: /edx/app/edxapp/themes/fun/templates/theme-header.html:54
+#: /edx/app/edxapp/themes/fun/templates/theme-header.html:51
 msgid "Subscribe now"
 msgstr "S'inscrire maintenant"
 
@@ -442,8 +458,8 @@ msgid "Valid e-mail address required."
 msgstr "Une adresse email valide est requise."
 
 # Translated in edx by 'Voir le cours'
-#: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:205
-#: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:207
+#: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:110
+#: /edx/app/edxapp/themes/fun/templates/dashboard/_dashboard_course_listing.html:112
 msgid "View Archived Course"
 msgstr "Voir les Cours archivés"
 

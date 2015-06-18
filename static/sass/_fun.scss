@@ -1584,14 +1584,11 @@ header.global .user a.user-link {
 }
 
 /* Fix teacher dashboard analytics tables font size and cells height. see #1577 */
-.profile-distribution-widget {
-    .display-table {
+.profile-distribution-widget, .report-downloads-table, .data-display-table {
+    .display-table, .slickgrid {
         font-size: 12px;
         .slick-header-column {
             height: 28px
-        }
-        slick-cell {
-            height: 20px;
         }
     }
 }

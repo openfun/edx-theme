@@ -1582,3 +1582,16 @@ button.close-modal, div.close-modal {
 header.global .user a.user-link {
     padding-top: 6px !important;
 }
+
+/* Fix teacher dashboard analytics tables font size and cells height. see #1577 */
+.profile-distribution-widget {
+    .display-table {
+        font-size: 12px;
+        .slick-header-column {
+            height: 28px
+        }
+        slick-cell {
+            height: 20px;
+        }
+    }
+}

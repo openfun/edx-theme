@@ -22,16 +22,6 @@ from universities.models import University
 <%inherit file="../main.html" />
 <%block name="headextra">
 
-  <%
-    if self.theme_enabled():
-      google_analytics_file = u'../{ga}'.format(
-        ga=microsite.get_value('google_analytics_file', 'theme-google-analytics.html')
-      )
-    else:
-      google_analytics_file = '../google_analytics.html'
-  %>
-
-  <%include file="${google_analytics_file}" />
 
   ## OG (Open Graph) title and description added below to give social media info to display
   ## (https://developers.facebook.com/docs/opengraph/howtos/maximizing-distribution-media-content#tags)
@@ -413,4 +403,6 @@ from universities.models import University
   </div>
 %endif
 
-<%include file="../video_modal.html" />
+<section id="video-modal" class="modal video-modal">
+    <div class="inner-wrapper" style="padding: 0">${get_dmcloud_url(course, get_course_about_section(course, "video"))}</div>
+</section>

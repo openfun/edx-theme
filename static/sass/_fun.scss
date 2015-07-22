@@ -240,11 +240,11 @@ body header.global {
     }
 
     nav {
+        width: 980px;
         height: auto;
         text-transform: uppercase;
         color: #fff;
-        margin-right: 10%;
-        margin-left: 10%;
+        margin: auto;
 
         &:before {
             position: absolute;

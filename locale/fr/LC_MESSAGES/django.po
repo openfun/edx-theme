@@ -1,16 +1,12 @@
-# edX translation file
-#
-# Translators:
-# France Université Numerique <team@openfun.fr>, 2013
+
 msgid ""
 msgstr ""
-"Project-Id-Version:  edx-platform\n"
+"Project-Id-Version: France Université Numérique 3\n"
 "Report-Msgid-Bugs-To: team@openfun.fr\n"
-"POT-Creation-Date: 2015-06-22 17:38+0200\n"
-"PO-Revision-Date: 2014-07-04 13:50-0400\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: French (http://www.transifex.com/projects/p/edx-"
-"platform/language/fr/)\n"
+"POT-Creation-Date: 2015-07-22 17:41+0200\n"
+"PO-Revision-Date: 2015-07-22 17:41+0000\n"
+"Last-Translator: FUN <team@openfun.fr>\n"
+"Language-Team: FUN <team@openfun.fr>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -500,35 +496,4 @@ msgstr "Ecrire anonymement aux camarades de classe"
 # Translated in edx by 'Résumé général de {platform_name}'
 msgid "{platform_name}-wide Summary"
 msgstr "{platform_name}-Sommaire général"
-
-#~ msgid ""
-#~ "Please enter your new password twice "
-#~ "so we can verify you typed it "
-#~ "in correctly. <br /> Required fields "
-#~ "are noted by <strong class=\"indicator\">bold"
-#~ " text and an asterisk (*)</strong>."
-#~ msgstr ""
-#~ "Veuillez entrer votre mot de passe "
-#~ "deux fois pour que nous puissions "
-#~ "vérifier que vous l'avez tapé "
-#~ "correctement. <br /> Les champs requis"
-#~ " sont indiqués en <strong "
-#~ "class=\"indicator\">gras et avec un astérisque"
-#~ " (*)</strong>."
-
-#~ msgid "Reset Your %(platform_name)s Password"
-#~ msgstr "Réinitialisez votre mot de passe %(platform_name)s"
-
-#~ msgid "The FUN Team"
-#~ msgstr "L'équipe FUN"
-
-#~ msgid ""
-#~ "You're receiving this e-mail because you"
-#~ " requested a password reset for your"
-#~ " user account at FUN."
-#~ msgstr ""
-#~ "Vous recevez cet e-mail parce que "
-#~ "vous avez fait une demande de "
-#~ "réinitialisation du mot de passe de "
-#~ "votre compte utilisateur FUN."
 

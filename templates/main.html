@@ -20,12 +20,13 @@ dir_rtl = 'rtl' if get_language_bidi() else 'ltr'
     % endif
     
     ## We override this template to:
-	## - insert the RSS feed
+    ## - insert the RSS feed
     ## - add the platform node name
     ## - remove the google-site-verification meta name
     ## - set our own title
     ## - display sandbox theme
     ## - insert our cookie banner
+    ## - add paths to require.config
     <%! from django.core.urlresolvers import reverse %>
     <%! import platform %>
     <meta name="platform.node" CONTENT="${platform.node()}">
@@ -96,7 +97,23 @@ dir_rtl = 'rtl' if get_language_bidi() else 'ltr'
           baseUrl: baseUrl,
           urlArgs: urlArgs
       });
+
     }).call(this, require || RequireJS.require);
+
+    ## Copied from the cms base template. If possible, we should move this code
+    ## to a separate, automatically included js file.
+    (require || RequireJS.require).config({
+      paths: {
+        'libcast': '${static.url("fun/js/libcast")}',
+        'videojs-fun': '${static.url("fun/js/vendor/videojs/video-fun")}'
+      },
+      shim: {
+        'videojs-fun': {
+          exports: 'videojs_fun'
+        }
+      }
+    });
+
   </script>
   <script type="text/javascript" src="${static.url("require-config-lms.js")}"></script>
 
